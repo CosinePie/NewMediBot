@@ -1,0 +1,4 @@
+/models/
+/.rasa/
+/test_stories.yml/
+*.xlsx

@@ -1,0 +1,888 @@
+version: "3.0"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - alveolar_proteinosis
+  - pertussis
+  - asthmatic_bronchitis
+  - ards
+  - amniotic_fluid_inhalation
+  - spe
+  - loblar_pneumonia
+  - pulmonary_pleural_amebiasis
+  - prs
+  - confirm_symptom
+  - enter_symptoms
+  - enter_disease
+#date: 06/04/2022
+  - legionellosis
+  - tuberculous_empyema
+  - hemoptysis
+  - idiopathic_pulmonary_fibrosis
+  - desquamative_interstitial_pneumonia
+  - idiopathic_obstructive_bronchiolitis_with_organizing_pneumonia
+  - idiopathic_hemosiderin
+  - exogenous_allergic_alveolitis
+  - pediatric_tuberculosis
+# 8/04/2022
+  - respiratory_failure
+  - respiratory_bronchiole-associated_interstitial_lung_disease(RB-ILD)
+  - respiratory_syncytial_virus_pneumonia(RSV)
+  - acute_respiratory_failure
+  - neonatal_respiratory_distress_syndrome(RDS)
+  - inhalation_injury
+  - pediatric_cold
+  - congenital_pulmonary_cyst
+# 18-Apr-2022
+  - lung_actinomycosis
+  - pulmonary_aspergillosis
+  - radiation_pneumonitis
+  - lung_candidiasis
+  - lung_bullae
+  - emphysema
+  - lung_abscess
+  - pulmonary_embolism
+# 25-Apr-2022
+  - sars
+  - lung_metastases
+  - pneumonia_pseudotumor
+  - pulmonary_cryptococcosis
+  - lung_cancer
+  - anaphylactic_shock
+  - hypersensitivity_pneumonitis
+  - acute_lung_abscess
+  - legionnaires_disease
+# 26-Apr-2022 
+  - Pediatric_acute_bronchitis
+  - Pediatric_influenza
+  - Silicosis
+  - Neonatal_Asphyxia
+  # - asthma
+  # - pediatric_asthma
+  - Pneumonia_in_children
+  - Cold
+  - Respiratory_Foreign_Body
+  
+entities:
+- symptom_name
+
+slots:
+  symptoms:
+    type: list
+    mappings:
+    - type: from_entity
+      entity: symptom_name
+
+actions:
+  - action_get_symptom
+
+responses:
+  utter_welcome:
+  - text: "Hi there! Medi-bot is here for your assistance. Please enter the symptoms you are facing or ask me anything about a disease."
+    buttons:
+    - title: "symptoms"
+      payload: /enter_symptoms
+    - title: "disease"
+      payload: /enter_disease
+
+  utter_question:
+  - text: "Please enter your query: "
+
+  utter_symptom:
+  - text: "Please enter your symptoms: "
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+  utter_alveolar_proteinosis/description:
+  - text: "Alveolar proteinosis (pap) is also known as rosen-castle-liebow syndrome. It is a rare disease filled with pas staining positive in alveolar and brochial lumes. Fact is that it occurs in young and middle aged people and the incidence of males is about three times that of females."
+
+  utter_alveolar_proteinosis/prevention:
+  - text: "Prevenetion of Alveolar Proteinosis :-\n \n
+            1. to avoid infection with mycobacterial disease, karst lung cyst pneumonia, cytomegalovirus and so on.\n \n
+            2. pay attention to exercise, improve immunity."
+
+  utter_alveolar_proteinosis/cause:
+  - text: "Causes of Alveolar Proteinosis :-\n \n 
+            The cause is unknown, and it is speculated that it is related to several factors\n \n
+            1. such as a large amount of dust inhalation\n \n
+            2. decreased immune function (especially infants and young children)\n \n
+            3. genetic factors, alcoholism, microbial infections, etc."
+
+  utter_pertussis/description:
+  - text: "Pertussis is known as whooping cough. It is an acute respiratory infection caused by bordetella pertussis. It is characterized by paroxysmal spasmodic cough, with a special snoring inhalation snoring at the end of the cough.the course of the disease is long, up to several weeks or even 3 months, so it is called pertussis. More common in children under the age of 5, young children suffering from this disease are prone to suffocation, pneumonia, encephalopathy and other complications, high mortality"
+
+  utter_pertussis/prevention:
+  - text: "Prevention of Pertussis :-\n \n
+            1. control of the source of infection. In the epidemic season, if there are prodromal symptoms should be
+            early antibiotic treatment. \n \n
+            2. cut off the transmission route, because the pertussis bacillus is weak to the outside world, 
+            there is no need for disinfection treatment, but the indoor ventilation should be maintained, the clothes 
+            should be exposed to sunlight, and the sputum and mouth and nose secretions should be disinfected."
+
+  utter_pertussis/cause:
+  - text: "Causes of Pertussis :-\n \n
+            1. is a very contagious disease caused by a type of bacteria called Bordetella pertussis. 
+            These bacteria attach to the cilia (tiny, hair-like extensions) that line part of the upper 
+            respiratory system."
+
+  utter_asthmatic_bronchitis/description:
+  - text: "Asthmatoid Bronchitis is also known as asthmatic bronchitis. It refers to a group of asthmatic infantile acute bronchitis, an allergic, often associated with respiratory infections. The main pathological basis of acute asthmatic bronchitis is bronchial smooth muscle spasm, microvascular leakage, mucosal edema, inflammatory cell infiltration, and reversible airway obstruction caused by increased secretion.the trachea and bronchus of infants and young children are relatively narrow, and the surrounding elastic fibers are well developed."
+
+  utter_asthmatic_bronchitis/prevention:
+  - text: "Prevention of Asthmatoid Bronchitis :-\n \n
+            1. For children with asthmatic bronchitis, attention should be paid to the family and children's own 
+            allergic history, eosinophilia examination, serum ige levels and so on.
+            if bronchial asthma is suspect, early prevention and treatment of asthma should be given. "
+
+  utter_asthmatic_bronchitis/cause:
+  - text: "Causes of Asthmatoid Bronchitis :-\n \n
+            1. Allergens such as pollen, mold, dust, pet dander, or food (and food additives like MSG)\n \n
+            2. Certain medications (aspirin, beta-blockers)\n \n
+            3. Pollution, Viral or bacterial infections."
+
+  utter_ards/description:
+  - text: "Adult Respiratory Distress Syndrome is abbreviated as ards. It is a secondary syndrome characterized by acute respiratory distress and hypoxemia and also known as shock lungs, traumatic lungs and so on. This type of acute respiratory failure in adults causes shock, severe infection, craniocerebral injury, severe trauma, fat embolism during fracture, excessive transfusion infusion, dic, inhaled irritating gases, oxygen poisoning, long-term use of respirators, cardiopulmonary bypass, coma or aspiration after general anesthesia, burns, etc."
+
+  utter_ards/prevention:
+  - text: "Prevention of Adult Respiratory Distress Syndrome :-\n \n
+            1. Patients with high-risk should be closely observed, strengthen monitoring, when the respiratory rate is low, pao2 is reduced, and other lung injury performance should be given early.\n \n
+            2. Respiratory support and other effective prevention and intervention measures should be taken to prevent further development of ards and important organ damage."
+
+  utter_ards/cause:
+  - text: "Causes of Adult Respiratory Distress Syndrome :-\n \n
+            ARDS happens when the lungs become severely inflamed from an infection or injury. The inflammation causes fluid from nearby blood vessels to leak into the tiny air sacs in your lungs, making breathing increasingly difficult.\n \n
+            1. Pneumonia or severe flu\n \n
+            2. Taking excessive heroin or salicylate\n \n
+            3. Bacteria, viruses and pulmonary infection caused by fungi, etc."
+
+  utter_amniotic_fluid_inhalation/description:
+  - text: "The fetus inhales a larger amount of amniotic fluid during intrauterine or childbirth and refers to a large amount of alcoholic fluid inhalation (also known as amniotic fluid inhalation syndrome (aminoticfluidaspirationsydrom).generally speaking, amniotic fluid is not contaminated, often has a transient difficulty breathing or bruising, mild symptoms and good prognosis.such as the inflammatory reaction in the lungs, known as amniocentesis pneumonia."
+
+  utter_amniotic_fluid_inhalation/prevention:
+  - text: "Prevention of Adult Respiratory Distress Syndrome :-\n \n
+            1. the key to prevention is prevention of intrauterine or hypoxia in the fetus. It is very necessary for the mother to do prenatal checkup regularly. When the fetus has signs of intrauterine asphyxia, the delivery should be terminated as soon as possible.\n \n 
+            2. The longer the hypoxia, the possibility of inhaling amniotic fluid and the amount of amniotic fluid inhaled will be larger, and long-term intrauterine hypoxia can also cause fetal brain damage. \n \n
+            3. The nasal mucus is extremely important and the key to reducing the onset. health care, nursing staff through the suffocation resuscitation treatment and qualified to go to work is necessary for amniocentesis aspiration pneumonia after treatment, the prognosis is good, most children can heal, and leave no sequelae."
+
+  utter_amniotic_fluid_inhalation/cause:
+  - text: "Causes of Adult Respiratory Distress Syndrome :-\n \n
+            1. any factor causes hypoxia in the fetus or intrauterine as hypoxemia stimulates the fetal respiratory center, wheezing-like respiration occurs, causing amniotic fluid to be inhaled into the respiratory tract. \n \n
+            2. Amniotic fluid is quickly absorbed by the alveolar capillaries after inhalation. sebum in the amniotic fluid and exfoliated keratinized epithelial cells can cause chemical chemistry in the alveoli. "
+ 
+  utter_spe/description:
+  - text: "Simple Pulmonary Eosinophilic infiltration is also known as lvf's syndrome. It was first described by ruffin in 1932. Simple pulmonary eosinophilic infiltration is characterized by migratory pulmonary infiltration with elevated peripheral blood eosinophil count, mild pulmonary symptoms, most of which only have mild cough, and the course of disease is self-limiting, often 3 to 4 weeks. healed by himself."
+
+  utter_spe/prevention:
+  - text: "Prevention of Simple Pulmonary Eosinophilic infiltration :-\n \n
+            1. Pay attention to food hygiene.\n \n
+            2. Prevent infection with aphids, hookworms, silkworms, mites, ginger worms, trichinella and amoeba."
+  
+  utter_spe/cause:
+  - text: "Causes of Simple Pulmonary Eosinophilic infiltration :-\n \n
+            1. Experiments have shown that after eating aphid eggs, the larvae migrate to the lungs and the typical lung manifestations and eosinophils can occur.\n \n
+            2. Other parasites causing this disease include hookworms, filars, aphids, ginger worms, trichinella, and amoeba.  \n \n
+            3. The disease is seasonally prevalent in some areas, so it is speculated that environmental antigen factors are also a possible cause in some areas.\n \n
+            4. Sometimes the disease can also occur by inhaling pollen. pathological changes are mainly located in the interstitial lung, alveolar wall and terminal bronchiole wall, with irregular eosinophil infiltration, and sometimes a cluster of eosinophils can be seen in the alveoli, rarely involving blood vessels."
+
+  utter_loblar_pneumonia/description:
+  - text: "Lobarpneumonia is also known as pneumococcal pneumonia. It is an acute pulmonary parenchymal inflammation with a large leafy distribution caused by bacterial infections such as pneumococci. Occurs in young men and winter and spring, common causes are cold, rain, drunk or general anesthesia, sedative overdose, etc. When these causes make the respiratory defense function weakened, the bacteria invade the alveoli through the allergic reaction to make the alveolar wall capillary permeability is enhanced, serum and cellulose are exuded, and bacteria in protein-rich exudates rapidly multiply and spread to adjacent lung tissue, affecting a segment of the lung or the entire lobe. In recent years, typical lobar pneumonia has been rarely seen due to the use of a large number of powerful antibiotics. \n \n
+           Clinical symptoms -> sudden chills, high fever, chest pain, cough, cough and rust, and some patients have nausea, vomiting, irritability, paralysis and other digestive and neurological symptoms.\n \n
+           Signs -> acute illness, shortness of breath, nose flapping, early lung signs are not obvious or only respiratory sound reduction and pleural friction sound; consolidation period can have typical signs, such as weakened respiratory movements on the affected side, increased vocal fibrillation, percussion dullness, auscultation reduced breath sounds, with wet rales or pathological bronchial breath sounds.white blood cell count and neutrophil increase, typical x-ray findings are lung segment and leaf consolidation.the disease has a short course and can be cured by timely treatment with antibiotics such as penicillin."
+
+  utter_loblar_pneumonia/prevention:
+  - text: "Prevention of Lobarpneumonia :-\n \n
+            1. pay attention to prevent upper respiratory tract infections, strengthen cold-resistant exercise. \n \n
+            2. to avoid rain and cold, drunk, overwork and other incentives. \n \n
+            3. active treatment of primary disease, such as chronic heart and lung disease, chronic hepatitis, diabetes and oral diseases, can prevent lobar pneumonia."
+
+  utter_loblar_pneumonia/cause:
+  - text: "Causes of Lobarpneumonia :-\n \n
+            1. A variety of bacteria can cause lobar pneumonia, but the vast majority are streptococcus pneumoniae.streptococcus pneumoniae is a gram-positive cocci, with a capsule, and its pathogenicity is due to the invasion of the capsule of the polymer polysaccharide to the tissue.a few are klebsiella, staphylococcus aureus, streptococcus hemolyticus, haemophilus influenzae, and the like. \n \n
+            2. When the body suffers from cold, excessive fatigue, drunkenness, cold, diabetes, and low immune function, the respiratory defense function is weakened. the bacteria invade the alveoli through the allergic reaction, the capillary permeability of the alveolar wall is enhanced, and the slurry and cellulose are exuded. \n \n
+            3. The bacteria in the protein exudate rapidly multiply and spread to adjacent lung tissue through the alveolar hole or respiratory bronchi, affecting a segment of the lung or the entire lobe. The exudate of the spreading bacillus between the large leaves is caused by the dissemination of the leaf bronchus. large lobar pneumonia lesions begin in the local alveoli and spread rapidly to a segment of the lung or the entire lobules.the clinical onset is rapid and the course of disease is about one week.often started with high fever and aversion to cold, followed by chest pain, cough, cough and rust, difficulty breathing, and signs of lung consolidation and increased white blood cell count in peripheral blood."
+
+  utter_pulmonary_pleural_amebiasis/description:
+  - text: "Pulmonary-Pleural Amebiasis is a lung and pleural suppurative inflammation caused by the infection of amoeba. the hepatic lesions occur mostly in the right lower lung, and the blood-borne lesions are mostly multiple lesions in both lungs.in the case of parenteral amebiasis, the incidence of lung and pleural amebiasis is second only to the liver, and the right side of the chest amoebia is frequent and mostly secondary to the hepatic amoebic abscess near the diaphragm, and the hepatic amoebic abscess it is a late complication of intestinal amebiasis."
+
+  utter_pulmonary_pleural_amebiasis/prevention:
+  - text: "Prevention of Pulmonary-Pleural Amebiasis :-\n \n
+            1. Daily prevention of lung-pleural amebiasis the disease is prevalent in the world, and is more prevalent in tropical and subtropical regions. however, in colder regions and even in the arctic circle, there are also amoebic infections and epidemics, and the infection rate is high and low. the economic situation and eating habits are closely related.\n \n
+            2. source of infection: chronic patients, convalescent patients and healthy insects are the source of infection for this disease. \n \n
+            3. popular characteristics: the amebic disease in the lytic tissue is widely distributed. in temperate regions, the disease can be prevalent, while in the tropical and subtropical regions, the prevalence is particularly serious.\n \n
+            4. route of transmission: there are several ways to spread the amoeba in the lysate: \n \n
+              (a) the contaminated water source in the capsule can cause an outbreak in the area. \n \n
+              (b) in the case of manure as a fertilizer, unwashed and uncooked vegetables are also important transmission factors. \n \n
+              (c) cysts contaminate fingers, food or utensils to spread. \n \n
+              (d) both flies and cockroaches can be exposed to feces, carry and vomit feces on the surface, and encapsulate the contaminated food as an important medium of transmission."
+
+  utter_pulmonary_pleural_amebiasis/cause:
+  - text: "Causes of Pulmonary-Pleural Amebiasis :-\n \n
+            1. There are more than 10 species of amoeba parasitic in the human body. mature cysts are infectious and have strong resistance to external abilities. they survive in feces for more than 2 weeks and survive in water for more than 5 weeks. it is the only form of disease transmission.\n \n
+            2. The characteristics of the infected strain, and also on the host's immune status, nutritional status and resistance. when the person swallows the food or water contaminated by the capsule."
+
+  utter_prs/description:
+  - text: " Pulmonary Hemorrhagic-Nephritis Syndrome, also known as anti-base glomerulonephritis or pulmonary renal syndrome, goodpasture syndrome or goodpasture disease, may be caused by viral infection and/or inhalation of certain chemical substances.it is a serious damage of the glomerular and alveolar wall basement membrane caused by anti-base membrane antibody, clinical manifestations of pulmonary hemorrhage, rapid glomerulonephritis and serum anti-glomerular basement membrane (gbm) antibody-positive triad.most patients progress rapidly and the prognosis is dangerous."
+
+  utter_prs/prevention:
+  - text: "Prevention of Pulmonary Hemorrhagic-Nephritis Syndrome :-\n \n
+            1. In the acute phase, tracheal intubation is often required, assisted ventilation and hemodialysis. subsequent treatment relies on the use of high-dose corticosteroids (methylprednisolone daily 7-15 mg/kg, divided intravenously), immunosuppressive cyclophosphamide and repeated hemodialysis to exclude anti-glomerular base membrane antibody. the course of immunosuppressive therapy has changed a lot."
+
+  utter_prs/cause:
+  - text: "Causes of Pulmonary Hemorrhagic-Nephritis Syndrome :-\n \n
+            1. respiratory tract infections and influenza virus infection are the most common causes of this disease.\n \n
+            2. calderon et al reported 4 cases. three of the hiv-infected patients were positive for anti-type iv collagen chain antibody (anti-gbm antibody), suggesting that alveolar damage can induce pulmonary hemorrhagic-nephritis syndrome in pneumocystis carinii pneumonia. \n \n
+            3. Inhaled cocaine perez et al reported that a patient with long-term smoking developed pulmonary hemorrhagic-nephritis syndrome after 3 weeks of cocaine use. "
+
+
+#date: 06/04/2022
+  utter_legionellosis/description:
+  - text: "legionella pneumonia (legionellapneumonia) is a systemic disease, a type of pneumonia (lung infection) caused by the Legionella bacteria."
+
+  utter_legionellosis/prevention:
+  - text: "Although early diagnosis and reasonable treatment can greatly reduce the mortality rate of legionnaires' disease, some precautionary measures can be taken by public to avoid this disease.\n \n
+            Prevention of legionellosis - \n \n
+            1. exercise daily\n \n
+            2. quit smoking/drinking\n \n
+            3. regularly check air-conditioners to keep them clean\n \n
+            4. disinfect homes and showers\n \n
+            5. disinfect drinking water sources"
+
+  utter_legionellosis/cause:
+  - text: "Legionellosis is caused by the legionella bacteria which can enter the respiratory tract and affect the alveolar and bronchioles. Legionella also produces toxins which damage the lungs. The infection sources could be - \n \n
+            1. through humans\n \n
+            2. through water\n \n
+            3. through air-conditioners or water coolers"
+
+
+  utter_tuberculous_empyema/description:
+  - text: "Tubercolous empyema is a chronic disease and is a rare complication of pleuropulmonary TB. Chronic empyema is often formed due to delayed diagnosis or improper treatment, mostly caused by rupture of tuberculosis. Patients often come to clinical attention at the time of a routine chest radiograph."
+
+  utter_tuberculous_empyema/prevention:
+  - text: "Prevention of tubercolous empyema - \n \n
+            1. actively treat lung infections\n \n
+            2. drain pleural effusion in time\n \n
+            3. strict aseptic operation during medical operation to avoid iatrogenic infection."
+
+  utter_tuberculous_empyema/cause:
+  - text: "Tuberculous Empyema can be a result of - \n \n
+            1. incomplete treatment of tubercolous pleuresy. it causes infection through blood ciculation and tuberculosis lesions invade the pleura and cuase empyema.\n \n
+            2. empyema can be a combination of artificial pneumothorax or surgery for tubercolosis.\n \n
+            3. bone tubercolosis or chest wall tubercolosis."
+
+  utter_hemoptysis/description:
+  - text: "Hemoptysis is a medical condition in which a person spits or coughs blood derived from lungs or bronchial tubes as a result of pulmonary or bronchial hemorrahage. It can be classified roughly into 3 categories - small (daily less than 100ml blood), moderate (daily 100-500ml blood) and large (daily more than 500ml blood)."
+
+  utter_hemoptysis/prevention:
+  - text: "Prevention of hemoptysis - \n \n
+            1. prevent colds\n \n
+            2. improve immunity and physical fitness through moderate exercise, but avoid overwork\n \n
+            3. avoid polluted areas\n \n
+            4. restrict smoking"
+
+  utter_hemoptysis/cause:
+  - text: "The most common cause of hemoptysis is tuberculosis. Other causes can be - \n \n
+            1. trachea\n \n
+            2. bronchial ulcer\n \n
+            3. bronchial lung cancer\n \n
+            4. pneumonia\n \n
+            5. bronchus caused by small stones"
+
+  utter_idiopathic_pulmonary_fibrosis/description:
+  - text: "Idiopathic pulmonary fibrosis (ipf) is a chronic, progressive lung disease which generally occurs in middle-aged and elderly people. It is a 'tumor-like disease' with survival after diagnosis being 2.8 years and a mortality rate higher than most tumors."
+
+  utter_idiopathic_pulmonary_fibrosis/prevention:
+  - text: "Prevention of ipf - \n \n
+            1. strengthen physical exercise, enhance disease resistance, pay attention in winters to keep warm.\n \n
+            2. adjust diet, increase nutrition, smokers must quit smoking.\n \n
+            3. participate in lung rehabilitation exercise programs such as walking every day, stepping on a fixed bicycle, etc.\n \n
+            4. encourage patients to establish confidence in the fight against disease, and actively cooperate with treatment"
+
+  utter_idiopathic_pulmonary_fibrosis/cause:
+  - text: "Although direct causes of idiopathic pulmonary fibrosis (IPF) are not known, it has been linked to the following: \n \n
+            1. exposure to certain type of dust, for example wood dust or metal dust.\n \n
+            2. family history of IPF\n \n
+            3. smoking\n \n
+            4. viral infections"
+
+  utter_desquamative_interstitial_pneumonia/description:
+  - text: "Desquamative interstitial pneumonia is a kind of pneumonia with a distribution of macrophage (a type of white blood cells) in the alveolar cavity. This disease can occur at any age, but is mainly found in middle-aged and older people."
+
+  utter_desquamative_interstitial_pneumonia/prevention:
+  - text: "Prevention of desquamative interstitial pneumonia -\n \n 
+            1. avoid cold and reduce respiratory infections. \n \n
+            2. actively improve the air quality in the living environment; eat more fruits and drink more water.eat high protein digestible or semi-liquid foods. \n \n
+            3. smoking patients should quit smoking immediately\n \n
+            4. eat salty, greasy, and hot products, eat more fresh vegetables. \n \n
+            5. stop drinking."
+
+  utter_desquamative_interstitial_pneumonia/cause:
+  - text: "Although the causes of desquamative interstitial pneumonia are unknown, it is believed by scholars that it is closely related to inhalation and smoking of external pathogenic factors. Long-term inhalation of harmful stimulants or long-term smoking can cause the disease."
+
+  utter_idiopathic_obstructive_bronchiolitis_with_organizing_pneumonia/description:
+  - text: "Bronchiolitis obliterans organizing pneumonia (BOOP) is a rare inflammatory lung disorder which can cause a flu-like illness in many individuals as well as cough and shortness of breath with exertional activities. The term bronchiolitis obliterans refers to swirls or plugs of fibrous, granulation tissue filling the small bronchiole airways."
+
+  utter_idiopathic_obstructive_bronchiolitis_with_organizing_pneumonia/prevention:
+  - text: "This is a special clinical syndrome with unknown pathology, so improving the living environment and changing bad habits, such as smoking and drinking, improving autoimmune function, is the key to the prevention and treatment of this disease."
+
+  utter_idiopathic_obstructive_bronchiolitis_with_organizing_pneumonia/cause:
+  - text: "In most cases, causes of this disease are unknown. Scientists believe that some causes could be radiation therapy, exposure to chemical fumes, or from certain medications."
+
+  utter_idiopathic_hemosiderin/description:
+  - text: "Idiopathic pulmonary hemosiderosis (IPH) is a rare disease mostly found in children. This disease is characterized by recurring episodes of alveolar hemorrhage. Long-term repeated hemorrhage can lead to pulmonary fibrosis, which in turn damages the lungs."
+
+  utter_idiopathic_hemosiderin/prevention:
+  - text: "Prevention of idiopathic hemosiderin -\n \n 
+            1. protein rich diet for children\n \n
+            2. taking care that children are not exposed to pesticides or contaminated water"
+
+  utter_idiopathic_hemosiderin/cause:
+  - text: "Scholars believe that the causes could be - \n \n
+            1. Environmental factors such as exposure to contaminated water.\n \n
+            2. genetic factors may play certain role\n \n
+            3. immune factor"
+
+  utter_exogenous_allergic_alveolitis/description:
+  - text: "Exogenous allergic alveolitis is a lung disease resulting from repeated inhalation of organic dust. People can develop fever or respiratory problems several hours after the exposure to the dust. In children, the disease can be traced down to bird or fungal origins."
+
+  utter_exogenous_allergic_alveolitis/prevention:
+  - text: "Prevention - \n \n
+            1. Avoid contact with pathogenic dust.\n \n
+            2. Pay attention to ventilation.\n \n
+            3. Places where poultry is kept should be cleaned often and properly disposed of bird droppings.\n \n
+            4. Air conditioning sytems should be properly cleaned and the water in the humidifier should be clean.\n \n
+            5. Regular medical monitoring"
+
+  utter_exogenous_allergic_alveolitis/cause:
+  - text:  "The causes could be inhaling of organic material such as bird dust or fungal dust."
+
+  utter_pediatric_tuberculosis/description:
+  - text: "Pediatric tuberculosis refers to tuberculosis in children under the age of 14 years. It is known that tuberculosis is a chronic, infectious disease caused by the mycobacteria tuberculosis. It can be involved in all organs of the body, but tuberculosis is the most common in lungs."
+
+  utter_pediatric_tuberculosis/prevention:
+  - text: "Prevention - \n \n
+            1. Strenghtening the immune system, indulging in hegienic habits and avoiding getting close to active patients.\n \n
+            2. Early detection of the disease can lead to early termination.\n \n
+            3. Parents and schools should regularly get the children tested so that active patients are found and infection is not spread.\n \n
+            4. Chemoprevention, that is, taking rifampicin combined with isoniazid to prevent tuberculosis can be considered at 10mg/(kg)/day for 3 months. \n \n
+               This can prevent active tuberculosis in children, re-ignition of tuberculosis in adolescence and extrapulmonary tuberculosis."
+
+  utter_pediatric_tuberculosis/cause:
+  - text: "Tuberculosis is caused by the breeding of mycobacterium tuberculosis in the body. This could be caused by - \n \n
+            1. long-term asthma\n \n
+            2. genetic factors\n \n
+            3. contact with an adult who has TB\n \n
+            4. weak immune system"
+# 8/4/2022
+  utter_respiratory_failure/description:
+  - text: "Respiratory failure is a condition in which your blood doesn't have enough oxygen or has too much carbon dioxide. Sometimes you can have both problems. When you breathe, your lungs take in oxygen. The oxygen passes into your blood, which carries it to your organs. Your organs, such as your heart and brain, need this oxygen-rich blood to work well."
+
+  utter_respiratory_failure/prevention:
+  - text: "Prevention of respiratory failure:-\n \n
+            1. refraining from smoking cigarettes, which can damage the lungs\n \n
+            2. if necessary, using assistive devices to maintain oxygen levels, such as continuous positive airway pressure masks, which a person can wear at home\n \n
+            3. engaging in appropriate levels of physical activity to enhance lung function"
+
+  utter_respiratory_failure/causes:
+  - text: "Causes of respiratory failure are:-\n \n
+            1. Diseases that affect the lungs, such as pneumonia, pulmonary embolism, COVID-19, etc.\n \n
+            2. Conditions that affect the nerves and muscles that control breathing, such as spinal cord injuries, stroke, etc.\n \n
+            3. An injury to the chest can cause this damage.\n \n
+            4. Drug or alcohol overdose \n \n
+            5. Inhalation injuries, such as from inhaling the smoke (from fires) or harmful fumes" 
+
+  utter_respiratory_bronchiole-associated_interstitial_lung_disease(RB-ILD)/description:
+  - text: "Respiratory bronchiolitis-associated interstitial lung disease (RB-ILD) is a rare, mild inflammatory pulmonary disorder that occurs almost exclusively in current or former heavy smokers, usually between the third and sixth decades, most likely with no gender predilection."
+
+  utter_respiratory_bronchiole-associated_interstitial_lung_disease(RB-ILD)/prevention:
+  - text: "Prevention of respiratory bronchiole-associated interstitial lung disease(RB-ILD):-\n \n
+            1. keep warm to prevent cold.\n \n
+            2. pay attention to rest, and gradually increase the amount of activity. \n \n
+            3. reduce and avoid strenuous exercise, and avoid excessive fatigue."
+
+  utter_respiratory_bronchiole-associated_interstitial_lung_disease(RB-ILD)/causes:
+  - text: "Causes of respiratory bronchiole-associated interstitial lung disease(RB-ILD):-\n \n
+            1. RB-ILD is caused by cigarette smoke."
+
+  utter_respiratory_syncytial_virus_pneumonia(RSV)/description:
+  - text: "Respiratory syncytial (sin-SISH-uhl) virus, or RSV, is a common respiratory virus that usually causes mild, cold-like symptoms. Most people recover in a week or two, but RSV can be serious, especially for infants and older adults."
+
+  utter_respiratory_syncytial_virus_pneumonia(RSV)/prevention:
+  - text: "Prevention of :-\n \n
+            1. Wash your hands frequently.\n \n
+            2. Avoid exposure.\n \n 
+            3. Keep things clean.\n \n
+            4. Don't share drinking glasses with others. \n \n
+            5. Don't smoke.\n \n
+            6. Wash toys regularly. "
+
+  utter_respiratory_syncytial_virus_pneumonia(RSV)/causes:
+  - text: "Causes of respiratory syncytial virus pneumonia(RSV):-\n \n
+            1. Respiratory syncytial virus enters the body through the eyes, nose or mouth. It spreads easily through the air on infected respiratory droplets. You or your child can become infected if someone with RSV coughs or sneezes near you. The virus also passes to others through direct contact, such as shaking hands.\n \n
+            2. The virus can live for hours on hard objects such as countertops, crib rails and toys. Touch your mouth, nose or eyes after touching a contaminated object and you're likely to pick up the virus."
+
+  utter_acute_respiratory_failure/description:
+  - text: "Acute respiratory failure occurs when fluid builds up in the air sacs in your lungs. When that happens, your lungs can’t release oxygen into your blood. In turn, your organs can’t get enough oxygen-rich blood to function. You can also develop acute respiratory failure if your lungs can’t remove carbon dioxide from your blood."
+
+  utter_acute_respiratory_failure/prevention:
+  - text: "Prevention of acute respiratory failure:-\n \n
+            1. Refraining from smoking cigarettes, which can damage the lungs\n \n
+            2. Seeing a doctor at early signs of a bacterial infection, such as a fever, cough, and high mucus production\n \n
+            3. Taking all medications a doctor prescribes to keep the heart and lungs healthy\n \n
+            4. if necessary, using assistive devices to maintain oxygen levels, such as continuous positive airway pressure masks, which a person can wear at home\n \n
+            5. Engaging in appropriate levels of physical activity to enhance lung function"
+
+  utter_acute_respiratory_failure/causes:
+  - text: "Causes of acute respiratory failure:-\n \n
+            1. Obstruction:- When something lodges in your throat, you may have trouble getting enough oxygen into your lungs. Obstruction can also occur in people with chronic obstructive pulmonary disease (COPD) or asthma when an exacerbation causes the airways to become narrow.\n \n
+            2. Injury:- An injury that impairs or compromises your respiratory system can adversely affect the amount of oxygen in your blood. For instance, an injury to the spinal cord or brain can immediately affect your breathing. The brain tells the lungs to breathe. If the brain can’t relay messages due to injury or damage, the lungs can’t continue to function properly. An injury to the ribs or chest can also hamper the breathing process. These injuries can impair your ability to inhale enough oxygen into your lungs."    
+
+  utter_neonatal_respiratory_distress_syndrome(RDS)/description:
+  - text: "Respiratory distress syndrome (RDS) occurs in babies born early (premature) whose lungs are not fully developed. The earlier the infant is born, the more likely it is for them to have RDS and need extra oxygen and help breathing."
+
+  utter_neonatal_respiratory_distress_syndrome(RDS)/prevention:
+  - text: "Prevention of neonatal respiratory distress syndrome(RDS):-
+            1. Preventing a premature birth is the main way to prevent RDS. When a premature birth can’t be prevented, you may be given corticosteroids before delivery. These medicines may greatly lower the risk and severity of RDS in the baby. These steroids are often given between 24 and 34 weeks of pregnancy to women at risk of early delivery. They may sometimes be given up to 37 weeks."
+
+  utter_neonatal_respiratory_distress_syndrome(RDS)/causes:
+  - text: "Causes of neonatal respiratory distress syndrome(RDS):-
+            1. RDS occurs when there is not enough surfactant in the lungs. Surfactant is a liquid made by the lungs that keep the airways (alveoli) open. This liquid makes it possible for babies to breathe in the air after delivery. An unborn baby starts to make surfactant at about 26 weeks of pregnancy. If a baby is premature (born before 37 weeks of pregnancy), he or she may not have made enough surfactant yet.
+            2. When there is not enough surfactant, the tiny alveoli collapse with each breath. As the alveoli collapse, damaged cells collect in the airways. They further affect breathing. The baby has to work harder and harder to breathe trying to reinflate the collapsed airways.
+            3. As the baby's lung function gets worse, the baby takes in less oxygen. More carbon dioxide builds up in the blood. This can lead to increased acid in the blood (acidosis). This condition can affect other body organs. Without treatment, the baby becomes exhausted trying to breathe and over time gives up. A ventilator must do the work of breathing instead."
+
+  utter_inhalation_injury/description:
+  - text: "Inhalation injury is a nonspecific term that refers to damage to the respiratory tract or lung tissue from heat, smoke, or chemical irritants carried into the airway during inspiration. The term is often used synonymously with smoke inhalation injury."
+
+  utter_inhalation_injury/prevention:
+  - text: "Prevention of inhalation injury:-\n \n
+            1. At home, practice fire safety, which includes preventing fires and having a plan in case there is a fire\n \n
+            2. If there is smoke from a wildfire nearby or lots of particulate pollution in the air, try to limit your time outdoors. Keep your indoor air as clean as possible, by keeping windows closed and using an air filter. If you have asthma, another lung disease, or heart disease, follow your health care provider's advice about your medicines and respiratory management plan.\n \n
+            3. If you are working with chemicals or gases, handle them safely and use protective equipment"
+
+  utter_inhalation_injury/causes:
+  - text: "Causes of inhalation injury:-\n \n
+            1. the main cause of inhalation injury is thermal action, but at the same time, a large amount of unburned smog, carbon particles, and irritating chemicals are also inhaled, which also damages the respiratory tract and alveoli. therefore, inhalation damage is mixed damage from heat and chemicals."
+
+  utter_pediatric_cold/description:
+  - text: "The common cold (upper respiratory infection) is one of the most common illnesses in children. Each year it leads to more healthcare provider visits and missed days from school and work than any other illness. Here are a few facts:\n \n
+            1. Most children will have at least 6 to 8 colds a year. Children who go to daycare will have more.\n \n
+            2. Colds may occur less often after age 6.\n \n
+            3. Children are more likely to have colds during fall and winter."  
+
+  utter_pediatric_cold/prevention:
+  - text: "Prevention of pediatric cold:-\n \n
+            1. Keep children away from people with a cold.\n \n
+            2. Teach children to wash their hands often. Have them wash their hands before eating, and after using the bathroom, playing with animals, or coughing or sneezing. Carry an alcohol-based hand gel for times when soap and water aren’t available. The gel should be at least 60% alcohol.\n \n
+            3. Remind children not to touch their eyes, nose, and mouth.\n \n
+            4. Make sure toys and play areas are correctly cleaned, especially if several children are playing together."
+
+  utter_pediatric_cold/causes:
+  - text: "Causes of pediatric cold:-\n \n
+            1. Through the air- If a person with cold sneezes or coughs, small amounts of the virus can go into the air. Then if your child breathes in that air, the virus will stick inside your child’s nose (nasal membrane).\n \n
+            2. By direct contact- This means that your child touches an infected person. A cold is easy for children to spread. That’s because they touch their nose, mouth, and eyes often and then touch other people or objects. This can spread the virus. It’s important to know that viruses can be spread through objects, such as toys, that have been touched by someone with a cold."
+
+  utter_congenital_pulmonary_cyst/description:
+  - text: "It is also known as Congenital Cystic Adenomatoid Malformation (CCAM) or congenital pulmonary airway malformation (CPAM). Congenital cystic adenomatoid malformation (CCAM) is a benign lung lesion that appears before birth as a cyst or mass in the chest. It is made up of abnormal lung tissue that does not function properly but continues to grow."
+
+  utter_congenital_pulmonary_cyst/prevention:
+  - text: "Prevention of congenital pulmonary cyst:-\n \n
+            1. premarital examination mainly includes a comprehensive physical examination, genetic health inquiry, and common sense explanations after marriage. among them, genetic counseling and genetic testing are important contents.\n \n
+            2, prenatal diagnosis: prenatal diagnosis only 20 years of history, but rapid development, methods include x-ray, fetal mirror, ultrasound, biochemistry and enzyme examination, chromosome diagnosis, etc., "
+
+  utter_congenital_pulmonary_cyst/causes:
+  - text: "The causes of CCAM/CPAM are unknown. It’s not linked to a gene or to a chromosomal abnormality, and does not run in families (is not hereditary). The malformation results from abnormal lung tissue that grows, usually in one lobe of the lung."
+# 18-Apr-2022
+  utter_lung_actinomycosis/description:
+  - text: "pulmonary actinomycosis is a chronic suppurative granulomatous disease caused by anaerobic israeli actinomycetes infection the lung has an actinomycete infection called pulmonary actinomycosis."
+
+  utter_lung_actinomycosis/prevention:
+  - text: "Prevention of Lung Actinomycosis :- \n \n
+            1.eat hygiene food, do not eat spoiled food. \n \n
+            2.revent infection by oral hygiene, such as antibiotics should be used in time after tooth extraction.\n \n
+            3.early treatment of lesions such as sick teeth and tonsils should be carried out to remove the origin of actinomycetes."
+
+  utter_lung_actinomycosis/causes:
+  - text: "Causes of Lung Actinomycosis :-\n \n
+            1. It is a rare lung infection caused by bacteria
+            2. Actinomycetes often parasitize the human oral mucosa, gums, tonsils, colons, etc. when the body's resistance is reduced, it can invade the respiratory tract due to inhalation of oral secretions\n \n
+            3. It is caused by certain bacteria found in the mouth and gastrointestial tract. The bacteria often donot cause harm. But poor dental hygiene and tooth abscess can increase your risk for lung infection\n \n
+            4. People with alcohal use, Scars on the lungs, COPD have a higher chance of developing infection"
+
+  utter_pulmonary_aspergillosis/description:
+  - text: "Allergic pulmonary aspergillosis is an allergic reaction to the fungus. This infection usually develops in people who already have lung problems such as asthma or cystic fibrosis. Aspergilloma is a growth (fungus ball) that develops in an area of past lung disease or lung scarring such as tuberculosis or lung abscess."
+
+  utter_pulmonary_aspergillosis/prevention:
+  - text: "Prevention of pulmonary aspergillosis :-\n \n
+            1. When working in an environment suspected of being infected with aspergillus, protective work should be done, such as wearing a protective mask to avoid inhaling a large number of germs.\n \n
+            2. When operating in fungal laboratories, such as aspergillus, a. acumin, and aspergillus, it is necessary to operate take care to prevent these bacteria from being inhaled into the lungs."
+
+  utter_pulmonary_aspergillosis/causes:
+  - text: "Causes of pulmonary aspergillosis :-\n \n
+            1. pulmonary aspergillosis is mainly caused by aspergillus fumigatus. The bacterium is parasitic in the upper respiratory tract and can only cause disease if the body's immunity is reduced in patients with chronic diseases.\n \n
+            2. there are aspergillus spores everywhere in the air. in the autumn, winter and the rainy season when the stored grain grass is hot and mild, it is more.\n \n
+            3. a large amount of inhalation of aspergillus spores does not necessarily can cause acute tracheal-bronchitis or pneumonia.the disease is often secondary to existing diseases in the lungs, such as bronchial cysts, bronchiectasis, pneumonia, lung abscesses and so on."
+
+  utter_radiation_pneumonitis/description:
+  - text: "radiation pneumonitis is an inflammatory reaction caused by radiation damage in normal lung tissue in the radiation field after radiotherapy in lung cancer, breast cancer, esophageal cancer, malignant lymphoma or other malignant tumors of the chest.mild asymptomatic, inflammation can dissipate on its own, some patients have old-fashioned lesions; the severe lungs are extensively fibrotic, leading to respiratory damage, resulting in respiratory failure."
+
+  utter_radiation_pneumonitis/prevention:
+  - text: "Prevention of radiation pneumonitis :-\n \n
+            1. strictly control the radiation dose: generally, the conventional dose of 2500 rad is safe within 5 weeks.\n \n
+            2. control the radiation field, the larger the radiation field, the higher the incidence rate.\n \n
+            3. select an appropriate irradiation rate, preferably 800-1000 rad per week. once the disease is found, treatment should be started as soon as possible to block the progression of the disease. if extensive pulmonary fibrosis has occurred, the prognosis is poor."
+
+  utter_radiation_pneumonitis/causes:
+  - text: "Causes of Radiation Pneumonitis :-\n \n
+            1. It is more likely to happen when high dose of radiation are used or a large area of lung is treated with radiation.\n \n
+            2. While pneumonia is caused by bacteria or viruses, pneumonitis is caused by an irritant, similar to allergy. Radiation pneumonitis happens to some people after they’ve received radiations treatment to their lungs or chest area.\n \n
+            3. Certain chemotherapy drugs like bleomycin (Blenoxane), cyclophosphamide (procytox) and carmustine (BiCNU, BCNU), can also increase the risk of developing radiation pneumonitis if given along with radiation therapy."
+
+  utter_lung_candidiasis/description:
+  - text: "lung candidiasis is a common pulmonary fungal disease caused by infection with candida (mainly candida albicans).the disease is mostly secondary infection, which occurs in the case of decreased body resistance.clinically, it can be divided into three types:\n \n
+            (1) bronchitis type.\n \n
+            (2) pneumonia type.\n \n
+            (3) allergic type.\n \n
+            the pathogen is mainly candida albicans, followed by candida tropicalis, candida highis and candida albicans.candida infections have been reported to account for 79% of fungal infections, especially in intensive care units, burns and oncology."
+
+  utter_lung_candidiasis/prevention:
+  - text: "Prevention of Lung Candidiasis :-\n \n
+            1. Do not abuse broad-spectrum antibiotics.\n \n
+            2. Long-term application of antibiotics, glucocorticoids and immunosuppressive drugs should be regularly checked for feces, urine, sputum, etc., and carefully performed physical examination, if necessary, regular chest x-ray examination.\n \n
+            3. For those who must apply antibiotics and glucocorticoids for a long time, antifungal drugs such as nystatin, ketoconazole and fluconazole can be administered intermittently.4. The medical staff should wash their hands before and after touching the patient to avoid cross infection."
+
+  utter_lung_candidiasis/causes:
+  - text: "Causes of lung candidiasis :- \n \n
+            1. Tuberculosis\n \n
+            2. Fungal infection in lungs"
+
+  utter_lung_bullae/description:
+  - text: "pulmonary bullae refers to the balloon-containing cavity formed in the lung tissue due to various reasons such as increased pressure in the alveolar space, rupture of the alveolar wall, and fusion with each other.more than 1 cm in diameter, often occurs on the basis of emphysema. pulmonary bullae are both congenital and acquired.congenital more common in children, due to congenital bronchial dysplasia, mucosal folds are valvular, chondrodysplasia, caused by the action of the valve.acquired is more common in adult and elderly patients, often with chronic bronchitis and emphysema.at present, most of the bullous surgery can be done under video-assisted thoracoscopic surgery, and 2/3 of the patients have obvious improvement in postoperative symptoms."
+
+  utter_lung_bullae/prevention:
+  - text: "Prevention of lung bullae :-\n \n
+            1. since the cause of the formation of bullous bullae is not clear, any measures that can prevent the formation of small bronchial inflammation flaps can be taken.such as smoking cessation, to avoid catching cold, enhance physical fitness, prevent bronchopulmonary infection."
+
+  utter_lung_bullae/causes:
+  - text: "Causes of lung bullae :-\n \n
+            1. Smoking cigarettes is by far the most common cause of emphysema. And emphysema is by far the most common cause of giant bullae in the lungs.\n \n
+            2. There are limited cases of bullae appearing in the lungs as a result of bronchial illnesses from high air pollution levels, or occupational exposure to chemical fumes.\n \n
+            3. lung syndrome is a condition most often found in older people, giant bullae have also been found in young men."
+
+  utter_emphysema/description:
+  - text: "emphysema refers to the airway elasticity of the distal bronchioles (breathing bronchioles, alveolar duct, alveolar sac and alveoli), excessive expansion, inflation and increased lung volume or accompanied by pathological changes of the airway wall. .according to the cause of the disease, emphysema has the following types: senile emphysema, compensatory emphysema, interstitial emphysema, focal emphysema, paraventricular emphysema, obstructive pulmonary qi swollen."
+
+  utter_emphysema/prevention:
+  - text: "Prevention of emphysema :-\n \n
+            1. The first is to quit smoking.\n \n
+            2. Pay attention to keep warm, avoid cold, prevent colds.\n \n
+            3. Improve environmental sanitation, do personal labor protection, eliminate and avoid the effects of smoke, dust and irritating gases on the respiratory tract."
+
+  utter_emphysema/causes:
+  - text: "Causes of emphysema :-\n \n
+            1. Emphysema is caused by an inherited deficiency of a protein that protects the elastic structures in the lungs. It's called alpha-1-antitrypsin deficiency emphysema.\n \n
+            2. The main cause of emphysema is long-term exposure to airborne irritants, including Tobacco smoke, Marijuana smoke, Air pollution, Chemical fumes and dust etc."
+
+  utter_lung_abscess/description:
+  - text: "lung abscess is a purulent lesion of the lung tissue caused by a variety of causes, early purulent inflammation, followed by necrosis to form abscess.it happens mostly in the prime of life, more men than women.according to the cause of the disease, there are three types of infections caused by tracheal infection, blood-borne infection, multiple abscesses and lung cancer. lung abscess can also be classified according to related pathogens, such as staphylococcal and anaerobic bacteria. or aspergillus lung abscess, the incidence of lung abscess has been greatly reduced since the widespread use of antibiotics."
+
+  utter_lung_abscess/prevention:
+  - text: "Prevention of Lung abscess :-\n \n
+            1. Prevention of aspiration in high-risk individuals by providing proper attention towards airway protection, minimal sedation, and proper positioning of patients with elevation of the head in hospitalized patients. \n \n
+            2. Improving oral hygiene and proper dental care in elderly and debilitated patients also helps in decreasing the risk of anaerobic lung abscess."
+
+  utter_lung_abscess/causes:
+  - text: "cause of lung abscess :-\n \n
+            1. Not being able to cough. This often happens as a result of Anesthesia Alcohol or drug use Nervous system diseases Sedation. \n \n
+            2. Poor oral health that is People with gum disease are more likely to get an abscess.\n \n
+            3. Your immune system isn’t working well: This can let in germs that aren’t usually found in your mouth or throat, like fungi or the bacteria that cause tuberculosis, strep throat, and MRSA.\n \n
+            4. Blocked airway:Mucus can form behind a tumor or foreign object in your windpipe and lead to an abscess. If bacteria get into the mucus, the blockage stops you from coughing it out.\n \n
+            5. Blood-borne causes: It’s rare, but bacteria or infected blood clots from an infected part of your body can travel through your bloodstream and into your lung, where they cause an abscess."
+
+  utter_pulmonary_embolism/description:
+  - text: "pulmonary embolism refers to the pathology and clinical state of the appendage entering the pulmonary artery and its branches, blocking the blood supply to the tissue.common emboli are thrombus, and the rest are rare new biological cells, fat droplets, air bubbles, intravenously-loaded drug particles, and even pulmonary vascular occlusion caused by the tip of the catheter.since lung tissue is subjected to dual blood supply to the bronchial artery and pulmonary artery, and gas exchange can also be performed directly between the lung tissue and the alveoli, most pulmonary embolism does not necessarily cause pulmonary infarction."
+
+  utter_pulmonary_embolism/prevention:
+  - text: "Prevention of pulmonary embolism :-\n \n
+            1. Exercise regularly.\n \n
+            2. Drink plenty of fluids, like water and juice, but avoid excess alcohol and caffeine.\n \n
+            3. If you need to be stationary for long periods of time, move around for a few minutes each hour: move your feet and legs, bend your knees, and stand on tip-toe.\n \n
+            4. Do not smoke.\n \n
+            5. Avoid crossing your legs.\n \n
+            6. Do not wear tight-fitting clothing.\n \n
+            7. Lose weight if you are overweight.\n \n
+            8. Elevate your feet for 30 minutes twice a day.\n \n
+            9. Talk to your doctor about reducing your risk factors, especially if you or any of your family members have experienced a blood clot."
+
+  utter_pulmonary_embolism/causes:
+  - text: "Causes of Pulmonary embolism :-\n \n
+            1. Pulmonary embolism occurs when a clump of material, most often a blood clot, gets wedged into an artery in your lungs. These blood clots most commonly come from the deep veins of your legs, a condition known as deep vein thrombosis (DVT).\n \n
+            2. In many cases, multiple clots are involved in pulmonary embolism. The portions of lung served by each blocked artery are robbed of blood and may die. This is known as pulmonary infarction. This makes it more difficult for your lungs to provide oxygen to the rest of your body.\n \n
+            3. Occasionally, blockages in the blood vessels are caused by substances other than blood clots, like Fat from the marrow of a broken long bone, Part of a tumor, Air bubbles"
+# 25-Apr-2022
+  utter_sars/description:
+  - text: "abbreviation for sars, a special pneumonia caused by sars coronavirus that is contagious and can affect multiple organ systems, world health organization named it severe acute respiratory syndrome , clinical manifestations of fever, fatigue, headache, muscle and joint pain and other systemic symptoms and dry cough, chest tightness, dyspnea and antibacterial drug treatment. "
+
+  utter_sars/prevention:
+  - text: "prevention of sars:-\n \n
+            1. it is necessary to ensure the air supply safety of the air conditioning system and ensure sufficient fresh air input. \n \n
+            2. regularly disinfect the surface of the ground, walls, elevators, etc.\n \n
+            3. regularly disinfect items and utensils that are frequently used or touched. for counters, tables, chairs, door handles, faucets, etc. \n \n
+            4, wash, diligent clothes and bedding, etc. 5, the bathroom, kitchen and living room should be cleaned frequently, sanitary ware can be soaked and wiped with chlorine disinfectant with effective chlorine content."
+
+  utter_sars/causes:
+  - text: "Causes of Sars:-\n \n
+            1.epidemiology classical coronavirus infection mainly occurs in winter and spring. \n \n
+            2.morphological structure sars-cov belongs to the genus coronavirus of the coronavirus family. \n \n
+            3.the virus proliferates in the cytoplasm, and the polymerase encoded by the rna gene utilizes cellular material for rna replication and protein synthesis,
+            \n \n4.the viral genome is a single-stranded positive-stranded rna consisting of approximately 30,000 nucleotides, which is only about 60% homologous to the classical coronavirus."
+
+  utter_lung_metastases/description:
+  - text: "A lung metastasis is a metastatic tumor that originates in other parts of the body and is transferred to the lungs via the blood or lymphatics.In few cases where lung metastases are found earlier than the primary tumor.the primary malignant tumors that metastasize to the lungs are mostly from the breast, bones, digestive tract and genitourinary system.most of the lung metastatic tumors are multiple lesions throughout the lungs, varying in size and density. "
+
+  utter_lung_metastases/prevention:
+  - text: "Prevention of lung metastases:-\n \n
+            1.because lung metastases are metastasized from other parts of the body through bloodstream dissemination.therefore, prevention is mainly based on active treatment of primary tumors.pay attention to proper rest, do not master the combination of movement and rest, rest well, is conducive to the recovery of the body.\n \n
+            2.exercise can enhance physical strength and enhance disease resistance, and the combination of the two can better recover."
+
+  utter_lung_metastases/causes:
+  - text: "Causes of lung metastases:-\n \n
+            1.pulmonary metastases are metastasis of malignant tumors in other parts of the body. \n \n
+            2.the pathways can be hematogenous dissemination, lymphatic metastasis or direct invasion of adjacent organs, choriocarcinoma, breast cancer, malignant soft tissue tumors, liver cancer, osteosarcoma and pancreatic cancer is second; there are also thyroid cancer, kidney cancer, prostate cancer and kidney embryo cancer.\n \n
+            3.the primary disease of the tumor directly transferred to the lung into the pleura, chest wall and mediastinal malignant tumor,tumors increase in the short term, increase, and someafter tumor resection or radiation therapy, chemotherapy, sometimes shrink or disappear."
+
+  utter_pneumonia_pseudotumor/description:
+  - text: "pneumonia pseudotumor is a benign mass in the lung. it is a non-specific inflammatory proliferative tumor-like lesion of the lung parenchyma. it is a granuloma, mechanization, fibrous connective tissue hyperplasia and related secondary lesion formation caused by chronic inflammation in the lung. the lumps are not real tumors.pneumonia pseudotumor is more common.pneumonia pseudotumor accounts for the first or second place in benign lung tumors."
+
+  utter_pneumonia_pseudotumor/prevention:
+  - text: "Prevention of pneumonia pseudotumor:- \n \n
+            1.the disease is related to bacteria and viral infections in the respiratory tract, and the irregular application of antibiotics limits the inflammatory lesions of the lungs, or delays absorption, so that the incidence increases, so proper exercise of the body has certain positive significance for preventing this disease.\n \n
+            2.the other is to use antibiotics correctly."
+
+  utter_pneumonia_pseudotumor/causes:
+  - text: "Cause of pneumonia pseudotumor:-\n \n
+            1.the disease is associated with bacterial and viral infections in the respiratory tract. it is a localized non-specific proliferative neoplastic lesion after pulmonary infection. \n \n
+            2.the pathological changes are mainly fibroblasts, various inflammatory cells, tissue cells and vascular components.irregular application of antibiotics localizes inflammatory lesions in the lungs,resulting in increased morbidity.  \n \n
+            3.pneumonia pseudotumor is generally located in the lung parenchyma, only a small number of bronchial involvement, the vast majority of single hair, round or oval nodules, generally no complete capsule, but the mass is more limited,"
+
+  utter_pulmonary_cryptococcosis/description:
+  - text: "pulmonary cryptococcal disease is a subacute or chronic visceral fungal disease caused by a novel cryptococcal infection. this bacterium is a saprophytic yeast that does not form hyphae and spores and is widely found in nature.the low immune function of the body is the main cause of the disease. most of the bacteria are inhaled into the human body by the respiratory tract, forming an infection in the lung"
+
+  utter_pulmonary_cryptococcosis/prevention:
+  - text: "Prevention of pulmonary cryptococcosis:-\n \n
+            1.the application of long-term antibiotics can cause imbalance of the body flora; the abuse of adrenocortical hormone can inhibit the body's immune response, which creates conditions for the infection and spread of cryptococcus. therefore, the use of the above drugs should be strictly eliminate abuse.for long-term use of antibiotics. \n \n
+            2. pay attention to health care, avoid eating decayed pears, peaches and other fruits to prevent the contamination of the environment by pigeon droppings and rat droppings. \n \n
+            3. should enhance the body's immunity, avoid wounds infected with soil and bird droppings."
+
+  utter_pulmonary_cryptococcosis/causes:
+  - text: "Causes of pulmonary cryptococcosis:-\n \n
+            1.low immune function is an important cause of cryptococcal disease. inhalation of cryptococci in normal people causes intrapulmonary infection. the lesions are mostly confined to the lungs, rarely appearing symptoms, and often have self-healing tendency. \n \n
+            2.if patients with chronic diseases due to overwork or immunodeficiency, inhalation of fungi can form lesions in the lungs, which can be disseminated by blood. to the whole body, and more invading the central nervous system. the bacteria usually enter the body through the respiratory tract, and the lungs are the first site of infection."
+
+  utter_lung_cancer/description:
+  - text: "lung cancer occurs in the bronchial mucosa epithelium, also known as bronchial carcinoma the incidence of lung cancer has been reported to increase significantly in many countries. among male cancer patients, lung cancer has ranked first, and the incidence rate in women has also increased rapidly, accounting for the second or third place of common malignant tumors in women.a large amount of data indicates that long-term large amount of cigarette smoking is an important cause of lung cancer.for more than 40 cigarettes per day for many years,"
+
+  utter_lung_cancer/prevention:
+  - text: "Prevention of lung cancer:-\n \n
+            1.smoking cessation, smoking is one of the most important factors leading to lung cancer, active smoking and passive smoking will cause great harm to the body, so smoking cessation is the preferred method to prevent lung cancer. \n \n
+            2.develop correct eating habits, prevent lung cancer, regular diet, eat more fungi, beans, drink less. \n \n
+            3.adhere to the physical examination, each physical examination must do chest x-ray lateral examination, try to do chest x-ray examination every year, for detailed cases of suspected cases.adherence to physical examination can achieve early detection and early treatment. \n \n
+            4.control air pollution to do environmental protection work, effectively control air pollution, so as to achieve the purpose of preventing lung cancer. 5.early detection, early diagnosis and early treatment of early lung cancer screening methods are still unsatisfactory, the cost of screening lung cancer in the population is very expensive, and the possibility of reducing lung cancer."
+
+  utter_lung_cancer/causes:
+  - text: "Cause of lung cancer:- \n \n
+            1.it is estimated that up to 15% of lung cancer patients have a history of environmental and occupational exposure, and there is sufficient evidence to confirm that the following nine industrial ingredients increase the incidence of lung cancer: by-products of aluminum products, arsenic, asbestos, bis-chloromethyl ether, chromium compounds, coke ovens, mustard gas, nickel-containing impurities, vinyl chloride, long-term exposure to strontium, cadmium, silicon, formalin and other substances will also increase the incidence of lung cancer. \n \n
+            2.in addition, air pollution, especially industrial waste gas, is a high risk factor for lung cancer. uranium and fluorspar miners are exposed to inert gas helium, decaying uranium by-products, etc., which are significantly higher than other people's lung cancer.\n \n
+            3.air pollution and the incidence of tobacco smoke on lung cancer may promote each other and play a synergistic role. de other organs, and large tumors can undergo central ischemic necrosis and form cancerous cavities. \n \n
+            4.blood transfer is a late manifestation of lung cancer, cancer cells with the pulmonary veins back to the left heart, can be transferred to any part of the body, the common transfer sites are liver, brain, lung, bone cool system, adrenal gland, kidney and pancreas. "
+
+  utter_anaphylactic_shock/description:
+  - text: "anaphylactic shock is caused by a general allergen that is harmless to the human body and acts on allergic patients. the systemic rapid allergic reaction mainly caused by acute peripheral circulatory hypoperfusion is due to the release of the immediate antigen-antibody reaction. vasomotor dysfunction caused by histamine, serotonin and other vasoactive substances, increased permeability of blood vessel wall, extravasation of blood plasma, sudden decrease in blood volume.mainly manifested as itchy skin, urticaria, dyspnea, chest tightness, cough, abdominal pain, nausea, vomiting, dizziness, pale, and severely into the state of shock.if you do not rescue in time, you can often die within 5-10 minutes."
+
+  utter_anaphylactic_shock/prevention:
+  - text: "Prevention of anaphylactic shock:-\n \n
+            1.consult the history of allergies before using the medicine. positive patients should make a striking and detailed record on the front page of the medical history. \n \n
+            2.try to reduce the need to take medicine, try to use oral preparations. \n \n
+            3.for patients with allergies after the injection of drugs for 15 to 20 minutes, before you must receive the drug that induces the disease, it is best to use antihistamines or prednisone 20 ~ 30mg. \n \n
+            4.the first skin test in the skin test, try not to have a positive drug, if it must be used, you can try the desensitization test the patient gradually increases the amount of the desensitized drug from a very small dose until the patient develops tolerance. during the desensitization process, there must be close observation by the medical staff, and the aqueous adrenaline, oxygen, endotracheal intubation and preparation are prepared. all emergency rescue measures such as intravenous corticosteroids."
+
+  utter_anaphylactic_shock/causes:
+  - text: "Cause of anaphylactic shock:-\n \n
+            1.endothelin,enzyme,pollen infusion ,food ,antiserum,occupational exposure to proteins , bee toxins. examples include antibiotics,cephalosporin, amphotericin b,local anesthetics,vitamins, diagnostic preparations x-ray contrast agent, , occupational exposure to chemicals.\n \n
+            2.the vast majority of anaphylactic shock is a typical type i allergy in the body of multiple organs, especially the performance of the circulatory system, the external antigenic substance the body can stimulate the immune system to produce corresponding antibodies, in which the yield of ige varies greatly depending on the constitution."
+
+  utter_hypersensitivity_pneumonitis/description:
+  - text: "hypersensitivity pneumonitis is a group of non-asthmatic allergic lung diseases caused by different allergens, with diffuse interstitial inflammation as its pathological feature.it is also called extrinsic allergicalveolitisbecause it inhales an allergic reaction caused by fungal spores, bacterial products, animal proteins or insect antigens of organic dust particles (diameter <10米)."
+
+  utter_hypersensitivity_pneumonitis/prevention:
+  - text: "Prevention of hypersensitivity pneumonitis:-\n \n
+            1.avoiding the inhalation of antigens is the best preventive measure. farmers need to wait until they are dried and put them into the warehouse to prevent mold, raise poultry, pigeons and all kinds of birds. \n \n
+            2.keep the shed clean and treat the feces and fallen feathers in time. wear protective masks when working, humidifiers and air conditioners should be cleaned frequently to prevent mold or other contamination."
+
+  utter_hypersensitivity_pneumonitis/causes:
+  - text: "Cause of hypersensitivity pneumonitis:- \n \n
+            1.it is a group of non-asthmatic allergic lung diseases caused by different allergens, with diffuse interstitial inflammation as its pathological feature. \n \n
+            2.it is an allergic reaction caused by inhalation of organic dust particles (diameter <10米) containing fungal spores, bacterial products, animal proteins or insect antigens."
+
+  utter_acute_lung_abscess/description:
+  - text: "acute lung abscess refers to a purulent infection of the lung caused by a variety of pathogenic bacteria. in the early stage, it is an infectious inflammation of the lung tissue, followed by necrosis, liquefaction, and peripheral granulation tissue to form an abscess. the pathogenic bacteria of acute lung abscess are common bacteria in the upper respiratory tract and oral cavity.often mixed infections, including aerobic and anaerobic gram-positive cocci and negative bacilli.the most common pathogens are staphylococcus, streptococcus, pneumococci, and clostridium.anaerobic bacteria have certain importance for pulmonary suppurative infection. due to the improvement of culture technology, the positive rate has increased in recent years.the more important anaerobic bacteria are streptococcus faecium, fusarium, clostridium nucleatum, bacteroides, v. sphaeroides, spirochetes."
+
+  utter_acute_lung_abscess/prevention:
+  - text: "Prevention of acute lung abscess:- \n \n
+            1.lung abscess is a suppurative inflammation of the lung parenchyma caused by a mixture of various pyogenic bacteria. the secretion of the mouth, nose and pharyngeal secretions containing the pathogen is the main cause of the disease. therefore, the key to prevent this disease is to actively remove and treatment of chronic infections of the mouth, nose and pharynx. \n \n
+            2.to avoid excessive use of sedation, hypnosis, anesthetics and alcohol abuse, upper respiratory tract surgery and coma, general anesthesia people should strengthen nursing, prevent lung infection, treat early use of strong antibiotics, sputum drainage is also an important measure to improve the efficacy, the disease can be cured after active and effective treatment, for chronic lung abscess, especially antibiotic treatment after 3 months."
+
+  utter_acute_lung_abscess/causes:
+  - text: "Cause of acute lung abscess:-\n \n
+            1.infected bacteria of acute lung abscess, common upper respiratory tract, oral common bacteria, often mixed infection, including aerobic and anaerobic gram-positive and negative cocci and bacilli, the most common pathogen is staphylococcus, chain cocci, pneumococcal, fusiform and spirochete, \n \n
+            2.the pathogenesis of lung abscess is closely related to the cause, and can be divided into the following types. inhaled lung abscess pathogen oral, nasopharyngeal cavity inhalation, is the most common cause of lung abscess, tonsil inflammation, sinusitis, alveolar pyorrhage or age teeth and other purulent secretions, oral, nasal, pharyngeal surgery blood clots; tartar or vomit, etc., \n \n
+            3.early bronchiole obstruction, inflammation of lung tissue, embolization of small blood vessels, suppuration of the lung tissue, necrosis, formation of abscess, lesions can spread to the surrounding, and even beyond the interlobular fissure to invade adjacent lung segments,aggravation of tissue necrosis, liquefied pus, accumulation in the abscess causes increased tension,and finally rupture into the bronchi, coughing up a large amount of purulent, if the air enters the abscess, the liquid level appears in the abscess, sometimes inflammation spread to the surrounding lung tissue, can form a uniform number of abscesses."
+
+  utter_legionnaires_disease/description:
+  - text: "legionnaires' disease is a pneumonia-based infection caused by legionellosis, also known as legionelladisease.the pathogens are mainly from contaminated water sources and invade from the respiratory tract.in addition, pathogenic bacteria may cause another clinical type with fever, headache, and myalgia, and the condition is mild, called pontiacfever."
+
+  utter_legionnaires_disease/prevention:
+  - text: "Prevention of legionnaires disease:-\n \n
+            1.disinfection of drinking water: adding chlorine or boiling can kill the bacteria.\n \n
+            2.the air-conditioning system should be shut down, disinfected and cleaned, and sanitized for water supply systems, wet equipment, sprayers, etc. to control the outbreak. \n \n
+            3.the immune vaccine is under development. preventive measures can be taken to address public health threats caused by legionnaires' disease, although it is not possible to eradicate the source of infection, but it can significantly reduce risks. legionnaires' disease prevention relies on good management of possible sources of infection, including regular cleaning and disinfection, and the use of other physics or chemical measures to minimize growth. for example, the cooling tower can be cleaned and disinfected regularly, and biocides are added frequently or continuously."
+
+  utter_legionnaires_disease/causes:
+  - text: "Cause of legionnaires disease:-\n \n
+            1. disinfection of drinking water: adding chlorine or boiling can kill the bacteria. \n \n
+            2.the air-conditioning system should be shut down, disinfected and cleaned, and sanitized for water supply systems, wet equipment, sprayers, etc. to control the outbreak. \n \n
+            3.the immune vaccine is under development. preventive measures can be taken to address public health threats caused by legionnaires' disease, although it is not possible to eradicate the source of infection, but it can significantly reduce risks. legionnaires' disease prevention relies on good management of possible sources of infection, including regular cleaning and disinfection, and the use of other physics or chemical measures to minimize growth. "
+#26-Apr-2022
+  utter_Pediatric_acute_bronchitis/description:
+  - text: "Acute Bronchitis is caused by inflammation of the bronchial mucosa caused by various pathogens. Often secondary to upper respiratory tract infections, or a clinical manifestation of acute infectious diseases. The trachea is often involved at the same time, so it is also called acute tracheobronchitis.infants and young children are more common, and the symptoms are heavier. Mainly caused by infection, the pathogen is various viruses, bacteria, mycoplasma pneumoniae, or mixed infection. Most of them have upper respiratory symptoms first, followed by cough as the main symptom, starting with a dry cough, and later there are convulsions. Infants and young children have severe symptoms. Generally no systemic symptoms."
+
+  utter_Pediatric_acute_bronchitis/prevention:
+  - text: "Prevenetion of Acute Bronchitis :-\n \n
+            1. Strengthen physical exercise and enhance disease resistance. \n \n
+            2. Pay attention to cold adjustment, to prevent cold, especially in autumn and winter, pay special attention to the chest to keep warm. \n \n
+            3. For repeated authors can prevent drugs, such as jaundice daily 6-9 grams for 2-3 months, can also be used to prevent recurrence."
+
+  utter_Pediatric_acute_bronchitis/causes:
+  - text: "Causes of Acute Bronchitis :-\n \n
+            1. Mycoplasma pneumoniae or bacteria, or a combination of infections, virus infection, influenza, adenovirus, type 3 parainfluenza and respiratory fusion virus, etc., m. pneumoniae is not uncommon, any virus that can cause upper respiratory tract infection can be become a pathogen of bronchitis. \n \n
+            2. On the basis of viral infection, pathogenic bacteria can cause secondary infection. the more common bacteria are pneumococci, 汕-hemolytic streptococcus group a, staphylococcus and influenza bacilli, and sometimes pertussis. salmonella or diphtheria. \n \n
+            3. Often secondary to medical and surgical reasons such as chronic diarrhea, short bowel syndrome and malabsorption.the non-medical reasons for malnutrition are poor eating habits, lack of nutritional knowledge, and parents neglecting scientific feeding methods.\n \n
+            4. For malnourished people, it is usually possible to treat the primary disease, provide an appropriate diet, educate the parents and follow up carefully. \n \n
+            5. Rickets, allergies, and chronic rhinitis and pharyngitis can all be the cause of this disease."
+
+  utter_Pediatric_influenza/description:
+  - text: "Influenza (abbreviated as flu) is an acute respiratory infection caused by influenza virus. It is also a highly contagious disease with a rapid spread. It is often endemic and it is mainly spread by droplets, contact between people or contact with contaminated objects. The main clinical manifestations are acute high fever, headache, body aches, fatigue and mild respiratory symptoms. From clinical manifestations can be divided into several types: simple influenza, pneumonia-type influenza, poisoning influenza, gastrointestinal influenza. The course of influenza is self-limiting. Patients with no complications usually recover within 5-10 days. Severe cases occur mostly in infants and the elderly, and are complicated by pulmonary infection. The prevention and treatment work cannot be ignored."
+
+  utter_Pediatric_influenza/prevention:
+  - text: "Prevenetion of Influenza :-\n \n
+            1. Pay attention to the younger therest of the baby, more need to rest and care, resume the activity after the symptoms disappear, so as not to relapse due to the failure of the lesion. for those with fever, it is best to rest in bed to reduce the stimulation of the central nervous system. \n \n
+            2. Reasonable diet the baby with cold and fever is prone to loss of appetite, nausea, vomiting, abdominal pain and diarrhea. Dietary care is very important. The general principle is to choose digestible food and eat less. If you insist on eating your baby, it will cause your baby's gastrointestinal burden to be heavy, which is harmful to your body and disease recovery. you can eat less food each time, eat more times, and give your baby some fruit juice, such as fresh orange juice. a baby with a fever and a good digestion ability can be thicker. as the baby's condition improves, it usually returns to a normal diet in about 1 week. \n \n
+            3. The environment is suitable to keep the baby's room air circulation. for hot babies, fresh air helps the skin to sweat effectively and lowers body temperature. should avoid direct blowing on the baby, resulting in the baby's skin vasoconstriction, aggravating the condition.  \n \n
+            4. effective sweating encourages your baby to drink more water. water can increase the body's cellular metabolism, promote the discharge of toxins in the body, and at the same time effectively sweat, which is beneficial to lowering body temperature. don't over-thick your baby's clothes and bedding. wear loose pants for effective sweating and heat dissipation."
+
+  utter_Pediatric_influenza/causes:
+  - text: "Causes of Influenza :-\n \n
+            1.80% to 90% of the colds are caused by viruses, and there are more than 200 kinds of viruses that can cause colds; 10% to 20% of the colds are caused by bacteria. Infants under the age of 1 are more likely to have a cold because the immune system is not yet mature.  \n \n
+            2. Child's nasal cavity is narrow, the mucous membrane is soft, the mucosal gland is insufficiently secreted, it is dry, and it is poorly adapted and resistant to the external environment, and it is prone to inflammation.\n \n
+            3. Premature infants, children with congenital defects or diseases, such as cardiopulmonary insufficiency, especially those with congenital immune diseases, may have a cold when they take care of a slight mistake. \n \n
+            4. It is also related to the improper feeding of parents. because of the rapid growth of children, children who are artificially fed due to lack of breast milk, and children who are too pampered, partial eclipse or anorexia, malnutrition or imbalance may cause different degrees of iron deficiency. \n \n
+            5. Lack of calcium or insufficient intake of vitamins and proteins.nutrients such as iron, zinc and protein play an important role in the synthesis of various globulins of the immune system and in promoting the maturation and differentiation of immune cells, affecting the resistance of the child's body. \n \n
+            6. It is related to poor surroundings. Some children have poor family room conditions, dark and humid, some indoor temperatures are too much or too low; some families like to close the doors and windows all day long, the air is not circulating; some family members like to smoke, plus the same room fire, smoke pollution serious.\n \n
+            7. Poor environment, turbid air, and great harm to the respiratory tract are important causes of colds. \n \n
+            8.some parents dress too much or too little for their children. the result is not sweating or cold, it is easy to induce a cold. finally, the cold is also associated with a lack of outdoor exercise.due to objective conditions or insufficient attention, many children lack outdoor activities."
+
+  utter_Silicosis/description:
+  - text: "Silicosis is one of the most common types of pneumoconiosis. It is caused by a large amount of nodular fibrosis in the lungs caused by long-term inhalation of a large amount of free silica dust. Severe cases can affect lung function, loss of labor capacity, and even develop into pulmonary heart disease, heart failure and respiratory failure. The disease is more common in miners, especially excavation workers, and a large number of dust, quartz, ceramics and refractory materials, the incidence of the disease is generally slow, generally 5 to 10 years, the elderly can reach 20 years."
+
+  utter_Silicosis/prevention:
+  - text: "Prevenetion of Silicosis :-\n \n
+            1. Control or reduce the incidence of silicosis, the key is dust. Industrial and mining enterprises should grasp comprehensive dust prevention measures such as reforming production technology, wet operation, closed dust source, ventilation and dust removal, equipment maintenance and repair. \n \n
+            2. Strengthen personal protection and comply with dustproof operating procedures. Regularly monitor the dust concentration in the air in the production environment and strengthen publicity and education. Do a good physical examination before employment, including x-ray. \n \n
+            3. Anyone with active pulmonary tuberculosis and various respiratory diseases should not participate in the work of dusting.regular physical examinations of dust workers, including x-ray films, are performed, and the interval between examinations depends on the amount of silica contacted and the concentration of airborne dust. \n \n
+            4. Strengthen the prevention and control of tuberculosis in industrial and mining areas. Those who are negative for tuberculin test should be vaccinated with bcg; positive for preventive anti-tuberculosis chemotherapy to reduce the incidence of silicosis and tuberculosis. "
+
+  utter_Silicosis/causes:
+  - text: "Causes of Silicosis :-\n \n
+            1. The content of free sio2 in the dust concentrationin the air is higher in the ambient dust. The higher the dust concentration, the greater the damage. The dust concentration is expressed in mg/m3. When the content of free sio2 in the dust is large and the concentration is high, the sputum nodules are formed in the lung tissue after long-term inhalation. \n \n
+            2. Contact time the development of silicosis is a chronic process, usually in the continuous inhalation of dust for 5 to 10 years, some for 5 to 20 years. However, continuous inhalation of high concentration, high free silica content of dust, can occur after 1 to 2 years, known as quick hair silicosis.\n \n
+            3. Dust dispersion dispersion is a measure of the size of the dust particles and is expressed as a percentage of the composition of the various particle diameters in the dust. The larger the proportion of small particle dust, the greater the dispersion. The degree of dispersion is closely related to the floating of dust particles in the air and its retention in the respiratory tract.  "
+
+  utter_Neonatal_Asphyxia/description:
+  - text: "Asphyxia of newborn refers to the occurrence of intrauterine distress or respiratory and circulatory disturbance during fetal delivery due to various causes of prenatal, intrapartum or postpartum, resulting in no hypoxia or spontaneous breathing within 1 min after birth. Failure to establish regular breathing, with hypoxemia, hypercapnia and acidosis as the main pathophysiological changes. Severe asphyxia is one of the important causes of disability and death in newborns. The motherland medicine said that neonatal asphyxia is a suffocation of the newborn, a sudden death of the baby, a suffocating suffocation, a dream, and a grass fan."
+
+  utter_Neonatal_Asphyxia/prevention:
+  - text: "Prevenetion of Neonatal Asphyxia :-\n \n
+            1. Perinatal health care: strengthen perinatal care and timely treatment of high-risk pregnancy. \n \n
+            2. Fetal monitoring: strengthen fetal monitoring, avoid and timely correct intrauterine hypoxia.\n \n
+            3. Avoid dystocia: closely monitor pregnant women in labor and avoid dystocia. \n \n
+            4. Proficiency in resuscitation techniques: training the delivery personnel to master the resuscitation technique. \n \n
+            5. equipped with resuscitation equipment: resuscitation equipment should be equipped in the hospital delivery room. persons with mastery of resuscitation techniques must be present during high-risk pregnancy delivery. "
+
+  utter_Neonatal_Asphyxia/causes:
+  - text: "Causes of Neonatal Asphyxia :-\n \n
+            1. pregnant mothers hypoxic diseases: such as respiratory failure, cyanotic congenital heart disease, severe anemia and co poisoning. \n \n
+            2. diseases of placental circulation disorders: such as congestive heart failure, pregnancy-induced hypertension syndrome, chronic nephritis, blood loss, shock, diabetes and infectious diseases. \n \n
+            3. others: pregnant mother drug use, smoking or passive smoking, or pregnant mother age ≡ 35 years old, <16 years old and multiple pregnancy, such as the incidence of fetal asphyxia. \n \n
+                (a) premature delivery: premature infants, small for gestational age, giant children, etc. \n \n
+                (b) malformations: various deformities such as posterior nostril atresia, throat, lung insufficiency, congenital heart disease and damage to the nervous system caused by intrauterine infection. \n \n
+                (c) airway obstruction: meconium inhalation causes obstruction of the airway. Such as placenta previa, placental abruption and placental insufficiency. if the umbilical cord is compressed, too short, too long to around the neck or around the body, prolapse, torsion or knotting. such as dystocia, high position forceps, breech position, fetal head suction is not smooth; anesthesia, analgesics and oxytocin used improperly during labor."
+
+  utter_Pneumonia_in_children/description:
+  - text: "Pediatric pneumonia is a common clinical illness among children which mostly occurs in winter and spring season. The temperature changes outside cause the respiratory functions of children to become low, which makes them prone to infection and pneumonia."
+
+  utter_Pneumonia_in_children/prevention:
+  - text: "Prevention of Pediatric Pneumonia - \n \n
+            1. Make sure the house is well ventilated so that the air inside is fresh.\n \n
+            2. If parents notice sputum in chilren cough, they should be fed high-calorie vitamin-rich diet. It is also good to gently slap the back of the child while coughing to get rid of sputum.\n \n
+            3. Pay attention to proper exercise and proper clothing in winters to prevent upper respiratory tract infections.\n \n
+            4. Teach the children proper hygiene and let them get enough sun to improve immunity.\n \n"
+
+  utter_Pneumonia_in_children/causes:
+  - text: "Causes of Pneumonia in children :- \n \n
+            1. The prenatal fetus lives in the uterus filled with amniotic fluid, and hypoxia occurs, respiratory movements occur and inhaled amniotic fluid, causing aspiration pneumonia; such as early water breakage, prolonged labor or in the process of childbirth. \n \n
+            2. Inhalation of bacterial contaminated amniotic fluid or birth canal secretions, easy to cause bacterial pneumonia, such as amniotic fluid contaminated by meconium, inhalation of the lungs can cause meconium aspiration pneumonia.\n \n 
+            3. If there is a person with poison in the child (such as a cold), the child is easily infected with pneumonia.\n \n
+            4. The newborn is infected with pneumonia through blood circulation due to sepsis or umbilical inflammation or enteritis.this infection can be caused by bacteria, and newborns with a slightly older age can also be caused by viruses and other microorganisms. such as sudden changes in the climate, poor ventilation in the living room, air pollution and so on."
+
+  utter_Cold/description:
+  - text: "The common cold can be caused by a variety of viruses, but most commonly it is caused by the serotype of rhinovirus. Common cold generally occurs in winters, but it can also occur in other seasons."
+
+  utter_Cold/prevention:
+  - text: "Prevention of common cold :- \n \n
+            1. Taking cold water baths and soaking feet with hot water can improve body's disease resistance.\n \n
+            2. Salt water gargle in the morning routine, and after meals can remove oral bacteria.\n \n
+            3. Vinegar fumigation in the room once in a while can efectively kills the viruses such as colds.\n \n
+            4. Drinking ginger tea before going to bed at night or taking raddish and vinegar soup can prevent colds.\n \n
+            5. Vitamin E, vitamin C can improve immunity."
+
+  utter_Cold/causes:
+  - text: "Causes of common colds :- \n \n
+            1. Influenza viruses such as rhinovirus, adenovirus, respiratory syncytial virus.\n \n
+            2. Bacterial infection from people having cold.\n \n
+            3. Air/dust pollution"
+
+  utter_Respiratory_Foreign_Body/description:
+  - text: "Respiratory foreign body is a life threatening disease, especially the foreign body with large throat or trachea. This occurs mostly in children under the age of 5. If some foreign bodies are misdiagnosed and treated, serious complications will occur, even life-threatening."
+
+  utter_Respiratory_Foreign_Body/prevention:
+  - text: "Prevention of respiratory foreign body -\n \n
+            1. Do not eat peanuts, beans, seeds of fruits like watermelon seeds.\n \n
+            2. Prevent children from putting small toys in mouth as that may cause infection.\n \n
+            3. When vomiting, the head should be turned to one side to prevent vomit from inhaling the lower respiratory tract as this also causes infection."
+
+  utter_Respiratory_Foreign_Body/causes:
+  - text: "Causes of Respiratory Foreign Body - \n \n
+            1. Children carelessly take small toys/things in their mouth.\n \n
+            2. Foreign bodies are small and easy to inhale. Inhaling melon seeds could also cause this.\n \n
+            3. Bad habits at work, such as shoemakers will pin, studs, buttons, etc. between the teeth accidently. "
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

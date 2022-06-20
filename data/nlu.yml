@@ -1,0 +1,2462 @@
+version: "3.0"
+
+nlu:
+
+- lookup: symptom_name
+  examples: |
+    - chest pain
+    - difficulty in breathing
+    - alveolar inflammation
+    - alveolar lavage fluid visible
+    - fever with cough
+    - hanging sound when inhaling
+    - chest tightness
+    - lung yin deficiency
+    - twitching
+    - low fever
+    - wheeling sound
+    - ciliated epithelial cell damage shedding
+    - allergic cough
+    - chemical bronchitis
+    - wheezing
+    - chronic cough in winter and spring
+    - cough with wheezing sound
+    - cardiac respiratory distress
+    - face has bruises
+    - lips are blue
+    - lung texture thickening
+    - have a continuous cyanosis after birth
+    - lips and nail bed slightly blue-purple
+    - out of breath
+    - eosinophilia
+    - pharyngeal foreign body sensation
+    - chest suffocation
+    - hemoptysis with fever
+    - lack of strength
+    - wet squeaky
+    - fever
+    - cough rust color sputum
+    - acute face
+    - breathing sound weakened
+    - night sweats
+    - diarrhea
+    - lack of strength
+    - lung bleeding
+    - dyspnea
+    - hemoptysis
+    - proteinuria
+    - periostitis
+    - weight loss
+    - night sweat
+    - low fever
+    - cough out brown sputum
+    - eosinophilic
+    - short breath
+    - chest suffocation
+    - industrial vertebrae expansion
+    - barrel-thorax
+    - small bronchial mucosal edema
+    - sticky or purulent sputum with
+    - low diaphragm
+    - exhalation sound extension
+    - lung sounds
+    - fealing chills
+    - gas rush
+    - circle in the lungs is substantial
+    - lung pain
+    - blood in my sputum
+    - pus sputum
+    - cough with scorpion finger
+    - opening of the lungs
+    - right heart failure
+    - breathing difficulty
+    - hypoglycemic hypothermia
+    - arrhythmia
+    - hair sputum
+    - large hemoptysis                               
+    - malignant pleural effusion
+    - cardiopulmonary embolism
+    - short breath
+    - chest suffocation
+    - chilling
+    - sustained fever
+    - lack of strength
+    - thirsty vomiting
+    - stationary doctor
+    - cryptococcus capsular polysaccharide accumulation
+    - sputum is mucopurulent
+    - low fever
+    - cough with weight loss
+    - hemoptysis with chest pain
+    - lung nodules
+    - stem in bloodshot
+    - planting spread
+    - lip pale
+    - syncope
+    - confusion of consciousness
+    - consciousness disorder
+    - heart panic
+    - hypotension
+    - incapable
+    - allergic cough
+    - appetite loss
+    - lack of strength
+    - wheeze
+    - cough with wheezing sound
+    - cough foam mucus sputum
+    - rotten peach-like bloody sputum
+    - sputum is mucopurus
+    - sputum viscous or purulent
+    - sputum is white viscous jelly
+    - chills
+    - shock
+    - respiratory failure
+    - muscle soreness
+    - muscle pain
+    - hair lice
+    - diarrhea
+    - sparse increase
+    - sense is unclear
+    - dizziness
+    - less urine
+    - the gap between the ribs is narrowed
+    - pleural effusion
+    - purulent sputum
+    - cardiac tamponade
+    - lymph node enlargement
+    - hemoptysis with jaundice
+    - hemoptysis with cough
+    - hemoptysis with fever
+    - suffocation
+    - breathing sound weakened
+    - hemoptysis with skin and mucous membrane bleeding
+    - one side of the chest collapsed
+    - respiratory failure
+    - appetite loss
+    - purulent sputum
+    - sitting breathing
+    - heart failure
+    - weight loss
+    - appetite loss
+    - pneumatic dyspnea
+    - fever
+    - cough with chest pain
+    - twirl pronunciation
+    - sparse increase
+    - fever with cough
+    - hemosiderinosis
+    - breathing difficulties
+    - internal bleeding
+    - weakness
+    - pulmonary interstitial fibrosis
+    - weight loss
+    - breathing difficulties
+    - chest tightness
+    - tachycardia
+    - blood sputum
+    - tuberculosis
+    - lymph node tuberculosis
+    - nasal tuberculosis
+    - immune deficiency
+    - wet voice
+    - fatigue
+    - bacterial infection
+    - diarrhea
+    - abdominal pain
+    - child has stuffy nose
+    - child has a red spot after fever
+    - sickness
+    - sleepiness
+    - runny nose
+    - dizziness
+    - feeling cold
+    - barrel chest
+    - appetite loss
+    - exhalation sound extension
+    - breathing sound weakened
+    - newborn cyanosis
+    - breathing inhibition
+    - neonatal convulsions
+    - breathing slow
+    - neonatal heart failure
+    - two lungs are diffuse or scattered
+    - lung over-inflated
+    - breathing difficulty
+    - tracheal obstruction
+    - cough
+    - cough with wheezing
+    - airway hyperresponsiveness
+    - wheeze
+    - nose fan
+    - gas rush
+    - drowsiness
+    - coughing more
+    - appetite is not good
+    - phlegm and sound
+    - irritable and uneasy
+    - cyanosis
+    - nose wing fan
+    - headaches
+    - hot and cold
+    - sore pain
+    - fever
+    - throat and burning sensation
+    - nasal
+    - fever with cold
+    - flu
+    - respiratory stenosis
+    - sound hoarseness
+    - difficulty swallowing
+    - nails have large vertical stripes
+    - thyroglous can be touched underneath
+    - out of breath
+
+- intent: confirm_symptom
+  examples: |
+    - i am having [cough]{"entity": "symptom_name"}, [severe headache]{"entity": "symptom_name"}, and [pain in nose]{"entity": "symptom_name"} for some days now
+    - [chest pain]{"entity": "symptom_name"}, [fever with cough]{"entity": "symptom_name"} and [breathing difficulty]{"entity": "symptom_name"}
+    - [chest pain]{"entity": "symptom_name"}, [fever with cough]{"entity": "symptom_name"} and [breathing difficulties]{"entity": "symptom_name"}
+    - i have [pain in chest]{"entity": "symptom_name"}, [fever with cough]{"entity": "symptom_name"} and [difficulty in breathing]{"entity": "symptom_name"}
+    - i feel [pain in chest area]{"entity": "symptom_name"}, [fever with cough]{"entity": "symptom_name"} and [difficulties in breathing]{"entity": "symptom_name"}
+    - feeling [chest area pain]{"entity": "symptom_name"}, [fever with cough]{"entity": "symptom_name"} and [breathing difficulty]{"entity": "symptom_name"}
+    - hearing [hanging sound while inhaling]{"entity": "symptom_name"}, [chest tightness]{"entity": "symptom_name"} and [twitching]{"entity": "symptom_name"}
+    - i am feeling [hanging sound while breathing]{"entity": "symptom_name"}, [tight chest]{"entity": "symptom_name"} and [twitching]{"entity": "symptom_name"}
+    - i am experiencing [hanging sound when inhaling]{"entity": "symptom_name"}, [tightness in chest]{"entity": "symptom_name"} and [twitching]{"entity": "symptom_name"}
+    - i am experiencing [hanging sound when breathing]{"entity": "symptom_name"}, [chest is tight]{"entity": "symptom_name"} and [twitching]{"entity": "symptom_name"}
+    - i am hearing [hanging sound when i inhale]{"entity": "symptom_name"}, [chest feeling tight]{"entity": "symptom_name"} and [twitching]{"entity": "symptom_name"}
+    - i hear [hanging sound when i breathe]{"entity": "symptom_name"}, [feeling tightness in chest]{"entity": "symptom_name"} and feel [twitchy]{"entity": "symptom_name"}
+    - my symptoms are [cardiac respiratory distress]{"entity": "symptom_name"} and [cough]{"entity": "symptom_name"} and also [difficulty in breathing]{"entity": "symptom_name"}
+    - i am facing [allergic cough]{"entity": "symptom_name"} and [cough with wheezing sound]{"entity": "symptom_name"}
+    - i am facing [allergy and cough]{"entity": "symptom_name"} and [wheezing when i cough]{"entity": "symptom_name"}
+    - i am having [cough and allergy]{"entity": "symptom_name"} and [wheez cough]{"entity": "symptom_name"}
+    - having [allergic cough]{"entity": "symptom_name"} and [wheezing]{"entity": "symptom_name"}
+    - my [face has bruises]{"entity": "symptom_name"}, my [lips are blue]{"entity": "symptom_name"} and i feel [out of breath]{"entity": "symptom_name"}
+    - my [face is bruised]{"entity": "symptom_name"}, my [lips are blue]{"entity": "symptom_name"} and i feel [out of breath]{"entity": "symptom_name"}
+    - i have [bruised face]{"entity": "symptom_name"}, my [lips are blue]{"entity": "symptom_name"} and i feel [out of breath]{"entity": "symptom_name"}
+    - i see [bruises on face]{"entity": "symptom_name"}, my [lips are blue]{"entity": "symptom_name"} and i feel [exhaustion]{"entity": "symptom_name"}
+    - my [face has bruises]{"entity": "symptom_name"}, my [lips are blue]{"entity": "symptom_name"} and i feel [exhaustion]{"entity": "symptom_name"}
+    - my [face has bruises]{"entity": "symptom_name"}, my [lips are blue]{"entity": "symptom_name"} and i feel [out of breath]{"entity": "symptom_name"}
+    - feeling [low fever]{"entity": "symptom_name"}, and [weight loss]{"entity": "symptom_name"}
+    - experiencing [short breath]{"entity": "symptom_name"} and [chest suffocation]{"entity": "symptom_name"}
+    - experiencing [breathlessness]{"entity": "symptom_name"} and [chest suffocation]{"entity": "symptom_name"}
+    - i am facing [gas rush]{"entity": "symptom_name"} and [feeling chills]{"entity": "symptom_name"}
+    - i am facing [gas in stomach]{"entity": "symptom_name"} and [feeling chills]{"entity": "symptom_name"}
+    - there is [blood in my sputum]{"entity": "symptom_name"} and i am also having [lung pain]{"entity": "symptom_name"}
+    - there is [blood in my mucus]{"entity": "symptom_name"} and i am also having [lung ache]{"entity": "symptom_name"}
+    - there is [blood in mucus]{"entity": "symptom_name"} and i am also having [pain in lungs]{"entity": "symptom_name"}
+    - there is [blood in sputum]{"entity": "symptom_name"} and i am also having [lung pain]{"entity": "symptom_name"}
+    - i have [bloody mucus]{"entity": "symptom_name"} and i am also having [ache in lungs]{"entity": "symptom_name"}
+    - i have [muscle pain]{"entity": "symptom_name"} and [muscle soreness]{"entity": "symptom_name"}
+    - i have [pain in muscles]{"entity": "symptom_name"} and [sore muscles]{"entity": "symptom_name"}
+    - i have [muscle ache]{"entity": "symptom_name"} and [sored muscles]{"entity": "symptom_name"}
+    - [fatigue]{"entity": "symptom_name"}, [diarrhea]{"entity": "symptom_name"} and [abdominal pain]{"entity": "symptom_name"}
+    - feeling [weak]{"entity": "symptom_name"}, [sore pain]{"entity": "symptom_name"} and [nasal stuff]{"entity": "symptom_name"}
+    - [fever]{"entity": "symptom_name"}, [cough rust color sputum]{"entity": "symptom_name"}, [breathing sound weakened]{"entity": "symptom_name"}
+    - [fever]{"entity": "symptom_name"}, [cough with brown mucus]{"entity": "symptom_name"}, [breathing sound weakened]{"entity": "symptom_name"}
+    - [fever]{"entity": "symptom_name"}, [cough with brown color sputum]{"entity": "symptom_name"}, [breathing sound weakened]{"entity": "symptom_name"}
+    - i think i have [diarrhea]{"entity": "symptom_name"} and i feel [lack of strength]{"entity": "symptom_name"}. i also experience [night sweats]{"entity": "symptom_name"}
+    - i have [low fever]{"entity": "symptom_name"}, [night sweat]{"entity": "symptom_name"} and [weight loss]{"entity": "symptom_name"}
+    - i [cough out brown sputum]{"entity": "symptom_name"}
+    - i am having [short breath]{"entity": "symptom_name"} and [chest suffocation]{"entity": "symptom_name"}
+    - i think i have [lung sounds]{"entity": "symptom_name"}, [exhalation sound]{"entity": "symptom_name"}. i also have [sticky sputum]{"entity": "symptom_name"}
+    - i am [feeling chills]{"entity": "symptom_name"} and a sudden [gas rush]{"entity": "symptom_name"}
+    - i have severe [lung pain]{"entity": "symptom_name"} and there is [blood in my sputum]{"entity": "symptom_name"}
+    - i have [breathing difficulty]{"entity": "symptom_name"}
+    - i feel [chilling]{"entity": "symptom_name"} and [lack of strength]{"entity": "symptom_name"}, and also i have [sustained fever]{"entity": "symptom_name"}
+    - [cough]{"entity": "symptom_name"}, [weight loss]{"entity": "symptom_name"}
+    - i have [pale lips]{"entity": "symptom_name"}, [confusion of conciousness]{"entity": "symptom_name"} and [hypotension]{"entity": "symptom_name"}
+    - i feel [incapable]{"entity": "symptom_name"} and i have [allergic cough]{"entity": "symptom_name"} and [appetite loss]{"entity": "symptom_name"}
+    - i [cough foam like sputum]{"entity": "symptom_name"}
+    - i have [muscle soreness]{"entity": "symptom_name"} and [muscle pain]{"entity": "symptom_name"}
+    - i feel [dizziness]{"entity": "symptom_name"} and my [sense is unclear]{"entity": "symptom_name"}
+    - facing [suffocation]{"entity": "symptom_name"} and [breathing sound weakened]{"entity": "symptom_name"}
+    - [appetite loss]{"entity": "symptom_name"} and [sitting breathing]{"entity": "symptom_name"}
+    - [heart failure]{"entity": "symptom_name"}, [weight loss]{"entity": "symptom_name"}, [appetite loss]{"entity": "symptom_name"}
+    - i have [cough with chest pain]{"entity": "symptom_name"}
+    - i am having [breathing difficulties]{"entity": "symptom_name"} and [weakness]{"entity": "symptom_name"}
+    - [breathing difficulties]{"entity": "symptom_name"} and [chest tightness]{"entity": "symptom_name"}
+    - i have [wet voice]{"entity": "symptom_name"} and [abdominal pain]{"entity": "symptom_name"}
+    - my child has [child has stuffy nose]{"entity": "symptom_name"} and [runny nose]{"entity": "symptom_name"} and [dizziness]{"entity": "symptom_name"}
+    - [breathing slow]{"entity": "symptom_name"}, [breathing inhibition]{"entity": "symptom_name"}
+    - [breathing difficulty]{"entity": "symptom_name"} and [tracheal obstruction]{"entity": "symptom_name"}, [cough with wheezing]{"entity": "symptom_name"}
+    - [gas rush]{"entity": "symptom_name"}, [airway hyperresponsiveness]{"entity": "symptom_name"}
+    - my child feels kind of [drowsiness]{"entity": "symptom_name"}, [cough]{"entity": "symptom_name"} and [appetite is not good]{"entity": "symptom_name"}
+    - [headache]{"entity": "symptom_name"}, [sore pain]{"entity": "symptom_name"}, [hot and cold]{"entity": "symptom_name"}, [fever]{"entity": "symptom_name"}
+    - i am having [difficulty swallowing]{"entity": "symptom_name"} and i feel [out of breath]{"entity": "symptom_name"}
+    - i have [chest pain]{"entity": "symptom_name"}
+    - my [heart rate increase]{"entity": "symptom_name"}
+    - i have [breathing difficulties]{"entity": "symptom_name"} and [nasal stuffing]{"entity": "symptom_name"}
+
+- synonym: breathing difficulty
+  examples: |
+    - breathing difficulties
+    - difficulty in breathing
+    - difficulties in breathing
+    - breathing problem
+    - problems in breathing
+    - breathing problems
+
+- synonym: chest pain
+  examples: |
+    - pain in chest
+    - chest area pain
+    - pain in chest area
+
+- synonym: chest tightness
+  examples: |
+    - tight chest
+    - chest is tight
+    - chest feeling tight
+    - tightness in chest
+    - feeling tightness in chest
+
+- synonym: hanging sound while inhaling
+  examples: |
+    - hanging sound while breathing
+    - hanging sound when inhaling
+    - hanging sound when breathing
+    - hanging sound when i breathe
+    - hanging sound when i inhale
+
+- synonym: twitching
+  examples: |
+    - twitchy
+    - twitch
+
+- synonym: cough with wheezing sound
+  examples: |
+    - wheezing sound when coughing
+    - wheezing when i cough
+    - wheezing
+    - wheez cough
+
+- synonym: allergic cough
+  examples: |
+    - allergy and cough
+    - cough and allergy
+
+- synonym: face has bruises
+  examples: |
+    - bruised face
+    - bruises on my face
+    - face is bruised
+    - bruise on face
+    - face is bruised
+
+- synonym: out of breath
+  examples: |
+    - exhaustion
+
+- synonym: short breath
+  examples: |
+    - breathlessness
+
+- synonym: gas rush
+  examples: |
+    - gas
+    - excess gas
+    - gas in stomach
+
+- synonym: blood in my sputum
+  examples: |
+    - blood in my mucus
+    - blood in sputum
+    - bloody sputum
+    - bloody mucus
+    - blood in mucus
+    - mucus is bloody
+    - blood in my mucus
+
+- synonym: lung pain
+  examples: |
+    - pain in lungs
+    - lungs are paining
+    - lungs aching
+    - lungs paining
+    - lungs are aching
+    - lung ache
+    - lungs ache
+    - ache in lungs
+
+- synonym: muscle pain
+  examples: |
+    - pain in muscles
+    - muscle ache
+    - muscles are paining
+    - muscles are aching
+
+- synonym: muscle soreness
+  examples: |
+    - sore muscles
+    - muscles are sore
+    - sored muscles
+
+- synonym: cough rust color sputum
+  examples: |
+    - cough with brown mucus
+    - cough with brown sputum
+    - brown color mucus
+    - brown color sputum
+    - rust color mucus
+    - rust color sputum
+    - cough with rust color mucus
+
+- intent: enter_symptoms
+  examples: |
+    - i want to enter my symptoms
+    - yes i would enter symptoms
+    - symptom
+    - symptoms
+    - i have some symptoms
+    - enter symptoms
+    - yes i wanna enter the symptoms
+    - yeah i want to enter symptoms
+    - yes i want to enter my symptom
+    - yes enter the symptoms
+    - yes symptoms
+    - ya symptom
+    - yes i got some symptoms
+    - yes i am having some symptoms
+    - i guess i have some symptoms
+
+- intent: enter_disease
+  examples: |
+    - i want to enter the disease
+    - i want to enter my disease
+    - i know the disease
+    - disease
+    - yes i know my disease
+    - yes i know the disease name
+    - i want to enter the disease name
+    - i want to enter my disease name
+    - yeah i wanna enter disease
+    - yes disease
+    - yes, disease
+    - yeah disease
+    - i know the disease name
+
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+#Date :- 29-Mar-2022.
+- intent: alveolar_proteinosis/description
+  examples: |
+    - Tell me more about alveolar proteinosis ?
+    - what is alveolar proteinosis ?
+    - please explain me briefly about alveolar proteinosis ?
+    - description about alveolar proteinosis ?
+    - alveolar proteinisis ?
+    - Could you elaborate on alveolar proteinosis?
+    - Could you help describe alveolar proteinosis to me briefly?
+    - An explanation of alveolar proteinosis?
+    - What exactly is alveolar proteinosis?
+    - What is the definition of alveolar proteinosis?
+
+- intent: alveolar_proteinosis/prevention
+  examples: |
+    - tell me about prevention of alveolar protenosis ?
+    - how can i prevent from alveolar protenosis ?
+    - is there any way to prevent from alveolar protenisis ?
+    - what are the measures we take to prevent fom alveolar proteinosis
+    - alveolar proteinosis prevention ?
+    - Could you please tell me how to prevent alveolar proteosis?
+    - How can I avoid alveolar protenosis?
+    - Is there a technique to avoid alveolar protenisis?
+    - What precautions must we take to avoid alveolar proteinosis?
+    - prevention from preoteinosis
+
+- intent: alveolar_proteinosis/cause
+  examples: |
+    - how alveolar proteinosis is caused ?
+    - what are the causes of alveolar proteinosis ?
+    - please tell me the causes of alveolar proteinosis ?
+    - cause of alveolar proteinosis ?
+    - What causes alveolar proteinosis?
+    - How does alveolar proteinosis develop?
+    - Could you please explain me what causes alveolar proteinosis?
+    - alveolar proteinosis cause
+    - how proteinosis caused ?
+    - what factors contribute the cause of alveolar proteinosis
+
+- intent: pertussis/description
+  examples: |
+    - Tell me more about pertusis ?
+    - please explain me briefly about pertusis ?
+    - what is pertusis ?
+    - Could you elaborate on pertusis ?
+    - What is the definition of pertusis ?
+    - What exactly is pertusis ?
+    - An explanation of pertusis ?
+    - Could you help describe pertusis to me briefly?
+    - pertusis description
+    - about pertusis ?
+    - pertusis
+
+- intent: pertussis/prevention
+  examples: |
+    - prevention from pertusis
+    - What precautions must we take to avoid pertusis?
+    - tell me about prevention of pertusis ?
+    - how can i prevent from pertusis ?
+    - Is there a technique to avoid pertusis ?
+    - How can I avoid pertusis ?
+    - is there any way to prevent from pertusis ?
+    - what are the measures we take to prevent fom pertusis ?
+    - pertusis prevention ?
+    - Could you please tell me how to prevent pertusis?
+
+- intent: pertussis/cause
+  examples: |
+    - how pertusis caused ?
+    - please tell me the causes of pertusis ?
+    - cause of pertusis ?
+    - Could you please explain me what causes pertusis?
+    - pertusis cause
+    - What are the causes of pertusis?
+    - What causes pertusis?
+    - What factors contribute the cause of pertusis?
+    - How does pertusis develop?
+    - What are the factors that causes pertusis?
+
+- intent: asthmatic_bronchitis/description
+  examples: |
+    - tell me about asthmatic bronchitis
+    - what is asthmatic bronchitis ?
+    - define asthmatic bronchitis
+    - could you elaborate asthmatic bronchitis ?
+    - asthmatic bronchitis
+    - description of asthmatic bronchitis
+    - please explain to me about asthmatic bronchitis ?
+    - please tell me the definition of asthmatic bronchitis ?
+    - tell me briefly about asthmatic bronchitis ?
+    - what exactly is asthmatic bronchitis
+
+- intent: asthmatic_bronchitis/prevention
+  examples: |
+    - what are the prevention to be taken for asthmatic bronchitis
+    - how can i prevent from asthmatic bronchitis
+    - is there any way to prevent from asthmatic bronchitis
+    - asthmatic bronchitis prevention
+    - could you please tell me to prevent from asthmatic bronchitis
+    - how can i avoid asthmatic bronchitis
+    - tell me about prevention from asthmatic bronchitis
+    - what precaution should we take from asthmatic bronchitis
+    - prevention from asthmatic bronchitis
+    - ways to get prevent from asthmatic bronchitis
+
+- intent: asthmatic_bronchitis/cause
+  examples: |
+    - how asthmatic bronchitis is caused
+    - what are the factors that causes asthmatic bronchitis
+    - what causes asthmatic bronchitis
+    - could you please tell me the causes of asthmatic bronchitis
+    - how does asthmatic bronchitis caused
+    - asthmatic causes
+    - Could you please explain me what causes asthmatic bronchitis?
+    - what are the causes of asthmatic brochitis
+    - cause of asthamtic bronchitis ?
+    - tell me the cause of asthmatic bronchitis
+
+- intent: ards/description
+  examples: |
+    - What is ARDS ?
+    - tell me about adult respiratory distress syndrome ?
+    - define ARDS ?
+    - tell me briefly about ards 
+    - please explain me about Adult respiratory distress syndrome ?
+    - ards 
+    - elaborate the ards please?
+    - what exactly the ards disease ?
+    - description of ards
+    - definition of ARDS ?
+
+- intent: ards/prevention
+  examples: |
+    - what are the prevention measure of ARDS ?
+    - could you please tell me about the prevention from ards
+    - is there any way to prevent from ARDS
+    - adult respiratory distress syndrome preventions 
+    - what are the steps to be taken to prevent from ards
+    - how can i avoid ards ?
+    - tell me the way to prevent from ards
+    - ards prevention
+    - tell me about prevention from ards
+    - how can i prevent from ards ?
+
+- intent: ards/cause
+  examples: |
+    - what causes ards
+    - how adult respiratory distress syndrome is caused
+    - what are the factors that caused adult respiratory distress syndrome
+    - how does ards caused
+    - tell me the cause of ards ?
+    - could you please tell me the cause of ards ?
+    - causes of ARDS ?
+    - causes of adult respiratory distress syndrome 
+    - how ards is caused ?
+    - please tell me about how ards is caused ?
+
+- intent: amniotic_fluid_inhalation/description
+  examples: |
+    - what causes ards
+    - how adult respiratory distress syndrome is caused
+    - what are the factors that caused adult respiratory distress syndrome
+    - how does ards caused
+    - tell me the cause of ards ?
+    - could you please tell me the cause of ards ?
+    - causes of ARDS ?
+    - causes of adult respiratory distress syndrome 
+    - how ards is caused ?
+    - please tell me about how ards is caused ?
+
+- intent: amniotic_fluid_inhalation/prevention
+  examples: |
+    - what causes ards
+    - how adult respiratory distress syndrome is caused
+    - what are the factors that caused adult respiratory distress syndrome
+    - how does ards caused
+    - tell me the cause of ards ?
+    - could you please tell me the cause of ards ?
+    - causes of ARDS ?
+    - causes of adult respiratory distress syndrome 
+    - how ards is caused ?
+    - please tell me about how ards is caused ?
+
+- intent: amniotic_fluid_inhalation/cause
+  examples: |
+    - what causes ards
+    - how adult respiratory distress syndrome is caused
+    - what are the factors that caused adult respiratory distress syndrome
+    - how does ards caused
+    - tell me the cause of ards ?
+    - could you please tell me the cause of ards ?
+    - causes of ARDS ?
+    - causes of adult respiratory distress syndrome 
+    - how ards is caused ?
+    - please tell me about how ards is caused ?
+
+- intent: spe/description
+  examples: |
+    - What is SPE infiltration ?
+    - tell me about simple pulmonary eosinophilic infiltration ?
+    - define SPE ?
+    - tell me briefly about spe 
+    - please explain me about simple pulmonary eosinophilic infiltration ?
+    - spe  
+    - elaborate the spe please?
+    - what exactly the spe disease ?
+    - description of spe
+    - definition of Simple pulmonary eosinophilc infiltration ?
+
+- intent: spe/prevention
+  examples: |
+    - what are the prevention measure of SPE ?
+    - could you please tell me about the prevention from spe
+    - is there any way to prevent from SPE
+    - Simple pulmonary eosinophilc infiltration preventions 
+    - what are the steps to be taken to prevent from spe
+    - how can i avoid Simple pulmonary eosinophilc infiltration ?
+    - tell me the way to prevent from spe
+    - Simple pulmonary eosinophilc infiltration prevention
+    - tell me about prevention from SPE
+    - how can i prevent from SPE ?
+
+- intent: spe/cause
+  examples: |
+    - what causes SPE
+    - how Simple pulmonary eosinophilc infiltration is caused
+    - what are the factors that caused Simple pulmonary eosinophilc infiltration
+    - how does SPE caused
+    - tell me the cause of spe ?
+    - could you please tell me the cause of spe ?
+    - causes of SPE ?
+    - causes of Simple pulmonary eosinophilc infiltration 
+    - how Simple pulmonary eosinophilc infiltration is caused ?
+    - please tell me about how SPE is caused ?
+
+- intent: loblar_pneumonia/description
+  examples: |
+    - I'm not familiar with loblar pneumonia.
+    - Describe loblar pneumonia to me.
+    - elucidate the concept of loblar pneumonia
+    - explain the meaning of loblar pneumonia
+    - Could you kindly explain loblar pneumonia to me?
+    - Please explain what loblar pneumonia is.
+    - define the term "loblar pneumonia"
+    - clarify me about loblar pneumonia
+    - Summarize what loblar pneumonia is.
+    - i want to know about loblar pneumonia
+
+- intent: loblar_pneumonia/prevention
+  examples: |
+    - Is loblar pneumonia preventable?
+    - Can loblar pneumonia be avoided?
+    - Is it possible to get rid of loblar pneumonia?
+    - the prevention of loblar pneumonia
+    - loblar PNEUMONIA and how to deal with it
+    - I'd want to cure loblar pneumonia.
+    - how to deal with loblar pneumonia
+    - what can you do to prevent loblar pneumonia?
+    - tell some methods to cure loblar pneumonia?
+    - how to get rid of loblar pneumonia
+
+- intent: loblar_pneumonia/cause
+  examples: |
+    - what causes loblar pneumonia
+    - how loblar pneumonia is caused
+    - what are the factors that caused loblar pneumonia
+    - how does loblar pneumonia caused
+    - tell me the cause of loblar pneumonia ?
+    - could you please tell me the cause of loblar pneumonia ?
+    - causes of loblar pneumonia ?
+    - causes of loblar pneumonia 
+    - how loblar pneumonia is caused ?
+    - please tell me about how loblar pneumonia is caused ?
+
+- intent: pulmonary_pleural_amebiasis/description
+  examples: |
+    - i dont know about pulmonary-pleural amebiasis
+    - tell me about adult pulmonary-pleural amebiasis ?
+    - explain pulmonary-pleural amebiasis  ?
+    - give brief about pulmonary-pleural amebiasis 
+    - could you please tell what is  pulmonary-pleural amebiasis
+    - pulmonary-pleural amebiasis
+    - define  pulmonary-pleural amebiasis
+    - clear me of pulmonary-pleural amebiasis
+    - describe the pulmonary-pleural amebiasis
+    - i wanna know about pulmonary-pleural amebiasis
+
+- intent: pulmonary_pleural_amebiasis/prevention
+  examples: |
+    - is there any prevention measure of pulmonary-pleural amebiasis ?
+    - I'd want to learn about pulmonary-pleural amebiasis prevention.
+    - lemme know how to prevent from pulmonary-pleural amebiasis
+    - pulmonary-pleural amebiasis preventions 
+    - how to treat amebiasis of the lungs and pleura
+    - I'd want to cure pulmonary-pleural amebiasis.
+    - Amebiasis of the lungs and pleura (pulmonary-pleural amebiasis) and how to handle it
+    - Is there anything that can be done to avoid pulmonary-pleural amebiasis?
+    - Can pulmonary-pleural amebiasis be prevented?
+    - Tell me how to overcome ards.
+
+- intent: pulmonary_pleural_amebiasis/cause
+  examples: |
+    - what are different causes pulmonary-pleural amebiasis
+    - the origins of adult pulmonary-pleural amebiasis
+    - What variables contributed to the development of pulmonary-pleural amebiasis?
+    - Why does pulmonary-pleural amebiasis occur?
+    - tell me the cause of  pulmonary-pleural amebiasis
+    - do you now the cause of pulmonary-pleural amebiasis ?
+    - i dont know how pulmonary-pleural amebiasis happens?
+    - How does pulmonary-pleural amebiasis develop?
+    - I'm not sure what causes pulmonary-pleural amebiasis.
+    - please tell me about how pulmonary-pleural amebiasis is caused ?
+
+- intent: prs/description
+  examples: |
+    - Tell me about PRS ?
+    - what is Pulmonary Hemorrhagic-Nephritis Syndrome ?
+    - could you please explain me briefly about PRS ?
+    - tell me the description about prs ?
+    - Pulmonary Hemorrhagic-Nephritis Syndrome ?
+    - Could you elaborate me on pulmonary renal syndrome?
+    - Could you help me to describe the PRS disease briefly?
+    - tell me the explanation of PRS?
+    - What exactly is pulmonary renal syndrome?
+    - What is the definition of PRS?
+
+- intent: prs/prevention
+  examples: |
+    - tell me the prevention of Pulmonary Hemorrhagic-Nephritis Syndrome ?
+    - how we can prevent from PRS ?
+    - is there any way we should take to prevent from PRS ?
+    - what are the measures we take to prevent fom Pulmonary Hemorrhagic-Nephritis Syndrome
+    - Pulmonary Hemorrhagic-Nephritis Syndrome prevention ?
+    - Could you please tell me how to prevent PRS?
+    - How can I avoid pulmonary renal syndrome?
+    - Is there any steps to avoid PRS?
+    - What precautions must we take to avoid pulmonary renal syndrome?
+    - prevention from pulmonary renal syndrome
+
+- intent: prs/cause
+  examples: |
+    - how PRS is caused ?
+    - what are the causes of PRS ?
+    - please tell me the causes of Pulmonary Hemorrhagic-Nephritis Syndrome ?
+    - cause of Pulmonary Hemorrhagic-Nephritis Syndrome ?
+    - What causes PRS?
+    - How does PRS develop?
+    - Could you please explain me what causes PRS?
+    - pulmonary renal syndrome cause
+    - how PRS caused ?
+    - what factors contribute the cause of PRS
+
+#date - 06/04/2022
+- intent: legionellosis/description
+  examples: |
+    - what is legionellosis?
+    - what does legionellosis mean?
+    - what happens in legionellosis?
+    - tell me about legionellosis
+    - describe legionellosis
+    - can you tell me about legionellosis?
+    - what is meant by legionellosis?
+    - explain legionellosis
+    - can i know more about legionellosis?
+    - information about legionellosis
+
+- intent: legionellosis/prevention
+  examples: |
+    - how can legionellosis be prevented?
+    - steps to prevent legionellosis
+    - what can i do to prevent legionellosis?
+    - how can i prevent legionellosis from happening to me?
+    - can legionellosis be prevented? how?
+    - prevention of legionellosis
+    - what to do to prevent legionellosis?
+    - how to prevent legionellosis?
+    - tell me about prevention of legionellosis
+    - legionellosis prevention
+
+- intent: legionellosis/cause
+  examples: |
+    - what causes legionellosis?
+    - how can legionellosis be caused?
+    - what are the reasons behind legionellosis?
+    - causes of legionellosis
+    - explain the causes of legionellosis
+    - legionellosis can be caused by?
+    - tell me about the causes of legionellosis
+    - all causes of legionellosis
+    - list the causes of legionellosis
+    - name the causes of legionellosis
+
+- intent: tuberculous_empyema/description
+  examples: |
+    - what is tuberculous empyema?
+    - what does tuberculous empyema mean?
+    - what happens in tuberculous empyema?
+    - tell me about tuberculous empyema
+    - describe tuberculous empyema
+    - can you tell me about tuberculous empyema?
+    - what is meant by tuberculous empyema?
+    - explain tuberculous empyema
+    - can i know more about tuberculous empyema?
+    - information about tuberculous empyema
+
+- intent: tuberculous_empyema/prevention
+  examples: |
+    - how can tuberculous empyema be prevented?
+    - steps to prevent tuberculous empyema
+    - what can i do to prevent tuberculous empyema?
+    - how can i prevent tuberculous empyema from happening to me?
+    - can tuberculous empyema be prevented? how?
+    - prevention of tuberculous empyema
+    - what to do to prevent tuberculous empyema?
+    - how to prevent tuberculous empyema?
+    - tell me about prevention of tuberculous empyema
+    - tuberculous empyema prevention
+
+- intent: tuberculous_empyema/cause
+  examples: |
+    - what causes tuberculous empyema?
+    - how can tuberculous empyema be caused?
+    - what are the reasons behind tuberculous empyema?
+    - causes of tuberculous empyema
+    - explain the causes of tuberculous empyema
+    - tuberculous empyema can be caused by?
+    - tell me about the causes of tuberculous empyema
+    - all causes of tuberculous empyema
+    - list the causes of tuberculous empyema
+    - name the causes of tuberculous empyema
+
+- intent: hemoptysis/description
+  examples: |
+    - what is hemoptysis?
+    - what does hemoptysis mean?
+    - what happens in hemoptysis?
+    - tell me about hemoptysis
+    - describe hemoptysis
+    - can you tell me about hemoptysis?
+    - what is meant by hemoptysis?
+    - explain hemoptysis
+    - can i know more about hemoptysis?
+    - information about hemoptysis
+
+- intent: hemoptysis/prevention
+  examples: |
+    - how can hemoptysis be prevented?
+    - steps to prevent hemoptysis
+    - what can i do to prevent hemoptysis?
+    - how can i prevent hemoptysis from happening to me?
+    - can hemoptysis be prevented? how?
+    - prevention of hemoptysis
+    - what to do to prevent hemoptysis?
+    - how to prevent hemoptysis?
+    - tell me about prevention of hemoptysis
+    - hemoptysis prevention
+
+- intent: hemoptysis/cause
+  examples: |
+    - what causes hemoptysis?
+    - how can hemoptysis be caused?
+    - what are the reasons behind hemoptysis?
+    - causes of hemoptysis
+    - explain the causes of hemoptysis
+    - hemoptysis can be caused by?
+    - tell me about the causes of hemoptysis
+    - all causes of hemoptysis
+    - list the causes of hemoptysis
+    - name the causes of hemoptysis
+
+- intent: idiopathic_pulmonary_fibrosis/description
+  examples: |
+    - what is idiopathic pulmonary fibrosis?
+    - what does idiopathic pulmonary fibrosis mean?
+    - what happens in idiopathic pulmonary fibrosis?
+    - tell me about idiopathic pulmonary fibrosis
+    - describe idiopathic pulmonary fibrosis
+    - can you tell me about idiopathic pulmonary fibrosis?
+    - what is meant by idiopathic pulmonary fibrosis?
+    - explain idiopathic pulmonary fibrosis
+    - can i know more about idiopathic pulmonary fibrosis?
+    - information about idiopathic pulmonary fibrosis
+
+- intent: idiopathic_pulmonary_fibrosis/prevention
+  examples: |
+    - how can idiopathic pulmonary fibrosis be prevented?
+    - steps to prevent idiopathic pulmonary fibrosis
+    - what can i do to prevent idiopathic pulmonary fibrosis?
+    - how can i prevent idiopathic pulmonary fibrosis from happening to me?
+    - can idiopathic pulmonary fibrosis be prevented? how?
+    - prevention of idiopathic pulmonary fibrosis
+    - what to do to prevent idiopathic pulmonary fibrosis?
+    - how to prevent idiopathic pulmonary fibrosis?
+    - tell me about prevention of idiopathic pulmonary fibrosis
+    - idiopathic pulmonary fibrosis prevention
+
+- intent: idiopathic_pulmonary_fibrosis/cause
+  examples: |
+    - what causes idiopathic pulmonary fibrosis?
+    - how can idiopathic pulmonary fibrosis be caused?
+    - what are the reasons behind idiopathic pulmonary fibrosis?
+    - causes of idiopathic pulmonary fibrosis
+    - explain the causes of idiopathic pulmonary fibrosis
+    - idiopathic pulmonary fibrosis can be caused by?
+    - tell me about the causes of idiopathic pulmonary fibrosis
+    - all causes of idiopathic pulmonary fibrosis
+    - list the causes of idiopathic pulmonary fibrosis
+    - name the causes of idiopathic pulmonary fibrosis
+
+- intent: desquamative_interstitial_pneumonia/description
+  examples: |
+    - what is desquamative interstitial pneumonia?
+    - what does desquamative interstitial pneumonia mean?
+    - what happens in desquamative interstitial pneumonia?
+    - tell me about desquamative interstitial pneumonia
+    - describe desquamative interstitial pneumonia
+    - can you tell me about desquamative interstitial pneumonia?
+    - what is meant by desquamative interstitial pneumonia?
+    - explain desquamative interstitial pneumonia
+    - can i know more about desquamative interstitial pneumonia?
+    - information about desquamative interstitial pneumonia
+
+- intent: desquamative_interstitial_pneumonia/prevention
+  examples: |
+    - how can desquamative interstitial pneumonia be prevented?
+    - steps to prevent desquamative interstitial pneumonia
+    - what can i do to prevent desquamative interstitial pneumonia?
+    - how can i prevent desquamative interstitial pneumonia from happening to me?
+    - can desquamative interstitial pneumonia be prevented? how?
+    - prevention of desquamative interstitial pneumonia
+    - what to do to prevent desquamative interstitial pneumonia?
+    - how to prevent desquamative interstitial pneumonia?
+    - tell me about prevention of desquamative interstitial pneumonia
+    - desquamative interstitial pneumonia prevention
+
+- intent: desquamative_interstitial_pneumonia/cause
+  examples: |
+    - what causes desquamative interstitial pneumonia?
+    - how can desquamative interstitial pneumonia be caused?
+    - what are the reasons behind desquamative interstitial pneumonia?
+    - causes of desquamative interstitial pneumonia
+    - explain the causes of desquamative interstitial pneumonia
+    - desquamative interstitial pneumonia can be caused by?
+    - tell me about the causes of desquamative interstitial pneumonia
+    - all causes of desquamative interstitial pneumonia
+    - list the causes of desquamative interstitial pneumonia
+    - name the causes of desquamative interstitial pneumonia
+
+- intent: idiopathic_obstructive_bronchiolitis_with_organizing_pneumonia/description
+  examples: |
+    - what is idiopathic obstructive bronchiolitis with organizing pneumonia?
+    - what does idiopathic obstructive bronchiolitis with organizing pneumonia mean?
+    - what happens in idiopathic obstructive bronchiolitis with organizing pneumonia?
+    - tell me about idiopathic obstructive bronchiolitis with organizing pneumonia
+    - describe idiopathic obstructive bronchiolitis with organizing pneumonia
+    - can you tell me about idiopathic obstructive bronchiolitis with organizing pneumonia?
+    - what is meant by idiopathic obstructive bronchiolitis with organizing pneumonia?
+    - explain idiopathic obstructive bronchiolitis with organizing pneumonia
+    - can i know more about idiopathic obstructive bronchiolitis with organizing pneumonia?
+    - information about idiopathic obstructive bronchiolitis with organizing pneumonia
+
+- intent: idiopathic_obstructive_bronchiolitis_with_organizing_pneumonia/prevention
+  examples: |
+    - how can idiopathic obstructive bronchiolitis with organizing pneumonia be prevented?
+    - steps to prevent idiopathic obstructive bronchiolitis with organizing pneumonia
+    - what can i do to prevent idiopathic obstructive bronchiolitis with organizing pneumonia?
+    - how can i prevent idiopathic obstructive bronchiolitis with organizing pneumonia from happening to me?
+    - can idiopathic obstructive bronchiolitis with organizing pneumonia be prevented? how?
+    - prevention of idiopathic obstructive bronchiolitis with organizing pneumonia
+    - what to do to prevent idiopathic obstructive bronchiolitis with organizing pneumonia?
+    - how to prevent idiopathic obstructive bronchiolitis with organizing pneumonia?
+    - tell me about prevention of idiopathic obstructive bronchiolitis with organizing pneumonia
+    - idiopathic obstructive bronchiolitis with organizing pneumonia prevention
+
+- intent: idiopathic_obstructive_bronchiolitis_with_organizing_pneumonia/cause
+  examples: |
+    - what causes idiopathic obstructive bronchiolitis with organizing pneumonia?
+    - how can idiopathic obstructive bronchiolitis with organizing pneumonia be caused?
+    - what are the reasons behind idiopathic obstructive bronchiolitis with organizing pneumonia?
+    - causes of idiopathic obstructive bronchiolitis with organizing pneumonia
+    - explain the causes of idiopathic obstructive bronchiolitis with organizing pneumonia
+    - idiopathic obstructive bronchiolitis with organizing pneumonia can be caused by?
+    - tell me about the causes of idiopathic obstructive bronchiolitis with organizing pneumonia
+    - all causes of idiopathic obstructive bronchiolitis with organizing pneumonia
+    - list the causes of idiopathic obstructive bronchiolitis with organizing pneumonia
+    - name the causes of idiopathic obstructive bronchiolitis with organizing pneumonia
+
+- intent: idiopathic_hemosiderin/description
+  examples: |
+    - what is idiopathic hemosiderin?
+    - what does idiopathic hemosiderin mean?
+    - what happens in idiopathic hemosiderin?
+    - tell me about idiopathic hemosiderin
+    - describe idiopathic hemosiderin
+    - can you tell me about idiopathic hemosiderin?
+    - what is meant by idiopathic hemosiderin?
+    - explain idiopathic hemosiderin
+    - can i know more about idiopathic hemosiderin?
+    - information about idiopathic hemosiderin
+
+- intent: idiopathic_hemosiderin/prevention
+  examples: |
+    - how can idiopathic hemosiderin be prevented?
+    - steps to prevent idiopathic hemosiderin
+    - what can i do to prevent idiopathic hemosiderin?
+    - how can i prevent idiopathic hemosiderin from happening to me?
+    - can idiopathic hemosiderin be prevented? how?
+    - prevention of idiopathic hemosiderin
+    - what to do to prevent idiopathic hemosiderin?
+    - how to prevent idiopathic hemosiderin?
+    - tell me about prevention of idiopathic hemosiderin
+    - idiopathic hemosiderin prevention
+
+- intent: idiopathic_hemosiderin/cause
+  examples: |
+    - what causes idiopathic hemosiderin?
+    - how can idiopathic hemosiderin be caused?
+    - what are the reasons behind idiopathic hemosiderin?
+    - causes of idiopathic hemosiderin
+    - explain the causes of idiopathic hemosiderin
+    - idiopathic hemosiderin can be caused by?
+    - tell me about the causes of idiopathic hemosiderin
+    - all causes of idiopathic hemosiderin
+    - list the causes of idiopathic hemosiderin
+    - name the causes of idiopathic hemosiderin
+
+- intent: exogenous_allergic_alveolitis/description
+  examples: |
+    - what is exogenous allergic alveolitis?
+    - what does exogenous allergic alveolitis mean?
+    - what happens in exogenous allergic alveolitis?
+    - tell me about exogenous allergic alveolitis
+    - describe exogenous allergic alveolitis
+    - can you tell me about exogenous allergic alveolitis?
+    - what is meant by exogenous allergic alveolitis?
+    - explain exogenous allergic alveolitis
+    - can i know more about exogenous allergic alveolitis?
+    - information about exogenous allergic alveolitis
+
+- intent: exogenous_allergic_alveolitis/prevention
+  examples: |
+    - how can exogenous allergic alveolitis be prevented?
+    - steps to prevent exogenous allergic alveolitis
+    - what can i do to prevent exogenous allergic alveolitis?
+    - how can i prevent exogenous allergic alveolitis from happening to me?
+    - can exogenous allergic alveolitis be prevented? how?
+    - prevention of exogenous allergic alveolitis
+    - what to do to prevent exogenous allergic alveolitis?
+    - how to prevent exogenous allergic alveolitis?
+    - tell me about prevention of exogenous allergic alveolitis
+    - exogenous allergic alveolitis prevention
+
+- intent: exogenous_allergic_alveolitis/cause
+  examples: |
+    - what causes exogenous allergic alveolitis?
+    - how can exogenous allergic alveolitis be caused?
+    - what are the reasons behind exogenous allergic alveolitis?
+    - causes of exogenous allergic alveolitis
+    - explain the causes of exogenous allergic alveolitis
+    - exogenous allergic alveolitis can be caused by?
+    - tell me about the causes of exogenous allergic alveolitis
+    - all causes of exogenous allergic alveolitis
+    - list the causes of exogenous allergic alveolitis
+    - name the causes of exogenous allergic alveolitis
+
+- intent: pediatric_tuberculosis/description
+  examples: |
+    - what is pediatric tuberculosis?
+    - what does pediatric tuberculosis mean?
+    - what happens in pediatric tuberculosis?
+    - tell me about pediatric tuberculosis
+    - describe pediatric tuberculosis
+    - can you tell me about pediatric tuberculosis?
+    - what is meant by pediatric tuberculosis?
+    - explain pediatric tuberculosis
+    - can i know more about pediatric tuberculosis?
+    - information about pediatric tuberculosis
+
+- intent: pediatric_tuberculosis/prevention
+  examples: |
+    - how can pediatric tuberculosis be prevented?
+    - steps to prevent pediatric tuberculosis
+    - what can i do to prevent pediatric tuberculosis?
+    - how can i prevent pediatric tuberculosis from happening to me?
+    - can pediatric tuberculosis be prevented? how?
+    - prevention of pediatric tuberculosis
+    - what to do to prevent pediatric tuberculosis?
+    - how to prevent pediatric tuberculosis?
+    - tell me about prevention of pediatric tuberculosis
+    - pediatric tuberculosis prevention
+
+- intent: pediatric_tuberculosis/cause
+  examples: |
+    - what causes pediatric tuberculosis?
+    - how can pediatric tuberculosis be caused?
+    - what are the reasons behind pediatric tuberculosis?
+    - causes of pediatric tuberculosis
+    - explain the causes of pediatric tuberculosis
+    - pediatric tuberculosis can be caused by?
+    - tell me about the causes of pediatric tuberculosis
+    - all causes of pediatric tuberculosis
+    - list the causes of pediatric tuberculosis
+    - name the causes of pediatric tuberculosis
+    
+# 8/4/2022
+- intent: respiratory_failure/description
+  examples: |
+    - what is respiratory failure
+    - tell me about respiratory failure
+    - define respiratory failure
+    - describe respiratory failure
+    - specify the respiratory failure
+    - explain the respiratory failure
+    - description about respiratory failure
+    - information about respiratory failure
+    - elaborate respiratory failure
+    
+- intent: respiratory_failure/prevention
+  examples: |
+    - how to prevent the respiratory failure
+    - prevention of respiratory failure
+    - ways to prevent the respiratory failure
+    - what are the things to perform to prevent the respiratory failure
+    - how can I avoid the respiratory failure
+    - is there a technique to prevent the respiratory failure
+    - information regarding the prevention of respiratory failure
+    - what precaution we can take to prevent the respiratory failure
+    - describe the ways to prevent the respiratory failure
+    
+- intent: respiratory_failure/causes
+  examples: |
+    - causes of respiratory failure
+    - how respiratory failure is caused
+    - can you explain the causes of  respiratory failure
+    - what causes the respiratory failure
+    - could you please explain to me what causes respiratory failure
+    - how respiratory failure is caused 
+    - tell me different causes of respiratory failure
+    - define the various causes of respiratory failure
+    - what are the reasons behind respiratory failure
+    
+- intent: respiratory_bronchiole-associated_interstitial_lung_disease(RB-ILD)/description
+  examples: |
+    - tell me more about respiratory bronchiole-associated interstitial lung disease(RB-ILD)
+    - what is respiratory bronchiole-associated interstitial lung disease ?
+    - please explain me briefly about respiratory bronchiole-associated interstitial lung disease ?
+    - description about respiratory bronchiole-associated interstitial lung disease ?
+    - explain me about RB-ILD
+    - could you elaborate on respiratory bronchiole-associated interstitial lung disease?
+    - could you help describe respiratory bronchiole-associated interstitial lung disease to me briefly?
+    - explanation of respiratory bronchiole-associated interstitial lung disease
+    - what exactly is respiratory bronchiole-associated interstitial lung disease(RB-ILD)
+    - define respiratory bronchiole-associated interstitial lung disease
+    
+- intent: respiratory_bronchiole-associated_interstitial_lung_disease(RB-ILD)/prevention
+  examples: |
+    - tell me about the prevention of respiratory bronchiole-associated interstitial lung disease(RB-ILD) 
+    - how can i prevent from respiratory bronchiole-associated interstitial lung disease(RB-ILD)
+    - is there any way to prevent respiratory bronchiole-associated interstitial lung disease?
+    - what are the measures we take to prevent fom respiratory bronchiole-associated interstitial lung disease
+    - respiratory bronchiole-associated interstitial lung disease prevention ?
+    - could you please tell me how to prevent RB-ILD
+    - how can I avoid respiratory bronchiole-associated interstitial lung disease(RB-ILD)
+    - is there a technique to avoid respiratory bronchiole-associated interstitial lung disease
+    - what precautions must we take to avoid respiratory bronchiole-associated interstitial lung disease(RB-ILD)
+    - prevention methods of RB-ILD
+
+- intent: respiratory_bronchiole-associated_interstitial_lung_disease(RB-ILD)/causes
+  examples: |
+    - how respiratory bronchiole-associated interstitial lung disease is caused (RB-ILD)
+    - what are the causes of respiratory bronchiole-associated interstitial lung disease 
+    - please tell me the causes of RB-ILD
+    - cause of respiratory bronchiole-associated interstitial lung disease 
+    - what causes respiratory bronchiole-associated interstitial lung disease
+    - explain the different causes of respiratory bronchiole-associated interstitial lung disease
+    - could you please explain to me what causes respiratory bronchiole-associated interstitial lung disease?
+    - respiratory bronchiole-associated interstitial lung disease cause
+    - how respiratory bronchiole-associated interstitial lung disease caused 
+    - how can respiratory bronchiole-associated interstitial lung disease be caused
+
+- intent: respiratory_syncytial_virus_pneumonia(RSV)/description
+  examples: |
+    - what is respiratory syncytial virus pneumonia
+    - tell me about respiratory syncytial virus pneumonia
+    - what do you mean by respiratory syncytial virus pneumonia
+    - define RSV
+    - describe respiratory syncytial virus pneumonia (RSV)
+    - explain respiratory syncytial virus pneumonia (RSV)
+    - what exactly is respiratory syncytial virus pneumonia (RSV)
+    - information about RSV
+    - tell me briefly about respiratory syncytial virus pneumonia(RSV)
+
+- intent: respiratory_syncytial_virus_pneumonia(RSV)/prevention
+  examples: |
+    - how to prevent respiratory syncytial virus pneumonia
+    - what are the ways to prevent the spread of RSV
+    - what are the ways to prevent the spread of respiratory syncytial virus pneumonia 
+    - how can I avoid the RSV
+    - how can I avoid the respiratory syncytial virus pneumonia
+    - is there a technique to prevent the respiratory syncytial virus pneumonia (RSV)
+    - explain the prevention of respiratory syncytial virus pneumonia (RSV)
+    - describe the ways to prevent the respiratory syncytial virus pneumonia
+    - prevention methods of respiratory syncytial virus pneumonia
+    
+- intent: respiratory_syncytial_virus_pneumonia(RSV)/causes
+  examples: |
+    - causes of respiratory syncytial virus pneumonia
+    - how respiratory syncytial virus pneumonia be caused
+    - what causes RSV
+    - list the causes of respiratory syncytial virus pneumonia (RSV)
+    - explain the different causes of respiratory syncytial virus pneumonia 
+    - respiratory syncytial virus pneumonia (RSV) can be caused by
+    - causes of RSV
+    - define the various causes of respiratory syncytial virus pneumonia
+    - please tell me about how respiratory syncytial virus pneumonia(RSV) is caused
+    
+- intent: acute_respiratory_failure/description
+  examples: |
+    - what is acute respiratory failure
+    - explain the acute respiratory failure
+    - describe the acute respiratory failure
+    - information about acute respiratory failure
+    - define acute respiratory failure
+    - description of acute respiratory failure
+    - explanation of the acute respiratory failure
+    - tell me about acute respiratory failure
+    - what do you mean by acute respiratory failure
+    
+- intent: acute_respiratory_failure/prevention
+  examples: |
+    - how to prevent acute respiratory failure
+    - how to prevent the spread of acute respiratory failure
+    - what are the ways to prevent the acute respiratory failure
+    - is there a technique to prevent the acute respiratory failure
+    - is there some information about the prevention of acute respiratory failure
+    - what precaution we can take to prevent the spread of acute respiratory failure
+    - explain the prevention of acute respiratory failure
+    - describe the ways to prevent the acute respiratory failure
+    - describe methods to prevent acute respiratory failure  
+     
+- intent: neonatal_respiratory_distress_syndrome(RDS)/description
+  examples: |
+    - define neonatal neonatal respiratory distress syndrome(RDS)
+    - describe neonatal respiratory distress syndrome(RDS)
+    - information about neonatal respiratory distress syndrome(RDS)
+    - description about neonatal respiratory distress syndrome(RDS)
+    - what is neonatal respiratory distress syndrome(RDS)
+    - explain RDS
+    - can u tell me about neonatal respiratory distress syndrome
+    - what exactly RDS meant
+    - short note on neonatal respiratory distress syndrome
+  
+- intent: neonatal_respiratory_distress_syndrome(RDS)/prevention
+  examples: |
+    - how to prevent the spread of neonatal respiratory distress syndrome(RDS)
+    - how to prevent the neonatal respiratory distress syndrome
+    - what are the ways for preventing the neonatal respiratory distress syndrome(RDS)
+    - how can I avoid the spread of neonatal respiratory distress syndrome
+    - is there a technique to prevent the RDS
+    - what precaution we can take to prevent the neonatal respiratory distress syndrome(RDS)
+    - tell me about the prevention of neonatal respiratory distress syndrome
+    - prevention methods of RDS
+    - how neonatal respiratory distress syndrome(RDS) can be prevented
+    
+- intent: neonatal_respiratory_distress_syndrome(RDS)/causes
+  examples: |
+    - causes of neonatal respiratory distress syndrome
+    - information about the causes of neonatal respiratory distress syndrome(RDS)
+    - what are the different ways through which we can cause neonatal respiratory distress syndrome
+    - could you explain the causes of RDS
+    - describe the causes of neonatal respiratory distress syndrome
+    - tell me about the causes of neonatal respiratory distress syndrome(RDS)
+    - list out the causes of neonatal respiratory distress syndrome
+    - what causes the neonatal respiratory distress syndrome(RDS)
+    - what are the reasons behind neonatal respiratory distress syndrome(RDS)
+    
+- intent: inhalation_injury/description
+  examples: |
+    - what is inhalation injury
+    - what exactly inhalation injury is 
+    - define inhalation injury
+    - describe inhalation injury
+    - description about inhalation injury
+    - information about inhalation injury
+    - what do yo mean by inhalation injury
+    - tell me about inhalation injury
+    - explain inhalation injury
+    
+- intent: inhalation_injury/prevention
+  examples: |
+    - how inhalation injury can be prevented
+    - what precaution we can take to prevent the inhalation injury
+    - Prevention from inhalation injury
+    - how to prevent inhalation injury
+    - how to prevent the spread of inhalation injury
+    - tell me about the prevention of inhalation injury
+    - ways to prevent inhalation injury
+    - is there a technique which can prevent the inhalation injury
+    - information regarding the prevention of inhalation injury 
+    
+- intent: inhalation_injury/causes
+  examples: |
+    - causes of inhalation injury
+    - what causes the inhalation injury
+    - list out the causes inhalation injury
+    - tell me about the inhalation injury
+    - describes the causes of inhalation injury
+    - what are the factors that caused inhalation injury
+    - how inhalation injury be caused 
+    - could you explain the causes pf inhalation injury
+    - what are the different ways through which we can cause inhalation injury
+    
+- intent: pediatric_cold/description
+  examples: |
+    - describe  pediatric cold
+    - explain the pediatric cold
+    - could you explain pediatric cold
+    - description about pediatric cold
+    - information about pediatric cold
+    - what do you meant by pediatric cold
+    - short note on pediatric cold
+    - tell me about pediatric cold
+    - what is pediatric cold
+    
+- intent: pediatric_cold/prevention
+  examples: |
+    - ways to prevent pediatric cold
+    - tell me about the prevention of pediatric cold
+    - what precaution we can take to prevent pediatric cold
+    - how can I avoid pediatric cold
+    - prevention methods of pediatric cold
+    - how we can prevent the pediatric cold
+    - how to prevent the spread of pediatric cold
+    - information regarding the prevention of pediatric cold
+    - what are the different techniques through which we can prevent the pediatric cold
+    
+- intent: pediatric_cold/causes
+  examples: |
+    - causes of pediatric cold
+    - list out the causes pediatric cold
+    - describes the causes of pediatric cold
+    - please tell me about how pediatric cold is caused
+    - what are the different ways through which we can cause pediatric cold
+    - how pediatric cold be caused
+    - all causes of pediatric cold
+    - write down the ways through which pediatric cold can be caused
+    - what causes pediatric cold
+    
+- intent: congenital_pulmonary_cyst/description
+  examples: |
+    - what is a congenital pulmonary cyst
+    - describe congenital pulmonary cyst
+    - tell me about congenital pulmonary cyst
+    - short note on congenital pulmonary cyst
+    - define congenital pulmonary cyst
+    - information about congenital pulmonary cyst
+    - could you explain about congenital pulmonary cyst
+    - what do you meanby congenital pulmonary cyst
+    - tell me briefly about congenital pulmonary cyst
+    
+- intent: congenital_pulmonary_cyst/prevention
+  examples: |
+    - how to prevent congenital pulmonary cyst
+    - prevention of congenital pulmonary cyst
+    - describe prevention methods of congenital pulmonary cyst
+    - different ways to prevent congenital pulmonary cyst
+    - information regarding the prevention of congenital pulmonary cyst
+    - tell me about the prevention of congenital pulmonary cyst
+    - how can I avoid congenital pulmonary cyst
+    - could you please tell me how to prevent congenital pulmonary cyst
+    - is there a technique to avoid congenital pulmonary cyst
+    
+- intent: congenital_pulmonary_cyst/causes
+  examples: |
+    - what factors contribute to the cause of congenital pulmonary cyst
+    - causes of congenital pulmonary cyst
+    - explain the causes of congenital pulmonary cyst
+    - list out the causes of congenital pulmonary cyst
+    - what are the different ways through which we can cause congenital pulmonary cyst
+    - how does congenital pulmonary cyst caused
+    - write down the ways through which congenital pulmonary cyst can be caused
+    - what are the reasons behind congenital pulmonary cyst
+    - what are the causes of congenital_pulmonary_cyst
+
+# 18-Apr-2022
+- intent: lung_actinomycosis/description
+  examples: |
+    - Tell me about lung actinomycosis?
+    - explain me about lung actinomycosis?
+    - please give me brief description about lung actinomycosis?
+    - What is the definition of lung actinomy?
+    - Describe lung actinomycosis?
+    - lung actinomycosis?
+    - What is Lung actinomycosis?
+    - Define lung actinomycosis?
+    - what do you mean by lung actinomycosis?
+    - could you please elaborate lung actinomycosis?
+
+- intent: lung_actinomycosis/prevention
+  examples: |
+    - tell me about prevention of lung actinomycosis ?
+    - how lung actinomycosis prevent?
+    - Lung actinomycosis prevention?
+    - Could you please tell me how to prevent lung actinomycosis?
+    - prevention Lung actinomycosis?
+    - What precautions must we take to avoid lung actinomycosis?
+    - Is there a technique to avoid Lung actinomycosis?
+    - Is there any way to avoid Lung actinomycosis?
+    - How can I avoid lung actinomycosis ?
+    - what are the measures we take to prevent fom lung actinomycosis ?
+
+- intent: lung_actinomycosis/causes
+  examples: |
+    - how lung actinomycosis is caused?
+    - what are the causes of lung actinomycosis?
+    - tell me about the causes of lung actinomycosis?
+    - what causes lung actinomycosis?
+    - how can lung actinomycosis be caused?
+    - lung actinomycosis caused?
+    - Could you please explain me what are the causes of lung actinomycosis disease?
+    - please tell me the causes of  lung actinomycosis disease?
+    - how does lung actinomycosis caused?
+    - What are the factors that causes lung actinomycosis?
+
+- intent: pulmonary_aspergillosis/description
+  examples: |
+    - Tell me about pulmonary aspergillosis?
+    - explain me about pulmonary aspergillosis?
+    - please give me brief description about pulmonary aspergillosis?
+    - What is the definition of pulmonary aspergillosis?
+    - Describe pulmonary aspergillosis?
+    - pulmonary aspergillosis?
+    - What is pulmonary aspergillosis?
+    - Define pulmonary aspergillosis?
+    - what do you mean by pulmonary aspergillosis?
+    - could you please elaborate pulmonary aspergillosis?
+
+- intent: pulmonary_aspergillosis/prevention
+  examples: |
+    - tell me about prevention of pulmonary aspergillosis?
+    - how pulmonary aspergillosis prevent?
+    - pulmonary aspergillosis prevention?
+    - Could you please tell me how to prevent pulmonary aspergillosis?
+    - prevention pulmonary aspergillosis?
+    - What precautions must we take to avoid pulmonary aspergillosis?
+    - Is there a technique to avoid pulmonary aspergillosis?
+    - Is there any way to avoid pulmonary aspergillosis?
+    - How can I avoid pulmonary aspergillosis?
+    - what are the measures we take to prevent fom pulmonary aspergillosis ?
+
+- intent: pulmonary_aspergillosis/causes
+  examples: |
+    - how pulmonary aspergillosis is caused?
+    - what are the causes of pulmonary aspergillosis?
+    - tell me about the causes of pulmonary aspergillosis?
+    - what causes pulmonary aspergillosis?
+    - how can pulmonary aspergillosis be caused?
+    - pulmonary aspergillosis caused?
+    - Could you please explain me what are the causes of pulmonary aspergillosis disease?
+    - please tell me the causes of  pulmonary aspergillosis disease?
+    - how does pulmonary aspergillosis caused?
+    - What are the factors that causes pulmonary aspergillosis?
+
+- intent: radiation_pneumonitis/description
+  examples: |
+    - Tell me about radiation pneumonitis?
+    - explain me about radiation pneumonitis?
+    - please give me brief description about radiation pneumonitis?
+    - What is the definition of radiation pneumonitis?
+    - Describe radiation pneumonitis?
+    - radiation pneumonitis?
+    - What is radiation pneumonitis?
+    - Define radiation pneumonitis?
+    - what do you mean by radiation pneumonitis?
+    - could you please elaborate radiation pneumonitis?
+
+- intent: radiation_pneumonitis/prevention
+  examples: |
+    - tell me about prevention of radiation pneumonitis?
+    - how radiation pneumonitis prevent?
+    - radiation pneumonitis prevention?
+    - Could you please tell me how to prevent radiation pneumonitis?
+    - prevention radiation pneumonitis?
+    - What precautions must we take to avoid radiation pneumonitis?
+    - Is there a technique to avoid radiation pneumonitis?
+    - Is there any way to avoid radiation pneumonitis?
+    - How can I avoid radiation pneumonitis?
+    - what are the measures we take to prevent fom radiation pneumonitis ?
+
+- intent: radiation_pneumonitis/causes
+  examples: |
+    - how radiation pneumonitis is caused?
+    - what are the causes of radiation pneumonitis?
+    - tell me about the causes of radiation pneumonitis?
+    - what causes radiation pneumonitis?
+    - how can radiation pneumonitis be caused?
+    - radiation pneumonitis caused?
+    - Could you please explain me what are the causes of radiation pneumonitis disease?
+    - please tell me the causes of  radiation pneumonitis disease?
+    - how does radiation pneumonitis caused?
+    - What are the factors that causes radiation pneumonitis?
+
+- intent: lung_candidiasis/description
+  examples: |
+    - Tell me about lung candidiasis?
+    - explain me about lung candidiasis?
+    - please give me brief description about lung candidiasis?
+    - What is the definition of lung candidiasis?
+    - Describe lung candidiasis?
+    - lung candidiasis?
+    - What is lung candidiasis?
+    - Define lung candidiasis?
+    - what do you mean by lung candidiasis?
+    - could you please elaborate lung candidiasis?
+
+- intent: lung_candidiasis/prevention
+  examples: |
+    - tell me about prevention of lung candidiasis?
+    - how lung candidiasis prevent?
+    - lung candidiasis prevention?
+    - Could you please tell me how to prevent lung candidiasis?
+    - prevention lung candidiasis?
+    - What precautions must we take to avoid lung candidiasis?
+    - Is there a technique to avoid lung candidiasis?
+    - Is there any way to avoid lung candidiasis?
+    - How can I avoid lung candidiasis?
+    - what are the measures we take to prevent fom lung candidiasis ?
+
+- intent: lung_candidiasis/causes
+  examples: |
+    - how lung candidiasis is caused?
+    - what are the causes of lung candidiasis?
+    - tell me about the causes of lung candidiasis?
+    - what causes lung candidiasis?
+    - how can lung candidiasis be caused?
+    - lung candidiasis caused?
+    - Could you please explain me what are the causes of lung candidiasis disease?
+    - please tell me the causes of  lung candidiasis disease?
+    - how does lung candidiasis caused?
+    - What are the factors that causes lung candidiasis?
+
+- intent: lung_bullae/description
+  examples: |
+    - Tell me about lung bullae?
+    - explain me about lung bullae?
+    - please give me brief description about lung bullae?
+    - What is the definition of lung bullae?
+    - Describe lung bullae?
+    - lung bullae?
+    - What is lung bullae?
+    - Define lung bullae?
+    - what do you mean by lung bullae?
+    - could you please elaborate lung bullae?
+
+- intent: lung_bullae/prevention
+  examples: |
+    - tell me about prevention of lung bullae?
+    - how lung bullae prevent?
+    - lung bullae prevention?
+    - Could you please tell me how to prevent lung bullae?
+    - prevention lung bullae?
+    - What precautions must we take to avoid lung bullae?
+    - Is there a technique to avoid lung bullae?
+    - Is there any way to avoid lung bullae?
+    - How can I avoid lung bullae?
+    - what are the measures we take to prevent fom lung bullae ?
+
+- intent: lung_bullae/causes
+  examples: |
+    - how lung bullae is caused?
+    - what are the causes of lung bullae?
+    - tell me about the causes of lung bullae?
+    - what causes lung bullae?
+    - how can lung bullae be caused?
+    - lung bullae caused?
+    - Could you please explain me what are the causes of lung bullae disease?
+    - please tell me the causes of  lung bullae disease?
+    - how does lung bullae caused?
+    - What are the factors that causes lung bullae?
+
+- intent: emphysema/description
+  examples: |
+    - Tell me about emphysema?
+    - explain me about emphysema?
+    - please give me brief description about emphysema?
+    - What is the definition of emphysema?
+    - Describe emphysema?
+    - emphysema?
+    - What is emphysema?
+    - Define emphysema?
+    - what do you mean by emphysema?
+    - could you please elaborate emphysema?
+
+- intent: emphysema/prevention
+  examples: |
+    - tell me about prevention of emphysema?
+    - how emphysema prevent?
+    - emphysema prevention?
+    - Could you please tell me how to prevent emphysema?
+    - prevention emphysema?
+    - What precautions must we take to avoid emphysema?
+    - Is there a technique to avoid emphysema?
+    - Is there any way to avoid emphysema?
+    - How can I avoid emphysema?
+    - what are the measures we take to prevent fom emphysema ?
+
+- intent: emphysema/causes
+  examples: |
+    - how emphysema is caused?
+    - what are the causes of emphysema?
+    - tell me about the causes of emphysema?
+    - what causes emphysema?
+    - how can emphysema be caused?
+    - emphysema caused?
+    - Could you please explain me what are the causes of emphysema disease?
+    - please tell me the causes of  emphysema disease?
+    - how does emphysema caused?
+    - What are the factors that causes emphysema?
+
+- intent: lung_abscess/description
+  examples: |
+    - Tell me about lung abscess?
+    - explain me about lung abscess?
+    - please give me brief description about lung abscess?
+    - What is the definition of lung abscess?
+    - Describe lung abscess?
+    - lung abscess?
+    - What is lung abscess?
+    - Define lung abscess?
+    - what do you mean by lung abscess?
+    - could you please elaborate lung abscess?
+
+- intent: lung_abscess/prevention
+  examples: |
+    - tell me about prevention of lung abscess?
+    - how lung abscess prevent?
+    - lung abscess prevention?
+    - Could you please tell me how to prevent lung abscess?
+    - lung abscess?
+    - What precautions must we take to avoid lung abscess?
+    - Is there a technique to avoid lung abscess?
+    - Is there any way to avoid lung abscess?
+    - How can I avoid lung abscess?
+    - what are the measures we take to prevent fom lung abscess ?
+
+- intent: lung_abscess/causes
+  examples: |
+    - how lung abscess is caused?
+    - what are the causes of lung abscess?
+    - tell me about the causes of lung abscess?
+    - what causes lung abscess?
+    - how can lung abscess be caused?
+    - lung abscess caused?
+    - Could you please explain me what are the causes of lung abscess disease?
+    - please tell me the causes of  lung abscess disease?
+    - how does lung abscess caused?
+    - What are the factors that causes lung abscess?
+
+- intent: pulmonary_embolism/description
+  examples: |
+    - Tell me about pulmonary embolism?
+    - explain me about pulmonary embolism?
+    - please give me brief description about pulmonary embolism?
+    - What is the definition of pulmonary embolism?
+    - Describe pulmonary embolism?
+    - pulmonary embolism?
+    - What is pulmonary embolism?
+    - Define pulmonary embolism?
+    - what do you mean by pulmonary embolism?
+    - could you please elaborate pulmonary embolism?
+
+- intent: pulmonary_embolism/prevention
+  examples: |
+    - tell me about prevention of pulmonary embolism?
+    - how pulmonary embolism prevent?
+    - pulmonary embolism prevention?
+    - Could you please tell me how to prevent pulmonary embolism?
+    - pulmonary embolism?
+    - What precautions must we take to avoid pulmonary embolism?
+    - Is there a technique to avoid pulmonary embolism?
+    - Is there any way to avoid pulmonary embolism?
+    - How can I avoid pulmonary embolism?
+    - what are the measures we take to prevent fom pulmonary embolism?
+
+- intent: pulmonary_embolism/causes
+  examples: |
+    - how pulmonary embolism is caused?
+    - what are the causes of pulmonary embolism?
+    - tell me about the causes of pulmonary embolism?
+    - what causes pulmonary embolism?
+    - how can pulmonary embolism be caused?
+    - pulmonary embolism caused?
+    - Could you please explain me what are the causes of pulmonary embolism disease?
+    - please tell me the causes of pulmonary embolism disease?
+    - how does pulmonary embolism caused?
+    - What are the factors that causes pulmonary embolism?
+
+
+# 25-Apr-2022
+- intent: sars/description
+  examples: |
+    - What is sars?
+    - please provide the description of sars?
+    - tell me about sars?
+    - Could you please let me know about sars?
+    - what does sars mean?
+    - what heppens in sars?
+    - what do mean by sars?
+    - Explain me about sars?
+    - Could you describe about sars?
+    - Describe sars diseas? 
+
+- intent: sars/prevention
+  examples: |
+    - How to prevent sars?
+    - How can i prevent sars?
+    - let me know how to prevent sars?
+    - could you help me with prevention?
+    - what are technique of prevention of sars?
+    - is there any technique of prevention of sars?
+    - could you let me know with sars prevention?
+    - sars prevention?
+    - Could you describe how to prevent sars?
+    - prevention techinique of sars?
+
+- intent: sars/causes
+  examples: |
+    - what are the causes of sars?
+    - causes of sars?
+    - list of sars causes ?
+    - could you please help me with caueses of sars?
+    - wich are different causes of sars?
+    - Let me know the causes of sars?
+    - what are various causes of sars?
+    - what are all causes of sars?
+    - How sars is caused?
+    - Please let me know the causes of sars
+
+- intent: lung_metastases/description
+  examples: |
+    - What is lung metastases?
+    - please provide the description of lung metastases?
+    - tell me about lung metastases?
+    - Could you please let me know about lung metastases?
+    - what does lung metastasesmean?
+    - what heppens in lung metastases?
+    - what do mean by lung metastases?
+    - Explain me about lung metastases?
+    - Could you describe about lung metastases?
+    - Describe lung metastases diseas? 
+
+- intent: lung_metastases/prevention
+  examples: |
+    - How to prevent lung metastases?
+    - How can i prevent lung metastases?
+    - let me know how to prevent lung metastases?
+    - could you help me with prevention of lung metastases?
+    - what are technique of prevention of lung metastases?
+    - Is there any technique of prevention of lung metastases?
+    - could you let me know with lung metastases prevention?
+    - lung metastasesprevention?
+    - Could you describe how to prevent lung metastases?
+    - prevention techinique of lung metastases?
+  
+- intent: lung_metastases/causes
+  examples: |
+    - what are the causes of lung metastases?
+    - causes of lung metastases?
+    - list of lung metastases causes ?
+    - could you please help me with caueses of lung metastases?
+    - wich are different causes of lung metastases?
+    - Let me know the causes of lung metastases?
+    - what are various causes of lung metastases?
+    - what are all causes of lung metastases?
+    - How lung metastases is caused?
+    - Please let me know the causes of lung metastases?
+
+- intent: pneumonia_pseudotumor/description
+  examples: |
+    - What is pneumonia pseudotumor?
+    - please provide the description of pneumonia pseudotumor?
+    - tell me about pneumonia pseudotumor?
+    - Could you please let me know about pneumonia pseudotumor?
+    - what does pneumonia pseudotumor mean?
+    - what heppens in pneumonia pseudotumor?
+    - what do mean by pneumonia pseudotumor?
+    - Explain me about pneumonia pseudotumor?
+    - Could you describe about pneumonia pseudotumor?
+    - Describe pneumonia pseudotumor diseas? 
+
+- intent: pneumonia_pseudotumor/prevention
+  examples: |
+    - How to prevent pneumonia pseudotumor
+    - How can i prevent pneumonia pseudotumor?
+    - let me know how to prevent pneumonia pseudotumor?
+    - could you help me with pneumonia pseudotumor prevention?
+    - what are technique of prevention of pneumonia pseudotumor?
+    - is there any technique of prevention of pneumonia pseudotumor?
+    - could you let me know with pneumonia pseudotumor prevention?
+    - pneumonia pseudotumor prevention?
+    - Could you describe how to prevent pneumonia pseudotumor?
+    - prevention techinique of pneumonia pseudotumor?
+
+- intent: pneumonia_pseudotumor/causes
+  examples: |
+    - what are the causes of pneumonia pseudotumor?
+    - causes of pneumonia pseudotumor?
+    - list of pneumonia pseudotumorcauses ?
+    - could you please help me with caueses of pneumonia pseudotumor?
+    - wich are different causes of pneumonia pseudotumor?
+    - Let me know the causes of pneumonia pseudotumor?
+    - what are various causes of pneumonia pseudotumor?
+    - what are all causes of pneumonia pseudotumor?
+    - How pneumonia pseudotumor is caused?
+    - Please let me know the causes of pneumonia pseudotumor?
+
+- intent: pulmonary_cryptococcosis/description
+  examples: |
+    - What is pulmonary cryptococcosis?
+    - please provide the description of pulmonary cryptococcosis?
+    - tell me about pulmonary cryptococcosis?
+    - Could you please let me know about pulmonary cryptococcosis?
+    - what does pulmonary cryptococcosis mean?
+    - what heppens in pulmonary cryptococcosis?
+    - what do mean by pulmonary cryptococcosis?
+    - Explain me about pulmonary cryptococcosis?
+    - Could you describe about pulmonary cryptococcosis?
+    - Describe pulmonary cryptococcosis diseas? 
+
+- intent: pulmonary_cryptococcosis/prevention
+  examples: |
+    - How to prevent pulmonary cryptococcosis?
+    - How can i prevent pulmonary cryptococcosis?
+    - let me know how to prevent pulmonary cryptococcosis?
+    - could you help me with pulmonary cryptococcosis prevention?
+    - what are technique of prevention of pulmonary cryptococcosis?
+    - is there any technique of prevention of pulmonary cryptococcosis?
+    - could you let me know with pulmonary cryptococcosis prevention?
+    - pulmonary cryptococcosis prevention?
+    - Could you describe how to prevent pulmonary cryptococcosis?
+    - prevention techinique of pulmonary cryptococcosis?
+
+- intent: pulmonary_cryptococcosis/causes
+  examples: |
+    - what are the causes of pulmonary cryptococcosis?
+    - causes of pulmonary cryptococcosis?
+    - list of pulmonary cryptococcosis causes ?
+    - could you please help me with caueses of pulmonary cryptococcosis?
+    - wich are different causes of pulmonary cryptococcosis?
+    - Let me know the causes of pulmonary cryptococcosis?
+    - what are various causes of pulmonary cryptococcosis?
+    - what are all causes of pulmonary cryptococcosis?
+    - How pulmonary cryptococcosis is caused?
+    - Please let me know the causes of pulmonary cryptococcosis?
+
+- intent: lung_cancer/description
+  examples: |
+    - What is lung cancer?
+    - please provide the description of lung cancer?
+    - tell me about lung cancer?
+    - Could you please let me know about lung cancer?
+    - what does lung cancer mean?
+    - what heppens in lung cancer?
+    - what do mean by lung cancer?
+    - Explain me about lung cancer?
+    - Could you describe about lung cancer?
+    - Describe lung cancer diseas? 
+
+- intent: lung_cancer/prevention
+  examples: |
+    - How to prevent lung cancer?
+    - How can i prevent lung cancer?
+    - let me know how to prevent lung cancer?
+    - could you help me with lung cancer prevention?
+    - what are technique of prevention of lung cancer?
+    - is there any technique of prevention of lung cancer?
+    - could you let me know with lung cancer prevention?
+    - lung cancer prevention?
+    - Could you describe how to prevent lung cancer?
+    - prevention techinique of lung cancer?
+
+- intent: lung_cancer/causes
+  examples: |
+    - what are the causes of lung cancer?
+    - causes of lung cancer?
+    - list of lung cancer causes ?
+    - could you please help me with caueses of lung cancer?
+    - wich are different causes of lung cancer?
+    - Let me know the causes of lung cancer?
+    - what are various causes of lung cancer?
+    - what are all causes of lung cancer?
+    - How lung cancer is caused?
+    - Please let me know the causes of lung cancer?
+
+- intent: anaphylactic_shock/description
+  examples: |
+    - What is anaphylactic shock?
+    - please provide the description of anaphylactic shock?
+    - tell me about anaphylactic shock?
+    - Could you please let me know about anaphylactic shock?
+    - what does anaphylactic shock mean?
+    - what heppens in anaphylactic shock?
+    - what do mean by anaphylactic shock?
+    - Explain me about anaphylactic shock?
+    - Could you describe about anaphylactic shock?
+    - Describe anaphylactic shock diseas? 
+
+- intent: anaphylactic_shock/prevention
+  examples: |
+    - How to prevent anaphylactic shock?
+    - How can i prevent anaphylactic shock?
+    - let me know how to prevent anaphylactic shock?
+    - could you help me with anaphylactic shock prevention?
+    - what are technique of prevention of anaphylactic shock?
+    - is there any technique of prevention of anaphylactic shock?
+    - could you let me know with anaphylactic shock prevention?
+    - anaphylactic shock prevention?
+    - Could you describe how to prevent anaphylactic shock?
+    - prevention techinique of anaphylactic shock?
+
+- intent: anaphylactic_shock/causes
+  examples: |
+    - what are the causes of anaphylactic shock?
+    - causes of anaphylactic shock?
+    - list of anaphylactic shock causes ?
+    - could you please help me with caueses of anaphylactic shock?
+    - wich are different causes of anaphylactic shock?
+    - Let me know the causes of anaphylactic shock?
+    - what are various causes of anaphylactic shock?
+    - what are all causes of anaphylactic shock?
+    - How anaphylactic shock is caused?
+    - Please let me know the causes of anaphylactic shock?
+
+- intent: hypersensitivity_pneumonitis/description
+  examples: |
+    - What is hypersensitivity pneumonitis?
+    - please provide the description of hypersensitivity pneumonitis?
+    - tell me about hypersensitivity pneumonitis?
+    - Could you please let me know about hypersensitivity pneumonitis?
+    - what does hypersensitivity pneumonitis mean?
+    - what heppens in hypersensitivity pneumonitis?
+    - what do mean by hypersensitivity pneumonitis?
+    - Explain me about hypersensitivity pneumonitis?
+    - Could you describe about hypersensitivity pneumonitis?
+    - Describe hypersensitivity pneumonitis diseas? 
+
+- intent: hypersensitivity_pneumonitis/prevention
+  examples: |
+    - How to prevent hypersensitivity pneumonitis?
+    - How can i prevent hypersensitivity pneumonitis?
+    - let me know how to prevent hypersensitivity pneumonitis?
+    - could you help me with hypersensitivity pneumonitis prevention?
+    - what are technique of prevention of hypersensitivity pneumonitis?
+    - is there any technique of prevention of hypersensitivity pneumonitis?
+    - could you let me know with hypersensitivity pneumonitis prevention?
+    - hypersensitivity pneumonitis prevention?
+    - Could you describe how to prevent hypersensitivity pneumonitis?
+    - prevention techinique of hypersensitivity pneumonitis?
+
+- intent: hypersensitivity_pneumonitis/causes
+  examples: |
+    - what are the causes of hypersensitivity pneumonitis?
+    - causes of hypersensitivity pneumonitis?
+    - list of hypersensitivity pneumonitis causes ?
+    - could you please help me with caueses of hypersensitivity pneumonitis?
+    - wich are different causes of hypersensitivity pneumonitis?
+    - Let me know the causes of hypersensitivity pneumonitis?
+    - what are various causes of hypersensitivity pneumonitis?
+    - what are all causes of hypersensitivity pneumonitis?
+    - How hypersensitivity pneumonitis is caused?
+    - Please let me know the causes of hypersensitivity pneumonitis?
+
+- intent: acute_lung_abscess/description
+  examples: |
+    - What is acute lung abscess?
+    - please provide the description of acute lung abscess?
+    - tell me about acute lung abscess?
+    - Could you please let me know about acute lung abscess?
+    - what does acute lung abscess mean?
+    - what heppens in acute lung abscess?
+    - what do mean by acute lung abscess?
+    - Explain me about acute lung abscess?
+    - Could you describe about acute lung abscess?
+    - Describe acute lung abscess diseas? 
+
+- intent: acute_lung_abscess/prevention
+  examples: |
+    - How to prevent acute lung abscess?
+    - How can i prevent acute lung abscess?
+    - let me know how to prevent acute lung abscess?
+    - could you help me with acute lung abscess prevention?
+    - what are technique of prevention of acute lung abscess?
+    - is there any technique of prevention of acute lung abscess?
+    - could you let me know with acute lung abscess prevention?
+    - acute lung abscess prevention?
+    - Could you describe how to prevent acute lung abscess?
+    - prevention techinique of acute lung abscess?
+
+- intent: acute_lung_abscess/causes
+  examples: |
+    - what are the causes of acute lung abscess?
+    - causes of acute lung abscess?
+    - list of acute lung abscess causes ?
+    - could you please help me with caueses of acute lung abscess?
+    - wich are different causes of acute lung abscess?
+    - Let me know the causes of acute lung abscess?
+    - what are various causes of acute lung abscess?
+    - what are all causes of acute lung abscess?
+    - How acute lung abscess is caused?
+    - Please let me know the causes of acute lung abscess?
+
+- intent: legionnaires_disease/description
+  examples: |
+    - What is legionnaires disease?
+    - please provide the description of legionnaires disease?
+    - tell me about legionnaires disease?
+    - Could you please let me know about legionnaires disease?
+    - what does legionnaires disease mean?
+    - what heppens in legionnaires disease?
+    - what do mean by legionnaires disease?
+    - Explain me about legionnaires disease?
+    - Could you describe about legionnaires disease?
+    - Describe legionnaires disease diseas? 
+
+- intent: legionnaires_disease/prevention
+  examples: |
+    - How to prevent legionnaires disease?
+    - How can i prevent legionnaires disease?
+    - let me know how to prevent legionnaires disease?
+    - could you help me with legionnaires disease prevention?
+    - what are technique of prevention of legionnaires disease?
+    - is there any technique of prevention of legionnaires disease?
+    - could you let me know with legionnaires diseaseprevention?
+    - legionnaires disease prevention?
+    - Could you describe how to prevent legionnaires disease?
+    - prevention techinique of legionnaires disease?
+
+- intent: legionnaires_disease/causes
+  examples: |
+    - what are the causes of legionnaires disease?
+    - causes of legionnaires disease?
+    - list of legionnaires disease causes ?
+    - could you please help me with caueses of legionnaires disease?
+    - wich are different causes of legionnaires disease?
+    - Let me know the causes of legionnaires disease?
+    - what are various causes of legionnaires disease?
+    - what are all causes of legionnaires disease?
+    - How legionnaires disease is caused?
+    - Please let me know the causes of legionnaires disease?
+
+#26-Apr-2022
+- intent: Pediatric_acute_bronchitis/description
+  examples: |
+    - Tell me more about pediatric acute bronchitis ?
+    - what is pediatric acute bronchitis ?
+    - please explain me briefly about pediatric acute bronchitis ?
+    - description about pediatric acute bronchitis ?
+    - pediatric acute bronchitis ?
+    - Could you elaborate on pediatric acute bronchitis?
+    - Could you help describe pediatric acute bronchitis to me briefly?
+    - An explanation of pediatric acute bronchitis?
+    - What exactly is pediatric acute bronchitis?
+    - What is the definition of pediatric acute bronchitis?
+
+- intent: Pediatric_acute_bronchitis/prevention
+  examples: |
+    - tell me about prevention of pediatric acute bronchitis ?
+    - how can i prevent from pediatric acute bronchitis ?
+    - is there any way to prevent from pediatric acute bronchitis ?
+    - what are the measures we take to prevent fom pediatric acute bronchitis
+    - pediatric acute bronchitis prevention ?
+    - Could you please tell me how to prevent pediatric acute bronchitis?
+    - How can I avoid pediatric acute bronchitis?
+    - Is there a technique to avoid pediatric acute bronchitis?
+    - What precautions must we take to avoid pediatric acute bronchitis?
+    - prevention from pediatric acute bronchitis
+
+- intent: Pediatric_acute_bronchitis/causes
+  examples: |
+    - how pediatric acute bronchitis is caused ?
+    - what are the causes of pediatric acute bronchitis ?
+    - please tell me the causes of pediatric acute bronchitis ?
+    - cause of pediatric acute bronchitis ?
+    - What causes pediatric acute bronchitis?
+    - How does pediatric acute bronchitis develop?
+    - Could you please explain me what causes pediatric acute bronchitis?
+    - pediatric acute bronchitis cause
+    - how pediatric acute bronchitis caused ?
+    - what factors contribute the cause of pediatric acute bronchitis
+
+- intent: Pediatric_influenza/description
+  examples: |
+    - What is pediatric influenza ?
+    - please provide the description of pediatric influenza?
+    - tell me about pediatric influenza?
+    - Could you please let me know about pediatric influenza?
+    - what does pediatric influenza mean?
+    - what heppens in pediatric influenza?
+    - what do mean by pediatric influenza?
+    - Explain me about pediatric influenza?
+    - Could you describe about pediatric influenza?
+    - Describe pediatric influenza diseas? 
+
+- intent: Pediatric_influenza/prevention
+  examples: |
+    - How to prevent pediatric influenza?
+    - How can i prevent pediatric influenza?
+    - let me know how to prevent pediatric influenza?
+    - could you help me with pediatric influenza prevention?
+    - what are technique of prevention of pediatric influenza?
+    - is there any technique of prevention of pediatric influenza?
+    - could you let me know with pediatric influenza prevention?
+    - pediatric influenza prevention?
+    - Could you describe how to prevent pediatric influenza?
+    - prevention techinique of pediatric influenza?
+
+- intent: Pediatric_influenza/causes
+  examples: |
+    - what are the causes of pediatric influenza?
+    - causes of pediatric influenza?
+    - list of pediatric influenza causes ?
+    - could you please help me with caueses of pediatric influenza?
+    - wich are different causes of pediatric influenza?
+    - Let me know the causes of pediatric influenza?
+    - what are various causes of pediatric influenza?
+    - what are all causes of pediatric influenza?
+    - How pediatric influenza is caused?
+    - Please let me know the causes of pediatric influenza?
+
+- intent: Silicosis/description
+  examples: |
+    - what is silicosis?
+    - what does silicosis mean?
+    - what happens in silicosis?
+    - tell me about silicosis
+    - describe silicosis
+    - can you tell me about silicosis?
+    - what is meant by silicosis?
+    - explain silicosis
+    - can i know more about silicosis?
+    - information about silicosis
+
+- intent: Silicosis/prevention
+  examples: |
+    - what is pediatric tuberculosis?
+    - how can silicosis be caused?
+    - what are the reasons behind silicosis?
+    - causes of silicosis
+    - explain the causes of silicosis
+    - silicosis can be caused by?
+    - tell me about the causes of silicosis
+    - all causes of silicosis
+    - list the causes of silicosis
+    - name the causes of silicosis
+
+- intent: Silicosis/causes
+  examples: |
+    - how can silicosis be prevented?
+    - steps to prevent silicosis
+    - what can i do to prevent silicosis?
+    - how can i prevent silicosis from happening to me?
+    - can silicosis be prevented? how?
+    - prevention of silicosis
+    - what to do to prevent silicosis?
+    - how to prevent silicosis?
+    - tell me about prevention of silicosis
+    - silicosis prevention
+
+- intent: Neonatal_Asphyxia/description
+  examples: |
+    - What is neonatal asphyxia?
+    - please provide the description of neonatal asphyxia?
+    - tell me about neonatal asphyxia?
+    - Could you please let me know about neonatal asphyxia?
+    - what does neonatal asphyxia mean?
+    - what heppens in neonatal asphyxia?
+    - what do mean by neonatal asphyxia?
+    - Explain me about neonatal asphyxia?
+    - Could you describe about neonatal asphyxia?
+    - Describe neonatal asphyxia diseas? 
+
+- intent: Neonatal_Asphyxia/prevention
+  examples: |
+    - How to prevent neonatal asphyxia?
+    - How can i prevent neonatal asphyxia?
+    - let me know how to prevent neonatal asphyxia?
+    - could you help me with neonatal asphyxia prevention?
+    - what are technique of prevention of neonatal asphyxia?
+    - is there any technique of prevention of neonatal asphyxia?
+    - could you let me know with neonatal asphyxiaprevention?
+    - neonatal asphyxia prevention?
+    - Could you describe how to prevent neonatal asphyxia?
+    - prevention techinique of neonatal asphyxia?
+
+- intent: Neonatal_Asphyxia/causes
+  examples: |
+    - what are the causes of neonatal asphyxia?
+    - causes of neonatal asphyxia?
+    - list of neonatal asphyxia causes ?
+    - could you please help me with caueses of neonatal asphyxia?
+    - wich are different causes of neonatal asphyxia?
+    - Let me know the causes of neonatal asphyxia?
+    - what are various causes of neonatal asphyxia?
+    - what are all causes of neonatal asphyxia?
+    - How neonatal asphyxia is caused?
+    - Please let me know the causes of neonatal asphyxia?
+
+- intent: Pneumonia_in_children/description
+  examples: |
+    - What is pneumonia in childen ?
+    - tell me about pneumonia in childen ?
+    - define pneumonia in childen ?
+    - tell me briefly about pneumonia in childen 
+    - please explain me about pneumonia in childen ?
+    - pneumonia in childen 
+    - elaborate the pneumonia in childen please?
+    - what exactly the pneumonia in childen disease ?
+    - description of pneumonia in childen
+    - definition of pneumonia in childen ?
+
+- intent: Pneumonia_in_children/prevention
+  examples: |
+    - what are the prevention measure of pneumonia in childen ?
+    - could you please tell me about the prevention from pneumonia in childen
+    - is there any way to prevent from pneumonia in childen
+    - pneumonia in childen preventions 
+    - what are the steps to be taken to prevent from pneumonia in childen
+    - how can i avoid pneumonia in childen ?
+    - tell me the way to prevent from pneumonia in childen
+    - pneumonia in childen prevention
+    - tell me about prevention from pneumonia in childen
+    - how can i prevent from pneumonia in childen ?
+
+- intent: Pneumonia_in_children/causes
+  examples: |
+    - what causes pneumonia in childen
+    - how pneumonia in childen is caused
+    - what are the factors that caused pneumonia in childen
+    - how does pneumonia in childen caused
+    - tell me the cause of pneumonia in childen ?
+    - could you please tell me the cause of pneumonia in childen ?
+    - causes of pneumonia in childen ?
+    - causes of pneumonia in childen 
+    - how pneumonia in childen is caused ?
+    - please tell me about how pneumonia in childen is caused ?
+
+- intent: Cold/description
+  examples: |
+    - what is cold?
+    - what does cold mean?
+    - what happens in cold?
+    - tell me about cold
+    - describe cold
+    - can you tell me about cold?
+    - what is meant by cold?
+    - explain cold
+    - can i know more about cold?
+    - information about cold
+
+- intent: Cold/prevention
+  examples: |
+    - what causes cold?
+    - how can cold be caused?
+    - what are the reasons behind cold?
+    - causes of cold
+    - explain the causes of cold
+    - cold can be caused by?
+    - tell me about the causes of cold
+    - cold can be caused by?
+    - list the causes of cold
+    - name the causes of cold
+
+- intent: Cold/causes
+  examples: |
+    - how can cold be prevented?
+    - steps to prevent cold
+    - what can i do to prevent cold?
+    - how can i prevent cold from happening to me?
+    - can cold be prevented? how?
+    - prevention of cold
+    - what to do to prevent cold?
+    - how to prevent cold?
+    - tell me about prevention of cold
+    - cold prevention
+
+- intent: Respiratory_Foreign_Body/description
+  examples: |
+    - What is respiratory foreign body?
+    - please provide the description of respiratory foreign body?
+    - tell me about respiratory foreign body?
+    - Could you please let me know about respiratory foreign body?
+    - what does respiratory foreign body mean?
+    - what heppens in respiratory foreign body?
+    - what do mean by respiratory foreign body?
+    - Explain me about respiratory foreign body?
+    - Could you describe about respiratory foreign body?
+    - Describe respiratory foreign body ? 
+
+- intent: Respiratory_Foreign_Body/prevention
+  examples: |
+    - How to prevent respiratory foreign body?
+    - How can i prevent respiratory foreign body?
+    - let me know how to prevent respiratory foreign body?
+    - could you help me with respiratory foreign body prevention?
+    - what are technique of prevention of respiratory foreign body?
+    - is there any technique of prevention of respiratory foreign body?
+    - could you let me know with respiratory foreign body prevention?
+    - respiratory foreign body prevention?
+    - Could you describe how to prevent respiratory foreign body?
+    - prevention techinique of respiratory foreign body?
+
+- intent: Respiratory_Foreign_Body/causes
+  examples: |
+    - what are the causes of respiratory foreign body?
+    - causes of respiratory foreign body?
+    - list of respiratory foreign body causes ?
+    - could you please help me with caueses of respiratory foreign body?
+    - wich are different causes of respiratory foreign body?
+    - Let me know the causes of respiratory foreign body?
+    - what are various causes of respiratory foreign body?
+    - what are all causes of respiratory foreign body?
+    - How respiratory foreign body is caused?
+    - Please let me know the causes of respiratory foreign body?
+
+- intent: acute_respiratory_failure/causes
+  examples: | 
+    - what are the causes of acute respiratory failure
+    - how acute respiratory failure be caused
+    - explain the causes of acute respiratory failure
+    - define the various causes of acute respiratory failure
+    - could you explain the causes of acute respiratory failure
+    - what causes the acute respiratory failure
+    - acute respiratory failure can be cause by
+    - list the causes of acute respiratory failure.
+    - on which factor the acute respiratory failure be caused.

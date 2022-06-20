@@ -1,0 +1,252 @@
+# The config recipe.
+# https://rasa.com/docs/rasa/model-configuration/
+recipe: default.v1
+
+# Configuration for Rasa NLU.
+# https://rasa.com/docs/rasa/nlu/components/
+language: en
+
+pipeline:
+# # No configuration for the NLU pipeline was provided. The following default pipeline was used to train your model.
+# # If you'd like to customize it, uncomment and adjust the pipeline.
+# # See https://rasa.com/docs/rasa/tuning-your-model for more information.
+  - name: WhitespaceTokenizer
+  - name: RegexFeaturizer
+  - name: LexicalSyntacticFeaturizer
+  - name: CountVectorsFeaturizer
+
+  - name: CountVectorsFeaturizer
+    analyzer: char_wb
+    min_ngram: 1
+    max_ngram: 4
+  - name: DIETClassifier
+   # entity_recognition: False
+    epochs: 100
+    batch_strategy: sequence # if you have a lot of training data for some intents and very little training data for others. 
+
+  - name: EntitySynonymMapper
+  - name: ResponseSelector
+    epochs: 100
+    retrieval_intent: alveolar_proteinosis
+
+  - name: ResponseSelector
+    epochs: 100
+    retrieval_intent: pertussis
+
+  - name: ResponseSelector
+    epochs: 100
+    retrieval_intent: asthmatic_bronchitis
+
+  - name: ResponseSelector
+    epochs: 100
+    retrieval_intent: ards
+
+  - name: ResponseSelector
+    epochs: 100
+    retrieval_intent: amniotic_fluid_inhalation
+
+  - name: ResponseSelector
+    epochs: 100
+    retrieval_intent: spe
+
+  - name: ResponseSelector
+    epochs: 100
+    retrieval_intent: loblar_pneumonia
+
+  - name: ResponseSelector
+    epochs: 100
+    retrieval_intent: pulmonary_pleural_amebiasis
+  
+  - name: ResponseSelector
+    epochs: 100
+    retrieval_intent: prs
+
+#date: 06/04/2022
+  - name: ResponseSelector
+    epochs: 100
+    retrieval_intent: legionellosis
+
+  - name: ResponseSelector
+    epochs: 100
+    retrieval_intent: tuberculous_empyema
+
+  - name: ResponseSelector
+    epochs: 100
+    retrieval_intent: hemoptysis
+
+  - name: ResponseSelector
+    epochs: 100
+    retrieval_intent: idiopathic_pulmonary_fibrosis
+
+  - name: ResponseSelector
+    epochs: 100
+    retrieval_intent: desquamative_interstitial_pneumonia
+
+  - name: ResponseSelector
+    epochs: 100
+    retrieval_intent: idiopathic_obstructive_bronchiolitis_with_organizing_pneumonia
+
+  - name: ResponseSelector
+    epochs: 100
+    retrieval_intent: idiopathic_hemosiderin
+
+  - name: ResponseSelector
+    epochs: 100
+    retrieval_intent: exogenous_allergic_alveolitis
+
+  - name: ResponseSelector
+    epochs: 100
+    retrieval_intent: pediatric_tuberculosis
+
+# 8/4/2022
+  - name: ResponseSelector
+    epochs: 100
+    retrieval_intent: respiratory_failure
+    
+  - name: ResponseSelector
+    epochs: 100
+    retrieval_intent: respiratory_bronchiole-associated_interstitial_lung_disease(RB-ILD)
+    
+  - name: ResponseSelector
+    epochs: 100
+    retrieval_intent: respiratory_syncytial_virus_pneumonia(RSV)
+    
+  - name: ResponseSelector
+    epochs: 100
+    retrieval_intent: acute_respiratory_failure
+    
+  - name: ResponseSelector
+    epochs: 100
+    retrieval_intent: neonatal_respiratory_distress_syndrome(RDS)
+    
+  - name: ResponseSelector
+    epochs: 100
+    retrieval_intent: inhalation_injury
+    
+  - name: ResponseSelector
+    epochs: 100
+    retrieval_intent: pediatric_cold
+
+# 18-Apr-2022
+  - name: ResponseSelector
+    epochs: 100
+    retrieval_intent: congenital_pulmonary_cyst
+
+  - name: ResponseSelector
+    epochs: 100
+    retrieval_intent: lung_actinomycosis
+
+  - name: ResponseSelector
+    epochs: 100
+    retrieval_intent: pulmonary_aspergillosis
+
+  - name: ResponseSelector
+    epochs: 100
+    retrieval_intent: radiation_pneumonitis
+
+  - name: ResponseSelector
+    epochs: 100
+    retrieval_intent: lung_candidiasis
+
+  - name: ResponseSelector
+    epochs: 100
+    retrieval_intent: lung_bullae
+
+  - name: ResponseSelector
+    epochs: 100
+    retrieval_intent: emphysema
+
+  - name: ResponseSelector
+    epochs: 100
+    retrieval_intent: lung_abscess
+
+  - name: ResponseSelector
+    epochs: 100
+    retrieval_intent: pulmonary_embolism
+
+# 25-Apr-2022
+  - name: ResponseSelector
+    epochs: 100
+    retrieval_intent: sars
+
+  - name: ResponseSelector
+    epochs: 100
+    retrieval_intent: lung_metastases
+
+  - name: ResponseSelector
+    epochs: 100
+    retrieval_intent: pneumonia_pseudotumor
+
+  - name: ResponseSelector
+    epochs: 100
+    retrieval_intent: pulmonary_cryptococcosis
+
+  - name: ResponseSelector
+    epochs: 100
+    retrieval_intent: lung_cancer
+
+  - name: ResponseSelector
+    epochs: 100
+    retrieval_intent: anaphylactic_shock
+
+  - name: ResponseSelector
+    epochs: 100
+    retrieval_intent: hypersensitivity_pneumonitis
+
+  - name: ResponseSelector
+    epochs: 100
+    retrieval_intent: acute_lung_abscess
+
+  - name: ResponseSelector
+    epochs: 100
+    retrieval_intent: legionnaires_disease
+
+# 26-Apr-2022 
+  - name: ResponseSelector
+    epochs: 100
+    retrieval_intent: pediatric_acute_bronchitis
+
+  - name: ResponseSelector
+    epochs: 100
+    retrieval_intent: pediatric_influenza
+
+  - name: ResponseSelector
+    epochs: 100
+    retrieval_intent: silicosis
+
+  - name: ResponseSelector
+    epochs: 100
+    retrieval_intent: neonatal_asphyxia
+
+  # - name: ResponseSelector
+  #   epochs: 100
+  #   retrieval_intent: asthma
+
+  # - name: ResponseSelector
+  #   epochs: 100
+  #   retrieval_intent: pediatric_asthma
+
+  - name: ResponseSelector
+    epochs: 100
+    retrieval_intent: pneumonia_in_children
+
+  - name: ResponseSelector
+    epochs: 100
+    retrieval_intent: cold
+
+  - name: ResponseSelector
+    epochs: 100
+    retrieval_intent: respiratory_foreign_body
+
+
+  - name: FallbackClassifier
+    threshold: 0.7
+    ambiguity_threshold: 0.1
+
+policies:
+  - name: MemoizationPolicy
+  - name: TEDPolicy
+    max_history: 5
+    epochs: 100
+  - name: RulePolicy
+

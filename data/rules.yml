@@ -1,0 +1,300 @@
+version:  "3.0" 
+
+rules:
+- rule: enter disease
+  steps:
+  - intent: enter_disease
+  - action: utter_question
+
+- rule: enter symptoms
+  steps:
+  - intent: enter_symptoms
+  - action: utter_symptom
+
+- rule: question
+  steps:
+  - intent: affirm
+  - action: utter_question
+
+- rule: symptom
+  steps:
+  - intent: confirm_symptom
+  - action: action_get_symptom
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+- rule:  alveolar proteinosis  
+  steps:
+  - intent: alveolar_proteinosis
+  - action: utter_alveolar_proteinosis
+
+- rule:  pertussis  
+  steps:
+  - intent: pertussis
+  - action: utter_pertussis
+
+- rule:  asthmatic bronchitis  
+  steps:
+  - intent: asthmatic_bronchitis
+  - action: utter_asthmatic_bronchitis
+
+- rule:  ards  
+  steps:
+  - intent: ards
+  - action: utter_ards
+
+- rule:  amniotic_fluid_inhalation  
+  steps:
+  - intent: amniotic_fluid_inhalation
+  - action: utter_amniotic_fluid_inhalation
+
+- rule:  spe  
+  steps:
+  - intent: spe
+  - action: utter_spe
+
+- rule:  loblar pneumonia 
+  steps:
+  - intent: loblar_pneumonia
+  - action: utter_loblar_pneumonia
+
+- rule:  pulmonary pleural amebiasis  
+  steps:
+  - intent: pulmonary_pleural_amebiasis
+  - action: utter_pulmonary_pleural_amebiasis
+
+- rule:  prs  
+  steps:
+  - intent: prs
+  - action: utter_prs
+
+
+#date: 06/04/2022
+- rule:  legionellosis
+  steps:
+  - intent: legionellosis
+  - action: utter_legionellosis
+
+- rule:  tuberculous empyema
+  steps:
+  - intent: tuberculous_empyema
+  - action: utter_tuberculous_empyema
+
+- rule:  hemoptysis
+  steps:
+  - intent: hemoptysis
+  - action: utter_hemoptysis
+
+- rule:  idiopathic pulmonary fibrosis
+  steps:
+  - intent: idiopathic_pulmonary_fibrosis
+  - action: utter_idiopathic_pulmonary_fibrosis
+
+- rule:  desquamative interstitial pneumonia
+  steps:
+  - intent: desquamative_interstitial_pneumonia
+  - action: utter_desquamative_interstitial_pneumonia
+
+
+- rule:  idiopathic obstructive bronchiolitis with organizing pneumonia
+  steps:
+  - intent: idiopathic_obstructive_bronchiolitis_with_organizing_pneumonia
+  - action: utter_idiopathic_obstructive_bronchiolitis_with_organizing_pneumonia
+
+- rule:  idiopathic hemosiderin
+  steps:
+  - intent: idiopathic_hemosiderin
+  - action: utter_idiopathic_hemosiderin
+
+- rule:  exogenous allergic alveolitis
+  steps:
+  - intent: exogenous_allergic_alveolitis
+  - action: utter_exogenous_allergic_alveolitis
+
+- rule:  pediatric tuberculosis
+  steps:
+  - intent: pediatric_tuberculosis
+  - action: utter_pediatric_tuberculosis
+  
+# 8/4/2022
+
+- rule: respiratory failure
+  steps:
+  - intent: respiratory_failure
+  - action: utter_respiratory_failure
+  
+- rule: respiratory bronchiole associated interstitial lung disease(RB-ILD)
+  steps:
+  - intent: respiratory_bronchiole-associated_interstitial_lung_disease(RB-ILD)
+  - action: utter_respiratory_bronchiole-associated_interstitial_lung_disease(RB-ILD)
+  
+- rule: respiratory syncytial virus pneumonia(RSV)
+  steps:
+  - intent: respiratory_syncytial_virus_pneumonia(RSV)
+  - action: utter_respiratory_syncytial_virus_pneumonia(RSV)
+  
+- rule: acute respiratory failure
+  steps:
+  - intent: acute_respiratory_failure
+  - action: utter_acute_respiratory_failure
+  
+- rule: neonatal respiratory distress syndrome(RDS)
+  steps:
+  - intent: neonatal_respiratory_distress_syndrome(RDS)
+  - action: utter_neonatal_respiratory_distress_syndrome(RDS)
+  
+- rule: inhalation injury
+  steps:
+  - intent: inhalation_injury
+  - action: utter_inhalation_injury
+  
+- rule: pediatric cold
+  steps:
+  - intent: pediatric_cold
+  - action: utter_pediatric_cold
+
+# 18-Apr-2022
+- rule: congenital pulmonary cyst
+  steps:
+  - intent: congenital_pulmonary_cyst
+  - action: utter_congenital_pulmonary_cyst
+
+- rule: lung actinomycosis
+  steps:
+  - intent: lung_actinomycosis
+  - action: utter_lung_actinomycosis
+
+- rule: pulmonary aspergillosis
+  steps:
+  - intent: pulmonary_aspergillosis
+  - action: utter_pulmonary_aspergillosis
+
+- rule: radiation pneumonitis
+  steps:
+  - intent: radiation_pneumonitis
+  - action: utter_radiation_pneumonitis
+
+- rule: lung candidiasis
+  steps:
+  - intent: lung_candidiasis
+  - action: utter_lung_candidiasis
+
+- rule: lung bullae
+  steps:
+  - intent: lung_bullae
+  - action: utter_lung_bullae
+
+- rule: emphysema
+  steps:
+  - intent: emphysema
+  - action: utter_emphysema
+
+- rule: lung abscess
+  steps:
+  - intent: lung_abscess
+  - action: utter_lung_abscess
+
+- rule: pulmonary embolism
+  steps:
+  - intent: pulmonary_embolism
+  - action: utter_pulmonary_embolism
+
+# 25-Apr-2022
+- rule: sars
+  steps:
+  - intent: sars
+  - action: utter_sars
+
+- rule: lung metastases
+  steps:
+  - intent: lung_metastases
+  - action: utter_lung_metastases
+
+- rule: pneumonia pseudotumor
+  steps:
+  - intent: pneumonia_pseudotumor
+  - action: utter_pneumonia_pseudotumor
+
+- rule: pulmonary cryptococcosis
+  steps:
+  - intent: pulmonary_cryptococcosis
+  - action: utter_pulmonary_cryptococcosis
+
+- rule: lung cancer
+  steps:
+  - intent: lung_cancer
+  - action: utter_lung_cancer
+
+- rule: anaphylactic shock
+  steps:
+  - intent: anaphylactic_shock
+  - action: utter_anaphylactic_shock
+
+- rule: hypersensitivity pneumonitis
+  steps:
+  - intent: hypersensitivity_pneumonitis
+  - action: utter_hypersensitivity_pneumonitis
+
+- rule: acute lung abscess
+  steps:
+  - intent: acute_lung_abscess
+  - action: utter_acute_lung_abscess
+
+- rule: legionnaires disease
+  steps:
+  - intent: legionnaires_disease
+  - action: utter_legionnaires_disease
+
+# 26-Apr-2022
+- rule: Pediatric acute bronchitis
+  steps:
+  - intent: Pediatric_acute_bronchitis
+  - action: utter_Pediatric_acute_bronchitis
+
+- rule: Pediatric influenza
+  steps:
+  - intent: Pediatric_influenza
+  - action: utter_Pediatric_influenza
+
+- rule: Silicosis
+  steps:
+  - intent: Silicosis
+  - action: utter_Silicosis
+
+- rule: Neonatal Asphyxia
+  steps:
+  - intent: Neonatal_Asphyxia
+  - action: utter_Neonatal_Asphyxia
+
+# - rule: asthma
+#   steps:
+#   - intent: asthma
+#   - action: utter_asthma
+
+# - rule: pediatric_asthma
+#   steps:
+#   - intent: pediatric_asthma
+#   - action: utter_pediatric_asthma
+
+- rule: Pneumonia in children
+  steps:
+  - intent: Pneumonia_in_children
+  - action: utter_Pneumonia_in_children
+
+- rule: Cold
+  steps:
+  - intent: Cold
+  - action: utter_Cold
+
+- rule: Respiratory Foreign Body
+  steps:
+  - intent: Respiratory_Foreign_Body
+  - action: utter_Respiratory_Foreign_Body

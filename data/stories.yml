@@ -1,0 +1,21 @@
+version: "3.0"
+
+stories:
+
+- story: symptom story
+  steps:
+  - intent: greet
+  - action: utter_welcome
+  - intent: enter_symptoms
+  - action: utter_symptom
+  - intent: confirm_symptom
+  - action: action_get_symptom
+  - intent: affirm
+  - action: utter_question
+
+- story: disease story
+  steps:
+  - intent: greet
+  - action: utter_welcome
+  - intent: enter_disease
+  - action: utter_question
