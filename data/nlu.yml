@@ -684,7 +684,9 @@ nlu:
     - how ards is caused ?
     - please tell me about how ards is caused ?
 
-- What is amniotic fluid inhalation ?
+- intent: amniotic_fluid_inhalation/description
+  examples: |  
+    - What is amniotic fluid inhalation ?
     - tell me about large amount of amniotic fluid inhalation ?
     - define amniotic fluid inhalation ?
     - tell me briefly about large amount of amniotic fluid inhalation 
