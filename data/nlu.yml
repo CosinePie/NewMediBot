@@ -1366,7 +1366,7 @@ nlu:
     - explain the prevention of acute respiratory failure
     - describe the ways to prevent the acute respiratory failure
     - describe methods to prevent acute respiratory failure  
-     
+
 - intent: neonatal_respiratory_distress_syndrome(RDS)/description
   examples: |
     - define neonatal neonatal respiratory distress syndrome(RDS)
