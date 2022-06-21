@@ -97,6 +97,9 @@ responses:
   utter_symptom:
   - text: "Please enter your symptoms: "
 
+  utter_please_rephrase:
+  - text: I'm sorry, I didn't quite understand that. Could you rephrase?
+
   utter_goodbye:
   - text: "Bye"
 
