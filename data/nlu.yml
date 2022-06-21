@@ -350,6 +350,8 @@ nlu:
 - synonym: short breath
   examples: |
     - breathlessness
+    - shortness of breath
+    - breath shortness
 
 - synonym: gas rush
   examples: |
