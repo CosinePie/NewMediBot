@@ -204,15 +204,15 @@ pipeline:
 # 26-Apr-2022 
   - name: ResponseSelector
     epochs: 100
-    retrieval_intent: pediatric_acute_bronchitis
+    retrieval_intent: Pediatric_acute_bronchitis
 
   - name: ResponseSelector
     epochs: 100
-    retrieval_intent: pediatric_influenza
+    retrieval_intent: Pediatric_influenza
 
   - name: ResponseSelector
     epochs: 100
-    retrieval_intent: silicosis
+    retrieval_intent: Silicosis
 
   - name: ResponseSelector
     epochs: 100
