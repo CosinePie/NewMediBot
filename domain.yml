@@ -169,13 +169,13 @@ responses:
   - text: "The fetus inhales a larger amount of amniotic fluid during intrauterine or childbirth and refers to a large amount of alcoholic fluid inhalation (also known as amniotic fluid inhalation syndrome (aminoticfluidaspirationsydrom).generally speaking, amniotic fluid is not contaminated, often has a transient difficulty breathing or bruising, mild symptoms and good prognosis.such as the inflammatory reaction in the lungs, known as amniocentesis pneumonia."
 
   utter_amniotic_fluid_inhalation/prevention:
-  - text: "Prevention of Adult Respiratory Distress Syndrome :-\n \n
+  - text: "Prevention of Amniotic Fluid Inhalation :-\n \n
             1. the key to prevention is prevention of intrauterine or hypoxia in the fetus. It is very necessary for the mother to do prenatal checkup regularly. When the fetus has signs of intrauterine asphyxia, the delivery should be terminated as soon as possible.\n \n 
             2. The longer the hypoxia, the possibility of inhaling amniotic fluid and the amount of amniotic fluid inhaled will be larger, and long-term intrauterine hypoxia can also cause fetal brain damage. \n \n
             3. The nasal mucus is extremely important and the key to reducing the onset. health care, nursing staff through the suffocation resuscitation treatment and qualified to go to work is necessary for amniocentesis aspiration pneumonia after treatment, the prognosis is good, most children can heal, and leave no sequelae."
 
   utter_amniotic_fluid_inhalation/cause:
-  - text: "Causes of Adult Respiratory Distress Syndrome :-\n \n
+  - text: "Causes of Amniotic Fluid Inhalation :-\n \n
             1. any factor causes hypoxia in the fetus or intrauterine as hypoxemia stimulates the fetal respiratory center, wheezing-like respiration occurs, causing amniotic fluid to be inhaled into the respiratory tract. \n \n
             2. Amniotic fluid is quickly absorbed by the alveolar capillaries after inhalation. sebum in the amniotic fluid and exfoliated keratinized epithelial cells can cause chemical chemistry in the alveoli. "
  

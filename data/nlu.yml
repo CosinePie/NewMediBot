@@ -684,44 +684,42 @@ nlu:
     - how ards is caused ?
     - please tell me about how ards is caused ?
 
-- intent: amniotic_fluid_inhalation/description
-  examples: |
-    - what causes ards
-    - how adult respiratory distress syndrome is caused
-    - what are the factors that caused adult respiratory distress syndrome
-    - how does ards caused
-    - tell me the cause of ards ?
-    - could you please tell me the cause of ards ?
-    - causes of ARDS ?
-    - causes of adult respiratory distress syndrome 
-    - how ards is caused ?
-    - please tell me about how ards is caused ?
+- What is amniotic fluid inhalation ?
+    - tell me about large amount of amniotic fluid inhalation ?
+    - define amniotic fluid inhalation ?
+    - tell me briefly about large amount of amniotic fluid inhalation 
+    - please explain me about amniotic fluid inhalation ?
+    - large amount of amniotic fluid inhalation  
+    - elaborate the amniotic fluid inhalation please?
+    - what exactly the amniotic fluid inhalation ?
+    - description of large amount of amniotic fluid inhalation
+    - definition of amniotic fluid inhalation ?
 
 - intent: amniotic_fluid_inhalation/prevention
   examples: |
-    - what causes ards
-    - how adult respiratory distress syndrome is caused
-    - what are the factors that caused adult respiratory distress syndrome
-    - how does ards caused
-    - tell me the cause of ards ?
-    - could you please tell me the cause of ards ?
-    - causes of ARDS ?
-    - causes of adult respiratory distress syndrome 
-    - how ards is caused ?
-    - please tell me about how ards is caused ?
+    - what are the prevention measure of large amount of amniotic fluid inhalation ?
+    - could you please tell me about the prevention from amniotic fluid inhalation
+    - is there any way to prevent from amniotic fluid inhalation
+    - amniotic fluid inhalation 
+    - what are the steps to be taken to prevent from amniotic fluid inhalation
+    - how can i avoid amniotic fluid inhalation ?
+    - tell me the way to prevent from large amount of amniotic fluid inhalation
+    - amniotic fluid inhalation prevention
+    - tell me about prevention from large amount of amniotic fluid inhalation
+    - how can i prevent from amniotic fluid inhalation ?
 
 - intent: amniotic_fluid_inhalation/cause
   examples: |
-    - what causes ards
-    - how adult respiratory distress syndrome is caused
-    - what are the factors that caused adult respiratory distress syndrome
-    - how does ards caused
-    - tell me the cause of ards ?
-    - could you please tell me the cause of ards ?
-    - causes of ARDS ?
-    - causes of adult respiratory distress syndrome 
-    - how ards is caused ?
-    - please tell me about how ards is caused ?
+    - how amniotic fluid inhalation is caused ?
+    - what are the causes of large of amount of amniotic fluid inhalation ?
+    - please tell me the causes of amniotic fluid inhalation ?
+    - cause of amniotic fluid inhalation ?
+    - What causes large amount of amniotic fluid inhalation?
+    - How does amniotic fluid inhalation develop?
+    - Could you please explain me what causes large amount of amniotic fluid inhalation?
+    - amniotic fluid inhalation cause
+    - how amniotic fluid inhalation caused ?
+    - what factors contribute the cause of large amount of amniotic fluid inhalation
 
 - intent: spe/description
   examples: |
@@ -2271,16 +2269,16 @@ nlu:
 
 - intent: Silicosis/prevention
   examples: |
-    - what is pediatric tuberculosis?
-    - how can silicosis be caused?
-    - what are the reasons behind silicosis?
-    - causes of silicosis
-    - explain the causes of silicosis
-    - silicosis can be caused by?
-    - tell me about the causes of silicosis
-    - all causes of silicosis
-    - list the causes of silicosis
-    - name the causes of silicosis
+    - what are the prevention to be taken for silicosis
+    - how can i prevent from silicosis
+    - is there any way to prevent from silicosis
+    - silicosis prevention
+    - could you please tell me to prevent from silicosis
+    - how can i avoid silicosis
+    - tell me about prevention from silicosis
+    - what precaution should we take from silicosis
+    - prevention from silicosis
+    - ways to get prevent from silicosis
 
 - intent: Silicosis/causes
   examples: |
