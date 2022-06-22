@@ -111,7 +111,7 @@ Social media integration is the process by which we can connect our  social medi
 ### Whatsapp bot :-
 It is very easy to build a whatsapp chatbot using twilio API for Whatsapp. Firstly, we created a twilio account. Twilio provides a WhatsApp sandbox where we can easily develop and test our application. we can connect our phone to whatsapp by selecting messaging and then in messaging by clicking send whatsapp message in try it out option. The whatsapp sandbox page shows us a whatsapp number and code for it.
 
-<p style="text-align:center;"><figure><img src=images/img1.png alt="Logo"><figcaption><b> Fig  Twilio Sandbox for whatsapp</b> </figcaption></figure></p> 
+<p style="text-align:center;"><figure><img src=images/img1.png alt="Logo" width = "90%" length = "60%"><figcaption><b> Fig  Twilio Sandbox for whatsapp</b> </figcaption></figure></p> 
 
 
 Now we can send message on given number from our whatsapp. The message we send is the code given. Then after sending this code we receive a message from twilio that shows our whatsapp is connected to the sandbox. Then we configure our sandbox by adding webhook URL then we see URL like this 
@@ -119,12 +119,12 @@ Now we can send message on given number from our whatsapp. The message we send i
 
 And in this we replaced the host and port with the appropriate values from your running Rasa X or Rasa Open Source server.
 
-<p style="text-align:center;"><figure><img src=images/img2.png alt="Logo"><figcaption><b> Fig Twilio Configuration</b> </figcaption></figure></p>
+<p style="text-align:center;"><figure><img src=images/img2.png alt="Logo" width = "95%" length = "60%"><figcaption><b> Fig Twilio Configuration</b> </figcaption></figure></p>
 
 
 Then After getting credential from Twilio we add those credentials in credentials.yml. We add the Account SID, Auth Token, and the phone number in our credentials.yml file. 
 
-<p style="text-align:center;"><figure><img src=images/img3.png alt="Logo"><figcaption><b> Fig  Twilio Sandbox for whatsapp</b> </figcaption></figure></p>
+<p style="text-align:center;"><figure><img src=images/img3.png alt="Logo" width = "75%" length = "60%"><figcaption><b> Fig  Twilio Sandbox for whatsapp</b> </figcaption></figure></p>
 
 
 Then we deploy our chatbot in whatsapp by using command 
@@ -136,12 +136,12 @@ After this we run the actions command
 
 After running the action command we ask a question from the whatsapp bot. Now the picture below we attached is a screenshot of our whatsapp chatbot.
 
-<p style="text-align:center;"><figure><img src=images/img4.jpg alt="Logo"><figcaption><b> Fig Whatsapp Chatbot</b> </figcaption></figure></p>
+<p style="text-align:center;"><figure><img src=images/img4.jpg alt="Logo" width = "55%" length = "60%"><figcaption><b> Fig Whatsapp Chatbot</b> </figcaption></figure></p>
 
 
 Now as the multiple users connect we can see  the user id’s as their number
 
-<p style="text-align:center;"><figure><img src=images/img4.png alt="Logo"><figcaption><b> Fig Multiple Users</b> </figcaption></figure></p>
+<p style="text-align:center;"><figure><img src=images/img4.png alt="Logo" width = "55%" length = "60%"><figcaption><b> Fig Multiple Users</b> </figcaption></figure></p>
 
 
 Basically we integrated our chatbot with whatsapp. We used a conversation tool called twilio which provides us with a powerful API through which we connect our chatbot to whatsapp. Ngrok was used to give twilio the access to the port where the chatbot server was running. After this the credentials file was modified to integrate the bot. Finally testing on WhatsApp was done by us.
@@ -149,12 +149,12 @@ Basically we integrated our chatbot with whatsapp. We used a conversation tool c
 ### Telegram bot :- 
 Firstly we have to get API for our bot so for that we have to send a message to bot father /new bot then it asks name and username for our bot. Then after this we get a message as it contains our token to access HTTP API
 
-<p style="text-align:center;"><figure><img src=images/img5.png alt="Logo"><figcaption><b> Fig Telegram BotFather</b> </figcaption></figure></p>
+<p style="text-align:center;"><figure><img src=images/img5.png alt="Logo" width = "55%" length = "60%"><figcaption><b> Fig Telegram BotFather</b> </figcaption></figure></p>
 
 
 Ngrok was used to give telegram access to the port where the chatbot server was running. Then we write all the credentials in credentials.yml
 
-<p style="text-align:center;"><figure><img src=images/img6.png alt="Logo"><figcaption><b> Fig Credentials for Telegram</b> </figcaption></figure></p>
+<p style="text-align:center;"><figure><img src=images/img6.png alt="Logo" width = "55%" length = "60%"><figcaption><b> Fig Credentials for Telegram</b> </figcaption></figure></p>
 
 
 Then we deploy our chatbot by using command 
@@ -165,4 +165,4 @@ After this we run the actions command
 
 After running the action command we ask a question from the telegram bot.
 
-<p style="text-align:center;"><figure><img src=images/img7.jpg alt="Logo"><figcaption><b> Fig Telegram Bot</b> </figcaption></figure></p>
+<p style="text-align:center;"><figure><img src=images/img7.jpg alt="Logo" width = "55%" length = "60%"><figcaption><b> Fig Telegram Bot</b> </figcaption></figure></p>
