@@ -106,6 +106,25 @@ If it gives an error port 5005 already in use, their are two things that we can 
 ## Pipeline of our chatbot :-
 <p style="text-align:center;"><figure><img src=images/pipeline.png alt="Logo" width = "80%" length = "70%"><figcaption><b> Pipeline of our Chatbot</b> </figcaption></figure></p> 
 
+1. First we started by removing the duplicate rows from the dataset so that there is one unique row for every disease present.
+
+2. Then we performed exploratory data analysis on the dataset to gather more information about the data and try to visualize the data to gain useful insights present in the dataset.
+
+3. In the third step we defined intents based on the disease names and started making example queries which the user may ask to the chatbot.
+
+4. After making questions, we made utterances for the diseases which the bot uses to answer the user's queries.
+
+5. Then we generated the nlu and the domain file and added them to the data folder on which the bot has to be trained.
+
+6. Then we made a custom action file so as to take in symptoms as the user input and accordingly predict the disease the user might have.
+
+7. Then the model is trained on the data generated.
+
+8. After training we tested the model.
+
+9. Then we deployed the model on Telegram and WhatsApp.
+
+
 ## Social media Integration
 Social media integration is the process by which we can connect our  social media followers to our website and make this platform available to our customers or followers by our website. so for now we connect our chatbot to:-
 1. Whatsapp
