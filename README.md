@@ -103,6 +103,9 @@ If it gives an error port 5005 already in use, their are two things that we can 
 - To remove a docker image
     > docker image rm -f \<image name>
 
+## Pipeline of our chatbot :-
+<p style="text-align:center;"><figure><img src=images/pipeline.png alt="Logo" width = "80%" length = "70%"><figcaption><b> Pipeline of our Chatbot</b> </figcaption></figure></p> 
+
 ## Social media Integration
 Social media integration is the process by which we can connect our  social media followers to our website and make this platform available to our customers or followers by our website. so for now we connect our chatbot to:-
 1. Whatsapp
@@ -141,7 +144,7 @@ After running the action command we ask a question from the whatsapp bot. Now th
 
 Now as the multiple users connect we can see  the user id’s as their number
 
-<p style="text-align:center;"><figure><img src=images/img4.png alt="Logo" width = "55%" length = "60%"><figcaption><b> Fig Multiple Users</b> </figcaption></figure></p>
+<p style="text-align:center;"><figure><img src=images/multipleusers.png alt="Logo" width = "55%" length = "60%"><figcaption><b> Fig Multiple Users</b> </figcaption></figure></p>
 
 
 Basically we integrated our chatbot with whatsapp. We used a conversation tool called twilio which provides us with a powerful API through which we connect our chatbot to whatsapp. Ngrok was used to give twilio the access to the port where the chatbot server was running. After this the credentials file was modified to integrate the bot. Finally testing on WhatsApp was done by us.
@@ -149,7 +152,7 @@ Basically we integrated our chatbot with whatsapp. We used a conversation tool c
 ### Telegram bot :- 
 Firstly we have to get API for our bot so for that we have to send a message to bot father /new bot then it asks name and username for our bot. Then after this we get a message as it contains our token to access HTTP API
 
-<p style="text-align:center;"><figure><img src=images/img5.png alt="Logo" width = "55%" length = "60%"><figcaption><b> Fig Telegram BotFather</b> </figcaption></figure></p>
+<p style="text-align:center;"><figure><img src=images/botfather.png alt="Logo" width = "55%" length = "60%"><figcaption><b> Fig Telegram BotFather</b> </figcaption></figure></p>
 
 
 Ngrok was used to give telegram access to the port where the chatbot server was running. Then we write all the credentials in credentials.yml
