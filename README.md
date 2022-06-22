@@ -60,6 +60,20 @@ Note - If issue still persists
 > pip install sanic==21.6.0
 > pip install Sanic-Cors==1.0.0
 > pip install sanic-routing==0.7.0
+## Phases
+We divided our chatbot in two phases.
+
+### Phase 1
+
+In the first phase, we make an assumption that the user already knows the disease name which he/she has been diagnosed with, and wants to gain more information about the disease. Then he/she asks the question about the disease description , causes and prevention methods
+
+<p style="text-align:center;"><figure><img src=images/img8.png alt="Logo" width = "55%" length = "60%"><figcaption><b> Fig Phase 1</b> </figcaption></figure></p>
+
+### Phase 2
+
+In Second phase, chatbot  asks the user what are symptoms of the disease you are facing and after entering the disease symptoms, it will give the disease name and more symptoms that you can face with that disease. By this you get to know that you are also facing that symptoms after reading the chatbot answer. And now you are more sure that you have that particular disease.
+
+<p style="text-align:center;"><figure><img src=images/img9.png alt="Logo" width = "55%" length = "60%"><figcaption><b> Fig Phase 2</b> </figcaption></figure></p>
 
 ## Running the bot using Docker
 First docker is required to be installed on the system to use it. It can be downloaded using the given link mentioned below.
