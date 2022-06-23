@@ -279,6 +279,7 @@ class ActionGetSymptom(Action):
                 dispatcher.utter_message(text="You may be experiencing some of these symptoms:\n \n")
                 for s in d[intent]:
                     dispatcher.utter_message(text=f"{s} ")
+                dispatcher.utter_message(text="You can contact Dr ABC for advice.\n\n His contact details are:\n\n Tel: 12345\n\n E-mail: abc@mail.com")
                 dispatcher.utter_message(text="Would you like to more about this disease?")
             else:
                 dispatcher.utter_message(text=f"I could not understand. Please provide more symptoms or contact a doctor.")
